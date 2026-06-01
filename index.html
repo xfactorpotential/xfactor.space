@@ -30,6 +30,29 @@ h2{color:var(--gold);text-align:center;margin-bottom:30px}
 .faq details{background:var(--card);padding:16px;border-radius:12px;margin:12px 0}
 footer{text-align:center;padding:30px;border-top:1px solid #222}
 .whatsapp{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;text-decoration:none;padding:16px;border-radius:50%}
+
+.assessment{background:radial-gradient(circle at top left,rgba(212,175,55,.18),transparent 32%),#0f0f0f}
+.assessment-intro{max-width:850px;margin:0 auto 30px;text-align:center;color:#ddd}
+.test-shell{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(280px,.6fr);gap:24px;align-items:start}
+.question-list{display:grid;gap:14px}
+.question{background:rgba(255,255,255,.08);border:1px solid rgba(212,175,55,.22);border-radius:16px;padding:18px}
+.question p{font-weight:600;margin-bottom:14px}
+.scale{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.scale label{cursor:pointer;border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:10px 8px;text-align:center;font-size:.85rem;color:#ddd;background:rgba(0,0,0,.18);transition:.2s}
+.scale input{display:none}
+.scale label:has(input:checked){background:var(--gold);color:#050505;border-color:var(--gold);font-weight:700;transform:translateY(-2px)}
+.test-panel{position:sticky;top:86px;background:linear-gradient(180deg,rgba(212,175,55,.16),rgba(255,255,255,.06));border:1px solid rgba(212,175,55,.35);border-radius:20px;padding:22px}
+.progress-wrap{height:10px;background:#252525;border-radius:999px;margin:14px 0 10px;overflow:hidden}
+.progress-bar{height:100%;width:0;background:var(--gold);transition:.25s}
+.muted{color:#cfcfcf;font-size:.95rem}
+.result-card{display:none;margin-top:18px;border-top:1px solid rgba(255,255,255,.15);padding-top:18px}
+.result-card.show{display:block}
+.result-badges{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.badge{background:rgba(212,175,55,.15);border:1px solid rgba(212,175,55,.45);color:#ffe08a;border-radius:999px;padding:6px 10px;font-size:.8rem}
+.bar-row{margin:12px 0}.bar-row span{display:flex;justify-content:space-between;font-size:.85rem;margin-bottom:5px}.bar-track{height:9px;background:#252525;border-radius:999px;overflow:hidden}.bar-fill{height:100%;background:linear-gradient(90deg,var(--gold),#ffe08a);width:0}
+.secondary-btn{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+@media(max-width:900px){.test-shell{grid-template-columns:1fr}.test-panel{position:static}.scale{grid-template-columns:1fr}.scale label{text-align:left}}
+
 @media(max-width:768px){.hero h1{font-size:2.4rem}.stats{grid-template-columns:1fr}}
 </style>
 </head>
@@ -38,7 +61,7 @@ footer{text-align:center;padding:30px;border-top:1px solid #222}
 <nav>
 <div><strong style="color:#D4AF37">X FACTOR</strong></div>
 <div>
-<a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a>
+<a href="#about">About</a><a href="#services">Services</a><a href="#assessment">Free Test</a><a href="#contact">Contact</a>
 </div>
 </nav>
 </header>
@@ -47,8 +70,8 @@ footer{text-align:center;padding:30px;border-top:1px solid #222}
 <div>
 <h1>Unlocking the "X" in Every Human Being</h1>
 <p>Helping students discover strengths, choose the right direction and build a future-ready career roadmap.</p>
+<a class="btn" href="#assessment">Take Free Career Test</a>
 <a class="btn" href="#contact">Book Consultation</a>
-<a class="btn" href="#services">Explore Services</a>
 </div>
 </section>
 
@@ -67,6 +90,24 @@ footer{text-align:center;padding:30px;border-top:1px solid #222}
 <div class="card">3. Counseling</div>
 <div class="card">4. Career Blueprint</div>
 <div class="card">5. Roadmap Planning</div>
+</div></section>
+
+
+<section id="assessment" class="assessment"><div class="container">
+<h2>Free Career Interest Test</h2>
+<p class="assessment-intro">Use this quick interest assessment to discover which work themes feel most natural to you. Rate each activity from strongly dislike to strongly enjoy, then generate an instant result with suggested career directions.</p>
+<div class="test-shell">
+<form id="careerTest" class="question-list" aria-describedby="testHelp"></form>
+<aside class="test-panel">
+<h3>Your Assessment</h3>
+<p id="testHelp" class="muted">Answer every question for the clearest result. There are no right or wrong answers.</p>
+<div class="progress-wrap" aria-hidden="true"><div id="progressBar" class="progress-bar"></div></div>
+<p id="progressText" class="muted">0 of 18 answered</p>
+<button class="btn" id="showResult" type="button">Show My Result</button>
+<button class="btn secondary-btn" id="resetTest" type="button">Reset</button>
+<div id="resultCard" class="result-card" aria-live="polite"></div>
+</aside>
+</div>
 </div></section>
 
 <section id="services"><div class="container">
@@ -121,4 +162,73 @@ footer{text-align:center;padding:30px;border-top:1px solid #222}
 
 <footer>© X Factor. All Rights Reserved.</footer>
 <a class="whatsapp" href="https://wa.me/919099044336">💬</a>
+
+<script>
+const careerQuestions=[
+{text:'Build, repair, or operate tools, machines, or equipment.',type:'Practical'},
+{text:'Solve science, data, or research problems by finding evidence.',type:'Analytical'},
+{text:'Create designs, stories, music, videos, or visual concepts.',type:'Creative'},
+{text:'Teach, mentor, counsel, or support another person.',type:'Social'},
+{text:'Lead a project, pitch an idea, or start a business initiative.',type:'Enterprising'},
+{text:'Organize records, budgets, schedules, or detailed information.',type:'Organized'},
+{text:'Work outdoors or in hands-on labs with materials and tools.',type:'Practical'},
+{text:'Compare facts and patterns to explain why something happened.',type:'Analytical'},
+{text:'Use imagination to make a brand, event, performance, or product stand out.',type:'Creative'},
+{text:'Help a group communicate better and resolve a problem.',type:'Social'},
+{text:'Negotiate, persuade, or motivate people toward a shared goal.',type:'Enterprising'},
+{text:'Follow a checklist to make a process accurate and reliable.',type:'Organized'},
+{text:'Test prototypes, devices, vehicles, or physical systems.',type:'Practical'},
+{text:'Explore technology, medicine, finance, or psychology through analysis.',type:'Analytical'},
+{text:'Express ideas through writing, art, media, fashion, or experiences.',type:'Creative'},
+{text:'Serve communities through health, education, coaching, or care.',type:'Social'},
+{text:'Manage teams, sales, events, campaigns, or operations.',type:'Enterprising'},
+{text:'Maintain databases, reports, compliance files, or office systems.',type:'Organized'}
+];
+const typeDetails={
+Practical:{summary:'You enjoy tangible work, tools, systems, and seeing concrete results.',careers:['Engineering','Architecture','Skilled trades','Manufacturing','Sports science']},
+Analytical:{summary:'You enjoy investigation, logic, evidence, and solving complex problems.',careers:['Data science','Medicine','Research','Finance analytics','Computer science']},
+Creative:{summary:'You enjoy originality, expression, design, and turning ideas into experiences.',careers:['Design','Content creation','Marketing','Performing arts','UX/UI']},
+Social:{summary:'You enjoy helping people learn, grow, heal, or navigate life decisions.',careers:['Teaching','Counseling','Psychology','Healthcare','Human resources']},
+Enterprising:{summary:'You enjoy influence, leadership, business decisions, and ambitious goals.',careers:['Entrepreneurship','Management','Sales','Law','Public relations']},
+Organized:{summary:'You enjoy structure, accuracy, planning, and dependable systems.',careers:['Accounting','Operations','Administration','Project coordination','Supply chain']}
+};
+const scaleLabels=['Strongly dislike','Dislike','Neutral','Enjoy','Strongly enjoy'];
+const form=document.getElementById('careerTest');
+const progressBar=document.getElementById('progressBar');
+const progressText=document.getElementById('progressText');
+const resultCard=document.getElementById('resultCard');
+careerQuestions.forEach((question,index)=>{
+ const field=document.createElement('fieldset');
+ field.className='question';
+ field.innerHTML=`<p>${index+1}. ${question.text}</p><div class="scale">${scaleLabels.map((label,i)=>`<label><input type="radio" name="q${index}" value="${i+1}" data-type="${question.type}"> ${label}</label>`).join('')}</div>`;
+ form.appendChild(field);
+});
+function getAnswers(){return [...form.querySelectorAll('input[type="radio"]:checked')];}
+function updateProgress(){
+ const answered=getAnswers().length;
+ progressBar.style.width=`${(answered/careerQuestions.length)*100}%`;
+ progressText.textContent=`${answered} of ${careerQuestions.length} answered`;
+}
+function showResults(){
+ const answers=getAnswers();
+ if(answers.length<careerQuestions.length){
+  resultCard.className='result-card show';
+  resultCard.innerHTML=`<h3>Almost there</h3><p class="muted">Please answer all ${careerQuestions.length} questions before viewing your result.</p>`;
+  return;
+ }
+ const scores=Object.fromEntries(Object.keys(typeDetails).map(type=>[type,0]));
+ answers.forEach(answer=>{scores[answer.dataset.type]+=Number(answer.value);});
+ const ranked=Object.entries(scores).sort((a,b)=>b[1]-a[1]);
+ const [topType,topScore]=ranked[0];
+ const top=typeDetails[topType];
+ resultCard.className='result-card show';
+ resultCard.innerHTML=`<h3>${topType} is your strongest theme</h3><p>${top.summary}</p><div class="result-badges">${top.careers.map(career=>`<span class="badge">${career}</span>`).join('')}</div><p class="muted">Next step: discuss your top themes with a counselor and convert them into a subject, stream, and roadmap plan.</p>${ranked.map(([type,score])=>`<div class="bar-row"><span><strong>${type}</strong><em>${score}/${topScore}</em></span><div class="bar-track"><div class="bar-fill" style="width:${(score/topScore)*100}%"></div></div></div>`).join('')}`;
+}
+function resetTest(){form.reset();resultCard.className='result-card';resultCard.innerHTML='';updateProgress();}
+form.addEventListener('change',updateProgress);
+document.getElementById('showResult').addEventListener('click',showResults);
+document.getElementById('resetTest').addEventListener('click',resetTest);
+updateProgress();
+</script>
+
 </body></html>
