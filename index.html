@@ -1,1 +1,1898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>X Factor | Unlocking the X in Every Human Being</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b0b0b;
+color:#ffffff;
+overflow-x:hidden;
+}
+
+:root{
+--gold:#f4c542;
+--dark:#0b0b0b;
+--card:#151515;
+--text:#ffffff;
+--gray:#cfcfcf;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+background:rgba(0,0,0,0.85);
+backdrop-filter:blur(12px);
+padding:18px 6%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid rgba(244,197,66,0.25);
+}
+
+.logo{
+height:70px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin-left:25px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:var(--gold);
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:120px 8%;
+position:relative;
+background:
+radial-gradient(circle at top right,
+rgba(244,197,66,.15),
+transparent 35%);
+}
+
+.hero-content{
+max-width:1200px;
+width:100%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.hero-text h1{
+font-size:4rem;
+line-height:1.15;
+margin-bottom:20px;
+}
+
+.hero-text span{
+color:var(--gold);
+}
+
+.hero-text p{
+color:#d1d5db;
+font-size:1.15rem;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+border-radius:50px;
+font-weight:600;
+text-decoration:none;
+transition:.3s;
+margin-right:12px;
+}
+
+.btn-primary{
+background:var(--gold);
+color:black;
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
+}
+
+.btn-outline{
+border:2px solid var(--gold);
+color:var(--gold);
+}
+
+.btn-outline:hover{
+background:var(--gold);
+color:black;
+}
+
+.hero-right{
+position:relative;
+height:500px;
+}
+
+.float-card{
+position:absolute;
+background:#141414;
+border:1px solid rgba(244,197,66,.25);
+border-radius:20px;
+padding:15px;
+width:180px;
+text-align:center;
+box-shadow:0 10px 40px rgba(0,0,0,.45);
+animation:float 4s ease-in-out infinite;
+}
+
+.float-card img{
+width:100%;
+height:100px;
+object-fit:contain;
+margin-bottom:10px;
+}
+
+.float-card h4{
+font-size:14px;
+color:var(--gold);
+}
+
+.card1{top:20px;left:20px;}
+.card2{top:40px;right:20px;}
+.card3{top:200px;left:0;}
+.card4{top:250px;right:0;}
+.card5{bottom:10px;left:50%;transform:translateX(-50%);}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0);}
+}
+
+.section{
+padding:90px 8%;
+}
+
+.section-title{
+font-size:2.8rem;
+text-align:center;
+margin-bottom:20px;
+}
+
+.section-sub{
+text-align:center;
+color:#cfcfcf;
+max-width:900px;
+margin:auto;
+margin-bottom:60px;
+line-height:1.8;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.service-card{
+background:#141414;
+border:1px solid rgba(244,197,66,.2);
+border-radius:24px;
+overflow:hidden;
+transition:.35s;
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+border-color:var(--gold);
+}
+
+.service-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.service-content{
+padding:25px;
+}
+
+.service-content h3{
+margin-bottom:15px;
+color:var(--gold);
+}
+
+.service-content p{
+color:#d1d5db;
+line-height:1.7;
+}
+
+.service-btn{
+margin-top:20px;
+display:inline-block;
+background:var(--gold);
+padding:12px 20px;
+border-radius:30px;
+text-decoration:none;
+color:black;
+font-weight:600;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.why-card{
+background:#141414;
+padding:30px;
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(244,197,66,.15);
+}
+
+.why-card h3{
+color:var(--gold);
+margin-bottom:12px;
+}
+
+.lead-popup{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.85);
+z-index:9999;
+justify-content:center;
+align-items:center;
+}
+
+.popup-box{
+width:90%;
+max-width:500px;
+background:#151515;
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(244,197,66,.25);
+}
+
+.popup-box h2{
+color:var(--gold);
+margin-bottom:20px;
+}
+
+.popup-box input{
+width:100%;
+padding:14px;
+margin-bottom:12px;
+background:#0b0b0b;
+border:1px solid #333;
+border-radius:10px;
+color:white;
+}
+
+.popup-box button{
+width:100%;
+padding:14px;
+background:var(--gold);
+border:none;
+font-weight:700;
+cursor:pointer;
+border-radius:10px;
+}
+
+footer{
+padding:50px;
+text-align:center;
+background:#050505;
+border-top:1px solid rgba(244,197,66,.2);
+}
+
+@media(max-width:900px){
+
+.hero-content{
+grid-template-columns:1fr;
+}
+
+.hero-text{
+text-align:center;
+}
+
+.hero-text h1{
+font-size:2.7rem;
+}
+
+.hero-right{
+height:700px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="images/xfactor-logo.png" class="logo">
+
+<nav>
+<a href="#services">Services</a>
+<a href="#why">Why X Factor</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-text">
+
+<h1>
+Unlocking the <span>X</span> in Every Human Being
+</h1>
+
+<p>
+Discover your strengths, personality, aptitude, purpose and ideal career path through scientific assessments and expert guidance.
+</p>
+
+<a href="#" class="btn btn-primary" onclick="openLead()">
+Start Career Blueprint Assessment
+</a>
+
+<a href="#contact" class="btn btn-outline">
+Book Counseling
+</a>
+
+</div>
+
+<div class="hero-right">
+
+<div class="float-card card1">
+<img src="images/ikigai.png">
+<h4>IKIGAI Test</h4>
+</div>
+
+<div class="float-card card2">
+<img src="images/aptitude.png">
+<h4>Aptitude Test</h4>
+</div>
+
+<div class="float-card card3">
+<img src="images/mit.png">
+<h4>Multiple Intelligence</h4>
+</div>
+
+<div class="float-card card4">
+<img src="images/personality.png">
+<h4>Personality Test</h4>
+</div>
+
+<div class="float-card card5">
+<img src="images/values.png">
+<h4>Values Test</h4>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="why">
+
+<h2 class="section-title">Why X Factor?</h2>
+
+<p class="section-sub">
+A comprehensive system designed to help students discover strengths, identify career opportunities and build a meaningful future.
+</p>
+
+<div class="why-grid">
+
+<div class="why-card">
+<h3>Scientific Assessments</h3>
+<p>Evidence-based evaluation of strengths and interests.</p>
+</div>
+
+<div class="why-card">
+<h3>Career Clarity</h3>
+<p>Top career matches aligned with your profile.</p>
+</div>
+
+<div class="why-card">
+<h3>Roadmap Planning</h3>
+<p>Step-by-step path from school to profession.</p>
+</div>
+
+<div class="why-card">
+<h3>Growth Tracking</h3>
+<p>Monitor skills, goals and career readiness.</p>
+</div>
+
+</div>
+
+</section>
+
+<div class="lead-popup" id="leadPopup">
+
+<div class="popup-box">
+
+<h2>Start Your Journey</h2>
+
+<input type="text" placeholder="Full Name">
+
+<input type="email" placeholder="Email">
+
+<input type="text" placeholder="Mobile Number">
+
+<input type="text" placeholder="School / College">
+
+<input type="text" placeholder="Class / Grade">
+
+<input type="text" placeholder="City">
+
+<button onclick="closeLead()">
+Continue to Assessment
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function openLead(){
+document.getElementById("leadPopup").style.display="flex";
+}
+
+function closeLead(){
+
+document.getElementById("leadPopup").style.display="none";
+
+alert(
+"Assessment Engine will start here in Part 2"
+);
+
+}
+
+</script>
+<!-- ASSESSMENT SCREEN -->
+
+<section id="assessmentSection" style="display:none;padding:120px 8%;min-height:100vh;background:#0b0b0b;">
+
+<div style="max-width:900px;margin:auto;">
+
+<h2 style="color:#f4c542;text-align:center;margin-bottom:25px;">
+Career Blueprint Assessment
+</h2>
+
+<div style="background:#1a1a1a;height:14px;border-radius:30px;overflow:hidden;margin-bottom:40px;">
+
+<div id="progressBar"
+style="
+height:100%;
+width:0%;
+background:#f4c542;
+transition:.4s;">
+</div>
+
+</div>
+
+<div
+style="
+background:#141414;
+padding:40px;
+border-radius:20px;
+border:1px solid rgba(244,197,66,.2);
+">
+
+<h3 id="questionCategory"
+style="
+color:#f4c542;
+margin-bottom:15px;">
+</h3>
+
+<h2 id="questionText"
+style="
+margin-bottom:30px;
+line-height:1.6;">
+</h2>
+
+<div id="optionsContainer"></div>
+
+<div
+style="
+display:flex;
+justify-content:space-between;
+margin-top:35px;">
+
+<button
+onclick="previousQuestion()"
+style="
+padding:12px 25px;
+background:#333;
+color:white;
+border:none;
+border-radius:10px;">
+Previous
+</button>
+
+<button
+onclick="nextQuestion()"
+style="
+padding:12px 25px;
+background:#f4c542;
+color:black;
+border:none;
+font-weight:700;
+border-radius:10px;">
+Next
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<script>
+
+const questions = [
+
+{
+category:"IKIGAI",
+question:"What activity makes you lose track of time?",
+options:[
+"Teaching",
+"Designing",
+"Building",
+"Helping Others"
+]
+},
+
+{
+category:"IKIGAI",
+question:"What do people often appreciate you for?",
+options:[
+"Creativity",
+"Leadership",
+"Knowledge",
+"Communication"
+]
+},
+
+{
+category:"APTITUDE",
+question:"What is 20% of 200?",
+options:[
+"20",
+"30",
+"40",
+"50"
+]
+},
+
+{
+category:"APTITUDE",
+question:"Find the next number: 2,4,8,16",
+options:[
+"20",
+"24",
+"32",
+"64"
+]
+},
+
+{
+category:"MI",
+question:"I enjoy solving puzzles.",
+options:[
+"Strongly Agree",
+"Agree",
+"Neutral",
+"Disagree"
+]
+},
+
+{
+category:"MI",
+question:"I learn best through visuals.",
+options:[
+"Strongly Agree",
+"Agree",
+"Neutral",
+"Disagree"
+]
+},
+
+{
+category:"PERSONALITY",
+question:"I enjoy meeting new people.",
+options:[
+"Strongly Agree",
+"Agree",
+"Neutral",
+"Disagree"
+]
+},
+
+{
+category:"PERSONALITY",
+question:"I plan my activities in advance.",
+options:[
+"Strongly Agree",
+"Agree",
+"Neutral",
+"Disagree"
+]
+},
+
+{
+category:"VALUES",
+question:"What matters most in a career?",
+options:[
+"Money",
+"Purpose",
+"Freedom",
+"Security"
+]
+},
+
+{
+category:"VALUES",
+question:"What motivates you the most?",
+options:[
+"Growth",
+"Recognition",
+"Impact",
+"Stability"
+]
+}
+
+]
+
+let currentQuestion = 0
+let score = 0
+
+</script>
+<script>
+
+function renderQuestion(){
+
+const q =
+questions[currentQuestion]
+
+document.getElementById(
+"questionCategory"
+).innerHTML =
+q.category
+
+document.getElementById(
+"questionText"
+).innerHTML =
+q.question
+
+let html = ""
+
+q.options.forEach(
+
+(option,index)=>{
+
+html += `
+
+<div
+onclick="selectOption(${index})"
+class="option-card"
+style="
+padding:15px;
+margin-bottom:12px;
+border:1px solid #333;
+border-radius:12px;
+cursor:pointer;
+">
+
+${option}
+
+</div>
+
+`
+
+})
+
+document.getElementById(
+"optionsContainer"
+).innerHTML = html
+
+updateProgress()
+
+}
+
+</script>
+<script>
+
+let selectedAnswer = null
+
+function selectOption(index){
+
+selectedAnswer = index
+
+document
+.querySelectorAll(".option-card")
+.forEach(card=>{
+
+card.style.border=
+"1px solid #333"
+
+})
+
+document
+.querySelectorAll(".option-card")
+[index]
+.style.border=
+"2px solid #f4c542"
+
+}
+
+</script>
+<script>
+
+function nextQuestion(){
+
+if(selectedAnswer===null){
+
+alert(
+"Please select an answer."
+)
+
+return
+
+}
+
+score += selectedAnswer + 1
+
+selectedAnswer = null
+
+currentQuestion++
+
+if(
+currentQuestion >=
+questions.length
+){
+
+showResults()
+
+return
+
+}
+
+renderQuestion()
+
+}
+
+function previousQuestion(){
+
+if(currentQuestion===0)
+return
+
+currentQuestion--
+
+renderQuestion()
+
+}
+
+</script>
+<script>
+
+function updateProgress(){
+
+const percentage =
+
+(
+(currentQuestion+1)
+
+/
+
+questions.length
+
+)
+
+*100
+
+document.getElementById(
+"progressBar"
+).style.width =
+percentage+"%"
+
+}
+
+</script>
+<section
+id="resultSection"
+style="
+display:none;
+padding:120px 8%;
+background:#0b0b0b;
+min-height:100vh;
+">
+
+<div
+style="
+max-width:1200px;
+margin:auto;
+">
+
+<h1
+style="
+text-align:center;
+color:#f4c542;
+margin-bottom:20px;
+font-size:3rem;
+">
+
+Your Career Blueprint Report
+
+</h1>
+
+<p
+style="
+text-align:center;
+color:#d1d5db;
+margin-bottom:50px;
+">
+
+Based on your responses across IKIGAI, Aptitude,
+Multiple Intelligence, Personality and Values.
+
+</p>
+
+<div
+style="
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+">
+
+<div class="report-card">
+
+<h3>Career Readiness</h3>
+
+<h1 id="careerReadiness">
+82%
+</h1>
+
+</div>
+
+<div class="report-card">
+
+<h3>Recommended Stream</h3>
+
+<h2 id="recommendedStream">
+
+Science
+
+</h2>
+
+</div>
+
+<div class="report-card">
+
+<h3>Learning Style</h3>
+
+<h2 id="learningStyle">
+
+Visual Learner
+
+</h2>
+
+</div>
+
+</div>
+
+<div
+style="
+margin-top:60px;
+">
+
+<h2
+style="
+color:#f4c542;
+margin-bottom:20px;
+">
+
+Top Career Matches
+
+</h2>
+
+<div
+id="careerMatches"
+class="career-grid">
+
+</div>
+
+</div>
+
+<div
+style="
+margin-top:60px;
+">
+
+<h2
+style="
+color:#f4c542;
+margin-bottom:20px;
+">
+
+Strengths
+
+</h2>
+
+<ul id="strengthList">
+
+</ul>
+
+</div>
+
+<div
+style="
+margin-top:50px;
+">
+
+<h2
+style="
+color:#f4c542;
+margin-bottom:20px;
+">
+
+Development Areas
+
+</h2>
+
+<ul id="developmentList">
+
+</ul>
+
+</div>
+
+<div
+style="
+text-align:center;
+margin-top:60px;
+">
+
+<a
+href="#"
+class="btn btn-primary">
+
+Download Report
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+<script>
+
+function showResults(){
+
+document
+
+.getElementById(
+"assessmentSection"
+)
+
+.style.display="none"
+
+document
+
+.getElementById(
+"resultSection"
+)
+
+.style.display="block"
+
+generateCareerReport()
+
+}
+
+</script>
+<script>
+
+function generateCareerReport(){
+
+let readiness =
+
+Math.min(
+
+100,
+
+Math.round(
+(score/questions.length)*20
+)
+
+)
+
+document
+
+.getElementById(
+"careerReadiness"
+)
+
+.innerHTML =
+
+readiness + "%"
+
+let stream = "Science"
+
+if(readiness < 50){
+
+stream = "Commerce"
+
+}
+
+document
+
+.getElementById(
+"recommendedStream"
+)
+
+.innerHTML = stream
+
+let learning =
+
+"Visual Learner"
+
+if(readiness > 80){
+
+learning =
+"Experiential Learner"
+
+}
+
+document
+
+.getElementById(
+"learningStyle"
+)
+
+.innerHTML = learning
+
+generateCareers(
+readiness
+)
+
+generateStrengths(
+readiness
+)
+
+generateDevelopment(
+readiness
+)
+
+}
+
+</script>
+<script>
+
+function generateCareers(score){
+
+let careers = []
+
+if(score>80){
+
+careers = [
+
+"Data Scientist",
+
+"AI Engineer",
+
+"Psychologist",
+
+"Product Manager",
+
+"UX Designer"
+
+]
+
+}else{
+
+careers = [
+
+"Teacher",
+
+"Marketing Manager",
+
+"Business Analyst",
+
+"HR Specialist",
+
+"Digital Marketer"
+
+]
+
+}
+
+let html=""
+
+careers.forEach(
+
+career=>{
+
+html +=
+
+`
+
+<div class="career-card">
+
+<h3>${career}</h3>
+
+<p>
+
+Strong Match
+
+</p>
+
+</div>
+
+`
+
+})
+
+document
+
+.getElementById(
+"careerMatches"
+)
+
+.innerHTML = html
+
+}
+
+</script>
+<script>
+
+function generateStrengths(score){
+
+let strengths = []
+
+if(score>80){
+
+strengths = [
+
+"Strong analytical ability",
+
+"High learning adaptability",
+
+"Clear career direction",
+
+"Strong problem solving"
+
+]
+
+}else{
+
+strengths = [
+
+"Good communication",
+
+"Positive attitude",
+
+"Growth mindset",
+
+"Team collaboration"
+
+]
+
+}
+
+let html=""
+
+strengths.forEach(
+
+item=>{
+
+html +=
+
+`<li>${item}</li>`
+
+})
+
+document
+
+.getElementById(
+"strengthList"
+)
+
+.innerHTML = html
+
+}
+
+</script>
+<script>
+
+function generateDevelopment(score){
+
+let areas=[]
+
+if(score>80){
+
+areas=[
+
+"Develop leadership",
+
+"Gain project experience",
+
+"Build industry exposure"
+
+]
+
+}else{
+
+areas=[
+
+"Improve focus",
+
+"Develop analytical skills",
+
+"Explore more career options"
+
+]
+
+}
+
+let html=""
+
+areas.forEach(
+
+item=>{
+
+html +=
+
+`<li>${item}</li>`
+
+})
+
+document
+
+.getElementById(
+"developmentList"
+)
+
+.innerHTML = html
+
+}
+
+</script>
+<section class="gold-section">
+
+<h2 class="section-title">
+Student Growth Dashboard
+</h2>
+
+<p class="section-sub">
+Track your progress beyond assessments.
+</p>
+
+<div class="dashboard-cards">
+
+<div class="dash-card">
+<h2>Goals</h2>
+<p>Track academic and career goals.</p>
+</div>
+
+<div class="dash-card">
+<h2>Skills</h2>
+<p>Monitor skill development.</p>
+</div>
+
+<div class="dash-card">
+<h2>Progress</h2>
+<p>Monthly growth tracking.</p>
+</div>
+
+<div class="dash-card">
+<h2>Career Readiness</h2>
+<p>Measure preparedness.</p>
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:40px;">
+
+<a
+href="YOUR_RAZORPAY_LINK"
+class="btn btn-primary">
+
+Subscribe Now
+
+</a>
+
+</div>
+
+</section>
+<section class="gold-section">
+
+<h2 class="section-title">
+
+DMIT Validation Package
+
+</h2>
+
+<p class="section-sub">
+
+DMIT is used as an additional
+validation layer and not as the
+sole career decision-making tool.
+
+</p>
+
+<div
+style="
+max-width:900px;
+margin:auto;
+text-align:center;
+">
+
+<ul
+style="
+list-style:none;
+line-height:2.3;
+">
+
+<li>✓ DMIT Analysis</li>
+
+<li>✓ Career Blueprint Assessment</li>
+
+<li>✓ Comparison Report</li>
+
+<li>✓ Recommendation Summary</li>
+
+</ul>
+
+<a
+href="YOUR_RAZORPAY_LINK"
+class="btn btn-primary">
+
+Buy DMIT Package
+
+</a>
+
+</div>
+
+</section>
+<section class="gold-section">
+
+<h2 class="section-title">
+
+Career Roadmap Planning
+
+</h2>
+
+<div
+style="
+max-width:900px;
+margin:auto;
+">
+
+<div class="timeline">
+
+Class 10
+
+↓
+
+Science
+
+↓
+
+B.Tech Artificial Intelligence
+
+↓
+
+Python Certification
+
+↓
+
+Machine Learning
+
+↓
+
+Internship
+
+↓
+
+Data Scientist
+
+</div>
+
+<div
+style="
+text-align:center;
+margin-top:40px;
+">
+
+<a
+href="YOUR_RAZORPAY_LINK"
+class="btn btn-primary">
+
+Get Personalized Roadmap
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+<section class="gold-section">
+
+<h2 class="section-title">
+
+Entrepreneurial Potential Assessment
+
+</h2>
+
+<p class="section-sub">
+
+Measure leadership,
+creativity,
+independence,
+risk tolerance
+and opportunity recognition.
+
+</p>
+
+<div class="dashboard-cards">
+
+<div class="dash-card">
+<h2>Leadership</h2>
+</div>
+
+<div class="dash-card">
+<h2>Creativity</h2>
+</div>
+
+<div class="dash-card">
+<h2>Risk Taking</h2>
+</div>
+
+<div class="dash-card">
+<h2>Opportunity Recognition</h2>
+</div>
+
+</div>
+
+<div
+style="
+text-align:center;
+margin-top:40px;
+">
+
+<a
+onclick="openLead()"
+class="btn btn-primary">
+
+Start Assessment
+
+</a>
+
+</div>
+
+</section>
+<section class="gold-section">
+
+<h2 class="section-title">
+
+Success Stories
+
+</h2>
+
+<div class="dashboard-cards">
+
+<div class="testimonial">
+
+<h3>
+Student
+</h3>
+
+<p>
+
+The Career Blueprint Assessment
+helped me choose AI Engineering.
+
+</p>
+
+</div>
+
+<div class="testimonial">
+
+<h3>
+Parent
+</h3>
+
+<p>
+
+The report provided clarity and
+direction for my child.
+
+</p>
+
+</div>
+
+<div class="testimonial">
+
+<h3>
+College Student
+</h3>
+
+<p>
+
+The roadmap showed me exactly
+what to learn next.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<section class="gold-section">
+
+<h2 class="section-title">
+
+Frequently Asked Questions
+
+</h2>
+
+<div
+style="
+max-width:900px;
+margin:auto;
+">
+
+<div
+class="faq-item"
+onclick="toggleFaq(this)">
+
+What is Career Blueprint Assessment?
+
+<div class="faq-answer">
+
+A scientific combination of
+IKIGAI,
+Aptitude,
+Multiple Intelligence,
+Personality
+and Values assessments.
+
+</div>
+
+</div>
+
+<div
+class="faq-item"
+onclick="toggleFaq(this)">
+
+How long does assessment take?
+
+<div class="faq-answer">
+
+Approximately
+20 to 30 minutes.
+
+</div>
+
+</div>
+
+<div
+class="faq-item"
+onclick="toggleFaq(this)">
+
+When will I receive my report?
+
+<div class="faq-answer">
+
+Instant preliminary report
+followed by expert review.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<script>
+
+function toggleFaq(element){
+
+let answer =
+
+element.querySelector(
+".faq-answer"
+)
+
+if(
+answer.style.display==="block"
+){
+
+answer.style.display="none"
+
+}else{
+
+answer.style.display="block"
+
+}
+
+}
+
+</script>
+YOUR_RAZORPAY_LINK
+  <div
+style="
+display:flex;
+justify-content:center;
+margin-bottom:50px;
+">
+
+<div class="score-circle">
+
+<span id="scoreNumber">
+
+85%
+
+</span>
+
+</div>
+
+</div>
+<canvas
+id="miChart"
+height="250">
+</canvas>
+<script src=
+"https://cdn.jsdelivr.net/npm/chart.js">
+</script>
+<script>
+
+function renderMIChart(){
+
+new Chart(
+
+document.getElementById(
+"miChart"
+),
+
+{
+
+type:"radar",
+
+data:{
+
+labels:[
+
+"Linguistic",
+
+"Logical",
+
+"Visual",
+
+"Musical",
+
+"Interpersonal"
+
+],
+
+datasets:[{
+
+label:
+
+"Multiple Intelligence",
+
+data:[
+
+85,
+75,
+90,
+65,
+80
+
+],
+
+borderColor:"#f4c542",
+
+backgroundColor:
+
+"rgba(244,197,66,.2)"
+
+}]
+
+}
+
+})
+
+}
+
+</script>
+<canvas
+id="personalityChart"
+height="250">
+</canvas>
+<script>
+
+function renderPersonalityChart(){
+
+new Chart(
+
+document.getElementById(
+"personalityChart"
+),
+
+{
+
+type:"bar",
+
+data:{
+
+labels:[
+
+"Openness",
+
+"Conscientiousness",
+
+"Extraversion",
+
+"Agreeableness",
+
+"Stability"
+
+],
+
+datasets:[{
+
+data:[
+
+80,
+75,
+70,
+85,
+78
+
+],
+
+backgroundColor:"#f4c542"
+
+}]
+
+}
+
+})
+
+}
+
+</script>
+showResults()
+  renderPersonalityChart()
+const questions=[
+...
+]
+  {
+category:"IKIGAI",
+question:"...",
+options:[
+"...",
+"...",
+"...",
+"..."
+]
+}
+  <div id="categoryIntro">
+
+<h1>
+
+IKIGAI Assessment
+
+</h1>
+
+<p>
+
+Discover your purpose.
+
+</p>
+
+<button>
+
+Begin
+
+</button>
+
+</div>
+<div id="processing">
+
+<h1>
+
+Generating Career Blueprint...
+
+</h1>
+
+<div class="spinner"></div>
+
+</div>
+localStorage
+  localStorage.setItem(
+
+"name",
+
+document.getElementById(
+"name"
+).value
+
+)
+  Welcome Dhaval
+  <div class="career-card">
+
+<h3>
+
+Data Scientist
+
+</h3>
+
+<div>
+
+92% Match
+
+</div>
+
+</div>
+<div
+style="
+text-align:center;
+margin-top:80px;
+">
+
+<h2>
+
+Ready For Personalized Guidance?
+
+</h2>
+
+<br>
+
+<a
+href="YOUR_RAZORPAY_LINK"
+class="btn btn-primary">
+
+Book Career Consultation
+
+</a>
+
+</div>
