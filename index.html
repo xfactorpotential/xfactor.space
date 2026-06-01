@@ -1,313 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="X Factor Career Guidance Test - discover your strengths, interests, personality and career-fit roadmap with a simple assessment and counselling support.">
-<title>X Factor Career Guidance Test | Find the Right Career Path</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<title>X Factor | Unlocking the X in Every Human Being</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-:root{--bg:#070707;--bg2:#101010;--gold:#D4AF37;--gold2:#ffe08a;--card:rgba(255,255,255,.07);--text:#f8f6ef;--muted:#cec7b6;--line:rgba(212,175,55,.26);--green:#25D366}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Poppins,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 15% 10%,rgba(212,175,55,.16),transparent 28%),radial-gradient(circle at 85% 25%,rgba(212,175,55,.10),transparent 24%),linear-gradient(180deg,#070707,#111 48%,#070707)}
-a{color:inherit}
-header{position:fixed;top:0;width:100%;background:rgba(7,7,7,.82);backdrop-filter:blur(16px);z-index:999;border-bottom:1px solid rgba(255,255,255,.08)}
-nav{max-width:1200px;margin:auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:20px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:.08em}
-.logo-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--gold),#8f6a0a);color:#080808;box-shadow:0 10px 30px rgba(212,175,55,.24)}
-nav .links{display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:flex-end}
-nav .links a{text-decoration:none;color:#f4f4f4;font-size:.93rem;opacity:.88;transition:.2s}
-nav .links a:hover{color:var(--gold);opacity:1}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;background:var(--gold);color:#050505;border-radius:999px;text-decoration:none;font-weight:800;margin:8px;border:1px solid var(--gold);box-shadow:0 12px 30px rgba(212,175,55,.18);cursor:pointer;font-family:inherit;font-size:.96rem;transition:.2s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(212,175,55,.26)}
-.btn.secondary,.secondary-btn{background:transparent;color:var(--gold);border:1px solid var(--gold);box-shadow:none}
-.hero{min-height:100vh;display:flex;align-items:center;padding:130px 20px 80px;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.86),rgba(0,0,0,.64),rgba(0,0,0,.82)),url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1800') center/cover}
-.hero:after{content:"";position:absolute;inset:auto -8% -24% -8%;height:260px;background:linear-gradient(180deg,transparent,var(--bg));pointer-events:none}
-.hero-grid{position:relative;z-index:1;max-width:1200px;margin:auto;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);gap:44px;align-items:center}
-.kicker{color:var(--gold2);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;margin-bottom:14px}
-.hero h1{font-size:clamp(2.55rem,6vw,5.7rem);line-height:1.02;color:#fff;letter-spacing:-.06em;max-width:780px}
-.hero h1 span{color:var(--gold)}
-.hero p{max-width:740px;margin:24px 0;color:#e8e2d4;font-size:1.1rem}
-.hero-actions{display:flex;flex-wrap:wrap;margin-left:-8px}
-.hero-card{background:rgba(12,12,12,.78);border:1px solid var(--line);border-radius:30px;padding:26px;box-shadow:0 30px 80px rgba(0,0,0,.42);backdrop-filter:blur(18px)}
-.hero-card h3{font-size:1.45rem;margin-bottom:14px;color:var(--gold2)}
-.check-list{display:grid;gap:12px;list-style:none;margin:18px 0}
-.check-list li{display:flex;gap:10px;align-items:flex-start;color:#eee}
-.check-list li:before{content:"✓";display:grid;place-items:center;flex:0 0 24px;height:24px;border-radius:50%;background:rgba(212,175,55,.18);color:var(--gold2);font-weight:800}
-.mini-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
-.mini-stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:16px}
-.mini-stat strong{display:block;color:var(--gold2);font-size:1.4rem}
-section{padding:86px 20px;position:relative}
-.container{max-width:1200px;margin:auto}
-h2{color:var(--gold);text-align:center;margin-bottom:16px;font-size:clamp(2rem,4vw,3.25rem);line-height:1.1;letter-spacing:-.04em}
-.section-lead{max-width:820px;margin:0 auto 34px;text-align:center;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
-.card{background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--line);padding:26px;border-radius:22px;box-shadow:0 18px 50px rgba(0,0,0,.20)}
-.card h3{color:#fff;margin-bottom:10px}.card p{color:var(--muted)}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
-.callout{background:linear-gradient(135deg,rgba(212,175,55,.18),rgba(255,255,255,.06));border:1px solid var(--line);border-radius:28px;padding:32px}
-.big-number{font-size:clamp(3.4rem,9vw,7.5rem);line-height:.9;color:var(--gold);font-weight:800;letter-spacing:-.08em}.big-number small{font-size:.24em;color:#fff;letter-spacing:0}
-.icon-card{position:relative;overflow:hidden;min-height:196px}.icon-card:after{content:attr(data-icon);position:absolute;right:18px;bottom:-18px;font-size:5.8rem;opacity:.12}
-.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.category{background:rgba(255,255,255,.06);border:1px solid rgba(212,175,55,.24);border-radius:22px;padding:22px}.category .tag{display:inline-block;margin-bottom:10px;color:#090909;background:var(--gold);border-radius:999px;padding:4px 10px;font-weight:800;font-size:.78rem}.category p{color:var(--muted)}
-.steps{counter-reset:step;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step{counter-increment:step;position:relative;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:22px;padding:24px}.step:before{content:"Step " counter(step);display:inline-block;margin-bottom:34px;color:#080808;background:var(--gold);font-weight:800;border-radius:999px;padding:5px 12px}.step:after{content:counter(step);position:absolute;right:18px;top:6px;font-size:5rem;color:rgba(212,175,55,.12);font-weight:800}.step h3{margin-bottom:8px}.step p{color:var(--muted)}
-.report-table{display:grid;grid-template-columns:1fr 1fr;gap:22px}.plan{border:1px solid var(--line);border-radius:26px;background:rgba(255,255,255,.06);padding:26px}.plan.featured{background:linear-gradient(180deg,rgba(212,175,55,.18),rgba(255,255,255,.06));box-shadow:0 22px 70px rgba(212,175,55,.10)}.price{font-size:2.3rem;color:var(--gold);font-weight:800;margin:12px 0}.plan ul{list-style:none;display:grid;gap:10px;margin:20px 0}.plan li:before{content:"•";color:var(--gold);font-weight:800;margin-right:9px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}.stat{background:var(--card);border:1px solid rgba(255,255,255,.1);padding:28px;border-radius:22px}.stat strong{display:block;color:var(--gold2);font-size:2rem}.stat span{color:var(--muted)}
-.assessment{background:radial-gradient(circle at top left,rgba(212,175,55,.18),transparent 32%),#0f0f0f}.assessment-intro{max-width:850px;margin:0 auto 30px;text-align:center;color:#ddd}.test-shell{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(290px,.65fr);gap:24px;align-items:start}.question-list{display:grid;gap:14px}.question{background:rgba(255,255,255,.08);border:1px solid rgba(212,175,55,.22);border-radius:16px;padding:18px}.question p{font-weight:600;margin-bottom:14px}.scale{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.scale label{cursor:pointer;border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:10px 8px;text-align:center;font-size:.85rem;color:#ddd;background:rgba(0,0,0,.18);transition:.2s}.scale input{display:none}.scale label:has(input:checked){background:var(--gold);color:#050505;border-color:var(--gold);font-weight:700;transform:translateY(-2px)}.test-panel{position:sticky;top:92px;background:linear-gradient(180deg,rgba(212,175,55,.16),rgba(255,255,255,.06));border:1px solid rgba(212,175,55,.35);border-radius:20px;padding:22px}.progress-wrap{height:10px;background:#252525;border-radius:999px;margin:14px 0 10px;overflow:hidden}.progress-bar{height:100%;width:0;background:var(--gold);transition:.25s}.muted{color:#cfcfcf;font-size:.95rem}.result-card{display:none;margin-top:18px;border-top:1px solid rgba(255,255,255,.15);padding-top:18px}.result-card.show{display:block}.result-badges{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.badge{background:rgba(212,175,55,.15);border:1px solid rgba(212,175,55,.45);color:#ffe08a;border-radius:999px;padding:6px 10px;font-size:.8rem}.bar-row{margin:12px 0}.bar-row span{display:flex;justify-content:space-between;font-size:.85rem;margin-bottom:5px}.bar-track{height:9px;background:#252525;border-radius:999px;overflow:hidden}.bar-fill{height:100%;background:linear-gradient(90deg,var(--gold),#ffe08a);width:0}
-.faq details{background:var(--card);border:1px solid rgba(255,255,255,.09);padding:18px 20px;border-radius:16px;margin:12px 0}.faq summary{cursor:pointer;font-weight:700;color:#fff}.faq p{color:var(--muted);margin-top:12px}.contact-card{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;background:linear-gradient(135deg,rgba(212,175,55,.18),rgba(255,255,255,.06));border:1px solid var(--line);border-radius:30px;padding:34px}.contact-card h2{text-align:left;margin-bottom:12px}.contact-details{background:rgba(0,0,0,.22);border-radius:22px;padding:22px}.contact-details p{margin:9px 0;color:#eee}
-footer{text-align:center;padding:30px;border-top:1px solid #222;color:#bdbdbd}.whatsapp{position:fixed;right:20px;bottom:20px;background:var(--green);color:#fff;text-decoration:none;width:58px;height:58px;display:grid;place-items:center;border-radius:50%;box-shadow:0 14px 40px rgba(37,211,102,.30);z-index:998;font-size:1.5rem}
-@media(max-width:980px){nav{align-items:flex-start}.links{font-size:.9rem}.hero-grid,.split,.contact-card{grid-template-columns:1fr}.categories,.steps,.stats{grid-template-columns:repeat(2,1fr)}.test-shell{grid-template-columns:1fr}.test-panel{position:static}.hero{padding-top:120px}}
-@media(max-width:680px){nav{display:block}.logo{margin-bottom:12px}.links{justify-content:flex-start;gap:12px}.hero h1{font-size:2.55rem}.mini-stats,.categories,.steps,.stats,.report-table{grid-template-columns:1fr}.scale{grid-template-columns:1fr}.scale label{text-align:left}section{padding:68px 18px}.btn{width:100%;margin:8px 0}.hero-actions{margin-left:0}}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f8fafc;
+color:#1e293b;
+}
+
+header{
+background:linear-gradient(135deg,#0f172a,#2563eb,#7c3aed);
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+height:70px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:500;
+}
+
+.hero{
+padding:80px 8%;
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:space-between;
+background:linear-gradient(135deg,#0f172a,#1e40af,#14b8a6);
+color:white;
+}
+
+.hero-text{
+flex:1;
+min-width:300px;
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+border-radius:50px;
+background:#fbbf24;
+color:black;
+font-weight:600;
+text-decoration:none;
+margin-right:10px;
+}
+
+.hero-img{
+flex:1;
+text-align:center;
+}
+
+.hero-img img{
+max-width:350px;
+width:100%;
+}
+
+.section{
+padding:80px 8%;
+}
+
+.section-title{
+font-size:2rem;
+text-align:center;
+margin-bottom:50px;
+color:#0f172a;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+font-size:.95rem;
+line-height:1.6;
+}
+
+.form-box{
+max-width:700px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.form-box input{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+.submit-btn{
+background:#2563eb;
+color:white;
+padding:15px;
+width:100%;
+border:none;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+}
+
+.roadmap{
+background:#0f172a;
+color:white;
+padding:50px;
+border-radius:20px;
+text-align:center;
+font-size:1.4rem;
+line-height:2;
+}
+
+footer{
+background:#0f172a;
+color:white;
+padding:40px;
+text-align:center;
+}
+
+footer img{
+height:70px;
+margin-bottom:20px;
+}
+
+@media(max-width:768px){
+
+.hero{
+text-align:center;
+}
+
+.hero h1{
+font-size:2.2rem;
+}
+
+}
+
 </style>
 </head>
+
 <body>
+
 <header>
-<nav aria-label="Main navigation">
-<a class="logo" href="#top"><span class="logo-mark">X</span><span>X FACTOR</span></a>
-<div class="links">
-<a href="#about">About</a><a href="#why">Why Test</a><a href="#structure">Structure</a><a href="#steps">Steps</a><a href="#assessment">Free Test</a><a href="#contact">Contact</a>
-</div>
+
+<img src="images/xfactor-logo.png" class="logo">
+
+<nav>
+<a href="#services">Services</a>
+<a href="#roadmap">Roadmap</a>
+<a href="#contact">Contact</a>
 </nav>
+
 </header>
 
-<main id="top">
 <section class="hero">
-<div class="hero-grid">
-<div>
-<p class="kicker">X Factor Career Creator</p>
-<h1>Find the right career path <span>for you.</span></h1>
-<p>Discover your interests, strengths, personality, work values and preferred skills with a practical career guidance experience designed for students and young professionals.</p>
-<div class="hero-actions">
-<a class="btn" href="#assessment">Take the Free Test</a>
-<a class="btn secondary" href="#report">View Report Options</a>
+
+<div class="hero-text">
+
+<h1>Unlocking the X in Every Human Being</h1>
+
+<p>
+Discover your strengths, personality, aptitude and ideal career path through scientific career assessments.
+</p>
+
+<a href="#lead" class="btn">Start Assessment</a>
+
+<a href="#contact" class="btn">Book Counseling</a>
+
 </div>
+
+<div class="hero-img">
+<img src="images/xfactor-logo.png">
 </div>
-<aside class="hero-card" aria-label="Career guidance highlights">
-<h3>Your career clarity starts here</h3>
-<p class="muted">A simple first step to identify career themes, discuss them with a counsellor and turn them into a roadmap.</p>
-<ul class="check-list">
-<li>Instant interest-theme result from the free starter test</li>
-<li>Personalised discussion for stream, subject and course selection</li>
-<li>Career roadmap covering skills, learning paths and next actions</li>
-</ul>
-<div class="mini-stats">
-<div class="mini-stat"><strong>18</strong><span>Starter questions</span></div>
-<div class="mini-stat"><strong>6</strong><span>Career themes</span></div>
-<div class="mini-stat"><strong>1:1</strong><span>Guidance available</span></div>
-<div class="mini-stat"><strong>0₹</strong><span>Free first test</span></div>
-</div>
-</aside>
-</div>
+
 </section>
 
-<section id="about"><div class="container split">
-<div>
-<p class="kicker">What is it?</p>
-<h2 style="text-align:left">X Factor Career Guidance Test</h2>
-<p class="section-lead" style="text-align:left;margin-left:0">The X Factor test helps you understand what kind of work naturally motivates you. It maps your responses to practical, analytical, creative, social, enterprising and organised career themes, then suggests career areas to explore.</p>
-<a class="btn" href="#assessment">Start Assessment</a>
-</div>
+<section class="section">
+
+<h2 class="section-title">Why X Factor?</h2>
+
+<div class="cards">
+
 <div class="card">
-<h3>Built for clearer decisions</h3>
-<p>Use the result to validate an existing career choice or to shortlist new options. For best outcomes, combine the test with a counselling conversation so your personality, academics, family context and goals are considered together.</p>
-<ul class="check-list">
-<li>Understand your top interest areas</li>
-<li>Compare possible subject and stream choices</li>
-<li>Plan skills and learning paths for your target careers</li>
-</ul>
+<div class="card-content">
+<h3>Scientific Assessment</h3>
+<p>Understand aptitude, personality and strengths through structured evaluation.</p>
 </div>
-</div></section>
+</div>
 
-<section id="why"><div class="container split">
-<div class="callout">
-<div class="big-number">250+<small> options</small></div>
-<p>Students often know only a small set of career choices. X Factor encourages you to explore a wider universe of roles before making a long-term decision.</p>
+<div class="card">
+<div class="card-content">
+<h3>Career Clarity</h3>
+<p>Receive personalized career recommendations aligned with your profile.</p>
 </div>
-<div>
-<p class="kicker">Why take a test?</p>
-<h2 style="text-align:left">Choose with insight, not confusion</h2>
-<p class="section-lead" style="text-align:left;margin-left:0">Career decisions influence your subjects, degree, skill-building and early work experience. A structured assessment gives you a clearer picture of who you are and what environments may fit you best.</p>
 </div>
-</div></section>
 
-<section><div class="container">
-<h2>Reasons to Choose X Factor</h2>
-<p class="section-lead">A guided, student-friendly approach inspired by modern career counselling best practices.</p>
-<div class="grid">
-<div class="card icon-card" data-icon="📊"><h3>Data-led discovery</h3><p>Responses are scored across career themes so your next step is based on patterns, not guesswork.</p></div>
-<div class="card icon-card" data-icon="🧠"><h3>Strength-focused analysis</h3><p>Explore interests, personality cues and working preferences to understand where you may perform with energy.</p></div>
-<div class="card icon-card" data-icon="🎯"><h3>Custom recommendations</h3><p>Get suggested career clusters and learning areas that can be discussed in a personalised counselling session.</p></div>
-<div class="card icon-card" data-icon="🧭"><h3>Roadmap support</h3><p>Move from test result to action: subjects, courses, entrance preparation, skills and milestones.</p></div>
+<div class="card">
+<div class="card-content">
+<h3>Roadmap Planning</h3>
+<p>Get a step-by-step path from school to your dream career.</p>
 </div>
-</div></section>
+</div>
 
-<section id="structure"><div class="container">
-<h2>Structure and Categories</h2>
-<p class="section-lead">To guide you well, we look at multiple dimensions that influence career fit.</p>
-<div class="categories">
-<div class="category"><span class="tag">01</span><h3>Interests</h3><p>Identifies activities and work environments you naturally enjoy.</p></div>
-<div class="category"><span class="tag">02</span><h3>Abilities</h3><p>Looks at problem-solving, learning style and task preferences.</p></div>
-<div class="category"><span class="tag">03</span><h3>Personality</h3><p>Considers behavioural traits that affect performance and satisfaction.</p></div>
-<div class="category"><span class="tag">04</span><h3>Work Values</h3><p>Highlights what you need from a career to feel motivated.</p></div>
-<div class="category"><span class="tag">05</span><h3>Skills</h3><p>Connects your preferred skills with roles that use them often.</p></div>
-<div class="category"><span class="tag">06</span><h3>Knowledge</h3><p>Matches academic direction and learning paths to career clusters.</p></div>
 </div>
-</div></section>
 
-<section id="steps"><div class="container">
-<h2>Steps to Take the Test</h2>
-<p class="section-lead">Start free, review your result and book deeper counselling when you are ready.</p>
-<div class="steps">
-<div class="step"><h3>Start</h3><p>Click “Take the Free Test” and answer each statement honestly.</p></div>
-<div class="step"><h3>Submit</h3><p>Complete all questions in one sitting for the clearest starter result.</p></div>
-<div class="step"><h3>Review</h3><p>See your strongest career theme and related career clusters instantly.</p></div>
-<div class="step"><h3>Plan</h3><p>Contact X Factor to convert insights into a personalised career roadmap.</p></div>
-</div>
-</div></section>
+</section>
 
-<section id="report"><div class="container">
-<h2>What Will You Receive?</h2>
-<p class="section-lead">Choose the level of support you need after completing the free starter assessment.</p>
-<div class="report-table">
-<div class="plan">
-<h3>Free Insights Card</h3>
-<div class="price">Free</div>
-<p>A quick snapshot of your strongest interest theme.</p>
-<ul><li>Top career theme</li><li>Suggested career clusters</li><li>Score comparison across themes</li><li>Next-step recommendation</li></ul>
-<a class="btn" href="#assessment">Take Free Test</a>
-</div>
-<div class="plan featured">
-<h3>Career Fitment Blueprint</h3>
-<div class="price">Consultation</div>
-<p>A deeper discussion and roadmap prepared with X Factor guidance.</p>
-<ul><li>Personality and strengths discussion</li><li>Subject, stream and course guidance</li><li>Career shortlist and fitment notes</li><li>Learning path and action plan</li></ul>
-<a class="btn" href="#contact">Book Counselling</a>
-</div>
-</div>
-</div></section>
+<section class="section" id="services">
 
-<section><div class="container">
-<h2>Turn Recommendations into Reality</h2>
-<p class="section-lead">X Factor helps students move beyond suggestions and build practical next steps.</p>
-<div class="stats">
-<div class="stat"><strong>6</strong><span>career themes</span></div>
-<div class="stat"><strong>1:1</strong><span>counselling support</span></div>
-<div class="stat"><strong>250+</strong><span>career paths to explore</span></div>
-<div class="stat"><strong>100%</strong><span>student-focused guidance</span></div>
+<h2 class="section-title">Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="images/ikigai.png">
+<div class="card-content">
+<h3>Career Blueprint Assessment</h3>
+<p>IKIGAI + Aptitude + Multiple Intelligence + Personality + Values.</p>
 </div>
-</div></section>
-
-<section id="assessment" class="assessment"><div class="container">
-<h2>Take the Free X Factor Career Test</h2>
-<p class="assessment-intro">Rate how much you enjoy each activity. Your result is a starter insight, not a final label. Use it as a conversation starter for counselling and career planning.</p>
-<div class="test-shell">
-<form id="careerTest" class="question-list" aria-label="X Factor career interest test"></form>
-<aside class="test-panel">
-<h3>Your Progress</h3>
-<div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
-<p id="progressText" class="muted">0 of 18 answered</p>
-<button class="btn" type="button" id="showResult">View My Result</button>
-<button class="btn secondary" type="button" id="resetTest">Reset Test</button>
-<div id="resultCard" class="result-card" aria-live="polite"></div>
-</aside>
 </div>
-</div></section>
 
-<section class="faq"><div class="container">
-<h2>FAQs</h2>
-<p class="section-lead">Common questions about the X Factor career guidance test.</p>
-<details><summary>How can this test help me choose the right career path?</summary><p>It highlights career themes that match your interests and preferred activities. A counsellor can then connect those themes with subjects, courses, skills and realistic career options.</p></details>
-<details><summary>Is there any negative marking?</summary><p>No. This is a preference-based career assessment. There are no right or wrong answers, so answer honestly.</p></details>
-<details><summary>Do I get a report?</summary><p>The free test gives an instant insights card on this page. You can contact X Factor for a detailed career fitment blueprint and counselling session.</p></details>
-<details><summary>Can I retake the test later?</summary><p>Yes. Your interests and confidence can change over time, especially after new subjects, projects or internships. Retaking the test can help you compare your direction.</p></details>
-</div></section>
-
-<section id="contact"><div class="container contact-card">
-<div>
-<p class="kicker">Ready for clarity?</p>
-<h2>Book Your X Factor Career Guidance Session</h2>
-<p class="muted">Share your test result and discuss the right stream, course, college direction, skill roadmap and career plan.</p>
+<div class="card">
+<img src="images/personality.png">
+<div class="card-content">
+<h3>DMIT Validation Package</h3>
+<p>DMIT as a supporting validation layer alongside Career Blueprint Assessment.</p>
 </div>
-<div class="contact-details">
-<p><strong>Phone:</strong> <a href="tel:+919099044336">+91 90990 44336</a></p>
-<p><strong>Email:</strong> <a href="mailto:xfactor.potential@gmail.com">xfactor.potential@gmail.com</a></p>
-<p><a class="btn" href="https://wa.me/919099044336">WhatsApp Now</a></p>
 </div>
-</div></section>
-</main>
 
-<footer>© X Factor. All Rights Reserved.</footer>
-<a class="whatsapp" href="https://wa.me/919099044336" aria-label="Chat with X Factor on WhatsApp">💬</a>
+<div class="card">
+<img src="images/aptitude.png">
+<div class="card-content">
+<h3>Career Roadmap Planning</h3>
+<p>5-Year customized roadmap for academic and career growth.</p>
+</div>
+</div>
 
-<script>
-const careerQuestions=[
-{text:'Build, repair, or operate tools, machines, or equipment.',type:'Practical'},
-{text:'Solve science, data, or research problems by finding evidence.',type:'Analytical'},
-{text:'Create designs, stories, music, videos, or visual concepts.',type:'Creative'},
-{text:'Teach, mentor, counsel, or support another person.',type:'Social'},
-{text:'Lead a project, pitch an idea, or start a business initiative.',type:'Enterprising'},
-{text:'Organize records, budgets, schedules, or detailed information.',type:'Organized'},
-{text:'Work outdoors or in hands-on labs with materials and tools.',type:'Practical'},
-{text:'Compare facts and patterns to explain why something happened.',type:'Analytical'},
-{text:'Use imagination to make a brand, event, performance, or product stand out.',type:'Creative'},
-{text:'Help a group communicate better and resolve a problem.',type:'Social'},
-{text:'Negotiate, persuade, or motivate people toward a shared goal.',type:'Enterprising'},
-{text:'Follow a checklist to make a process accurate and reliable.',type:'Organized'},
-{text:'Test prototypes, devices, vehicles, or physical systems.',type:'Practical'},
-{text:'Explore technology, medicine, finance, or psychology through analysis.',type:'Analytical'},
-{text:'Express ideas through writing, art, media, fashion, or experiences.',type:'Creative'},
-{text:'Serve communities through health, education, coaching, or care.',type:'Social'},
-{text:'Manage teams, sales, events, campaigns, or operations.',type:'Enterprising'},
-{text:'Maintain databases, reports, compliance files, or office systems.',type:'Organized'}
-];
-const typeDetails={
-Practical:{summary:'You enjoy tangible work, tools, systems, and seeing concrete results.',careers:['Engineering','Architecture','Skilled trades','Manufacturing','Sports science']},
-Analytical:{summary:'You enjoy investigation, logic, evidence, and solving complex problems.',careers:['Data science','Medicine','Research','Finance analytics','Computer science']},
-Creative:{summary:'You enjoy originality, expression, design, and turning ideas into experiences.',careers:['Design','Content creation','Marketing','Performing arts','UX/UI']},
-Social:{summary:'You enjoy helping people learn, grow, heal, or navigate life decisions.',careers:['Teaching','Counseling','Psychology','Healthcare','Human resources']},
-Enterprising:{summary:'You enjoy influence, leadership, business decisions, and ambitious goals.',careers:['Entrepreneurship','Management','Sales','Law','Public relations']},
-Organized:{summary:'You enjoy structure, accuracy, planning, and dependable systems.',careers:['Accounting','Operations','Administration','Project coordination','Supply chain']}
-};
-const scaleLabels=['Strongly dislike','Dislike','Neutral','Enjoy','Strongly enjoy'];
-const form=document.getElementById('careerTest');
-const progressBar=document.getElementById('progressBar');
-const progressText=document.getElementById('progressText');
-const resultCard=document.getElementById('resultCard');
-careerQuestions.forEach((question,index)=>{
- const field=document.createElement('fieldset');
- field.className='question';
- field.innerHTML=`<p>${index+1}. ${question.text}</p><div class="scale">${scaleLabels.map((label,i)=>`<label><input type="radio" name="q${index}" value="${i+1}" data-type="${question.type}"> ${label}</label>`).join('')}</div>`;
- form.appendChild(field);
-});
-function getAnswers(){return [...form.querySelectorAll('input[type="radio"]:checked')];}
-function updateProgress(){
- const answered=getAnswers().length;
- progressBar.style.width=`${(answered/careerQuestions.length)*100}%`;
- progressText.textContent=`${answered} of ${careerQuestions.length} answered`;
-}
-function showResults(){
- const answers=getAnswers();
- if(answers.length<careerQuestions.length){
-  resultCard.className='result-card show';
-  resultCard.innerHTML=`<h3>Almost there</h3><p class="muted">Please answer all ${careerQuestions.length} questions before viewing your result.</p>`;
-  return;
- }
- const scores=Object.fromEntries(Object.keys(typeDetails).map(type=>[type,0]));
- answers.forEach(answer=>{scores[answer.dataset.type]+=Number(answer.value);});
- const ranked=Object.entries(scores).sort((a,b)=>b[1]-a[1]);
- const [topType,topScore]=ranked[0];
- const top=typeDetails[topType];
- resultCard.className='result-card show';
- resultCard.innerHTML=`<h3>${topType} is your strongest theme</h3><p>${top.summary}</p><div class="result-badges">${top.careers.map(career=>`<span class="badge">${career}</span>`).join('')}</div><p class="muted">Next step: discuss your top themes with an X Factor counsellor and convert them into a subject, stream, and roadmap plan.</p>${ranked.map(([type,score])=>`<div class="bar-row"><span><strong>${type}</strong><em>${score}/${topScore}</em></span><div class="bar-track"><div class="bar-fill" style="width:${(score/topScore)*100}%"></div></div></div>`).join('')}`;
-}
-function resetTest(){form.reset();resultCard.className='result-card';resultCard.innerHTML='';updateProgress();}
-form.addEventListener('change',updateProgress);
-document.getElementById('showResult').addEventListener('click',showResults);
-document.getElementById('resetTest').addEventListener('click',resetTest);
-updateProgress();
-</script>
+<div class="card">
+<img src="images/mit.png">
+<div class="card-content">
+<h3>Student Growth Dashboard</h3>
+<p>Track goals, progress and career readiness.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="images/values.png">
+<div class="card-content">
+<h3>Entrepreneurial Potential Assessment</h3>
+<p>Measure creativity, leadership, risk-taking and opportunity recognition.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="lead">
+
+<h2 class="section-title">Start Your Journey</h2>
+
+<div class="form-box">
+
+<input type="text" placeholder="Full Name">
+
+<input type="email" placeholder="Email">
+
+<input type="text" placeholder="Mobile Number">
+
+<input type="text" placeholder="School / College">
+
+<input type="text" placeholder="Class / Grade">
+
+<input type="text" placeholder="City">
+
+<button class="submit-btn">
+Submit & Continue
+</button>
+
+</div>
+
+</section>
+
+<section class="section" id="roadmap">
+
+<h2 class="section-title">Sample Career Roadmap</h2>
+
+<div class="roadmap">
+
+Class 10
+
+↓
+
+Science
+
+↓
+
+B.Tech Artificial Intelligence
+
+↓
+
+AI Certifications
+
+↓
+
+Internship
+
+↓
+
+Data Scientist
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Payment Links</h2>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-content">
+<h3>DMIT Validation Package</h3>
+<a class="btn" href="YOUR_RAZORPAY_LINK">Pay Now</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>Career Roadmap Planning</h3>
+<a class="btn" href="YOUR_RAZORPAY_LINK">Pay Now</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>Student Growth Dashboard</h3>
+<a class="btn" href="YOUR_RAZORPAY_LINK">Subscribe</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer id="contact">
+
+<img src="images/xfactor-logo.png">
+
+<h3>X Factor</h3>
+
+<p>Unlocking the X in Every Human Being</p>
+
+<p>Email: info@xfactor.space</p>
+
+<p>Website: xfactor.space</p>
+
+</footer>
+
 </body>
 </html>
