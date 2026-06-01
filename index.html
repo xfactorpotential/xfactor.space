@@ -1,402 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>X Factor | Unlocking the X in Every Human Being</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>
+X Factor | Unlocking the X in Every Human Being
+</title>
 
-<style>
+<link
+rel="stylesheet"
+href="style.css">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
 
-body{
-background:#0b0b0b;
-color:#ffffff;
-overflow-x:hidden;
-}
-
-:root{
---gold:#f4c542;
---dark:#0b0b0b;
---card:#151515;
---text:#ffffff;
---gray:#cfcfcf;
-}
-
-header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-z-index:1000;
-background:rgba(0,0,0,0.85);
-backdrop-filter:blur(12px);
-padding:18px 6%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:1px solid rgba(244,197,66,0.25);
-}
-
-.logo{
-height:70px;
-}
-
-nav a{
-text-decoration:none;
-color:white;
-margin-left:25px;
-font-weight:500;
-transition:.3s;
-}
-
-nav a:hover{
-color:var(--gold);
-}
-
-.hero{
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:120px 8%;
-position:relative;
-background:
-radial-gradient(circle at top right,
-rgba(244,197,66,.15),
-transparent 35%);
-}
-
-.hero-content{
-max-width:1200px;
-width:100%;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center;
-}
-
-.hero-text h1{
-font-size:4rem;
-line-height:1.15;
-margin-bottom:20px;
-}
-
-.hero-text span{
-color:var(--gold);
-}
-
-.hero-text p{
-color:#d1d5db;
-font-size:1.15rem;
-line-height:1.8;
-margin-bottom:30px;
-}
-
-.btn{
-display:inline-block;
-padding:15px 30px;
-border-radius:50px;
-font-weight:600;
-text-decoration:none;
-transition:.3s;
-margin-right:12px;
-}
-
-.btn-primary{
-background:var(--gold);
-color:black;
-}
-
-.btn-primary:hover{
-transform:translateY(-3px);
-}
-
-.btn-outline{
-border:2px solid var(--gold);
-color:var(--gold);
-}
-
-.btn-outline:hover{
-background:var(--gold);
-color:black;
-}
-
-.hero-right{
-position:relative;
-height:500px;
-}
-
-.float-card{
-position:absolute;
-background:#141414;
-border:1px solid rgba(244,197,66,.25);
-border-radius:20px;
-padding:15px;
-width:180px;
-text-align:center;
-box-shadow:0 10px 40px rgba(0,0,0,.45);
-animation:float 4s ease-in-out infinite;
-}
-
-.float-card img{
-width:100%;
-height:100px;
-object-fit:contain;
-margin-bottom:10px;
-}
-
-.float-card h4{
-font-size:14px;
-color:var(--gold);
-}
-
-.card1{top:20px;left:20px;}
-.card2{top:40px;right:20px;}
-.card3{top:200px;left:0;}
-.card4{top:250px;right:0;}
-.card5{bottom:10px;left:50%;transform:translateX(-50%);}
-
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-12px);}
-100%{transform:translateY(0);}
-}
-
-.section{
-padding:90px 8%;
-}
-
-.section-title{
-font-size:2.8rem;
-text-align:center;
-margin-bottom:20px;
-}
-
-.section-sub{
-text-align:center;
-color:#cfcfcf;
-max-width:900px;
-margin:auto;
-margin-bottom:60px;
-line-height:1.8;
-}
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-}
-
-.service-card{
-background:#141414;
-border:1px solid rgba(244,197,66,.2);
-border-radius:24px;
-overflow:hidden;
-transition:.35s;
-}
-
-.service-card:hover{
-transform:translateY(-10px);
-border-color:var(--gold);
-}
-
-.service-card img{
-width:100%;
-height:220px;
-object-fit:cover;
-}
-
-.service-content{
-padding:25px;
-}
-
-.service-content h3{
-margin-bottom:15px;
-color:var(--gold);
-}
-
-.service-content p{
-color:#d1d5db;
-line-height:1.7;
-}
-
-.service-btn{
-margin-top:20px;
-display:inline-block;
-background:var(--gold);
-padding:12px 20px;
-border-radius:30px;
-text-decoration:none;
-color:black;
-font-weight:600;
-}
-
-.why-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.why-card{
-background:#141414;
-padding:30px;
-border-radius:20px;
-text-align:center;
-border:1px solid rgba(244,197,66,.15);
-}
-
-.why-card h3{
-color:var(--gold);
-margin-bottom:12px;
-}
-
-.lead-popup{
-display:none;
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.85);
-z-index:9999;
-justify-content:center;
-align-items:center;
-}
-
-.popup-box{
-width:90%;
-max-width:500px;
-background:#151515;
-padding:30px;
-border-radius:20px;
-border:1px solid rgba(244,197,66,.25);
-}
-
-.popup-box h2{
-color:var(--gold);
-margin-bottom:20px;
-}
-
-.popup-box input{
-width:100%;
-padding:14px;
-margin-bottom:12px;
-background:#0b0b0b;
-border:1px solid #333;
-border-radius:10px;
-color:white;
-}
-
-.popup-box button{
-width:100%;
-padding:14px;
-background:var(--gold);
-border:none;
-font-weight:700;
-cursor:pointer;
-border-radius:10px;
-}
-
-footer{
-padding:50px;
-text-align:center;
-background:#050505;
-border-top:1px solid rgba(244,197,66,.2);
-}
-
-@media(max-width:900px){
-
-.hero-content{
-grid-template-columns:1fr;
-}
-
-.hero-text{
-text-align:center;
-}
-
-.hero-text h1{
-font-size:2.7rem;
-}
-
-.hero-right{
-height:700px;
-}
-
-}
-
-</style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 
-<img src="images/xfactor-logo.png" class="logo">
+<div class="container nav-container">
+
+<div class="logo">
+
+<img
+src="images/xfactor-logo.png"
+alt="X Factor Logo">
+
+</div>
 
 <nav>
-<a href="#services">Services</a>
-<a href="#why">Why X Factor</a>
-<a href="#contact">Contact</a>
+
+<a href="#services">
+
+Services
+
+</a>
+
+<a href="#why">
+
+Why X Factor
+
+</a>
+
+<a href="#contact">
+
+Contact
+
+</a>
+
 </nav>
+
+</div>
 
 </header>
 
+<!-- HERO SECTION -->
+
 <section class="hero">
 
-<div class="hero-content">
+<div class="container hero-container">
 
-<div class="hero-text">
+<div class="hero-left">
 
 <h1>
-Unlocking the <span>X</span> in Every Human Being
+
+Unlocking the
+
+<span>X</span>
+
+in Every Human Being
+
 </h1>
 
 <p>
-Discover your strengths, personality, aptitude, purpose and ideal career path through scientific assessments and expert guidance.
+
+Discover your strengths,
+personality,
+aptitude,
+purpose
+and ideal career path through
+scientific assessments.
+
 </p>
 
-<a href="#" class="btn btn-primary" onclick="openLead()">
-Start Career Blueprint Assessment
-</a>
+<div class="hero-buttons">
 
-<a href="#contact" class="btn btn-outline">
+<button
+class="primary-btn">
+
+Start Career Blueprint Assessment
+
+</button>
+
+<button
+class="secondary-btn">
+
 Book Counseling
-</a>
+
+</button>
+
+</div>
 
 </div>
 
 <div class="hero-right">
 
-<div class="float-card card1">
-<img src="images/ikigai.png">
-<h4>IKIGAI Test</h4>
+<div class="floating-card card1">
+
+<img
+src="images/ikigai.png">
+
+<h4>
+
+IKIGAI Test
+
+</h4>
+
 </div>
 
-<div class="float-card card2">
-<img src="images/aptitude.png">
-<h4>Aptitude Test</h4>
+<div class="floating-card card2">
+
+<img
+src="images/aptitude.png">
+
+<h4>
+
+Aptitude Test
+
+</h4>
+
 </div>
 
-<div class="float-card card3">
-<img src="images/mit.png">
-<h4>Multiple Intelligence</h4>
+<div class="floating-card card3">
+
+<img
+src="images/multiple-intelligence.png">
+
+<h4>
+
+Multiple Intelligence
+
+</h4>
+
 </div>
 
-<div class="float-card card4">
-<img src="images/personality.png">
-<h4>Personality Test</h4>
+<div class="floating-card card4">
+
+<img
+src="images/personality.png">
+
+<h4>
+
+Personality Test
+
+</h4>
+
 </div>
 
-<div class="float-card card5">
-<img src="images/values.png">
-<h4>Values Test</h4>
+<div class="floating-card card5">
+
+<img
+src="images/values.png">
+
+<h4>
+
+Values Test
+
+</h4>
+
 </div>
 
 </div>
@@ -405,496 +187,649 @@ Book Counseling
 
 </section>
 
-<section class="section" id="why">
+<!-- WHY X FACTOR -->
 
-<h2 class="section-title">Why X Factor?</h2>
+<section
+id="why"
+class="why-section">
 
-<p class="section-sub">
-A comprehensive system designed to help students discover strengths, identify career opportunities and build a meaningful future.
+<div class="container">
+
+<h2>
+
+Why X Factor?
+
+</h2>
+
+<p class="section-subtitle">
+
+A complete career discovery system
+designed for students,
+parents,
+and young professionals.
+
 </p>
 
 <div class="why-grid">
 
 <div class="why-card">
-<h3>Scientific Assessments</h3>
-<p>Evidence-based evaluation of strengths and interests.</p>
+
+<h3>
+
+Scientific Assessments
+
+</h3>
+
+<p>
+
+Understand strengths,
+aptitude,
+personality
+and interests.
+
+</p>
+
 </div>
 
 <div class="why-card">
-<h3>Career Clarity</h3>
-<p>Top career matches aligned with your profile.</p>
+
+<h3>
+
+Career Clarity
+
+</h3>
+
+<p>
+
+Receive personalized
+career recommendations.
+
+</p>
+
 </div>
 
 <div class="why-card">
-<h3>Roadmap Planning</h3>
-<p>Step-by-step path from school to profession.</p>
+
+<h3>
+
+Roadmap Planning
+
+</h3>
+
+<p>
+
+Know exactly what steps
+to take next.
+
+</p>
+
 </div>
 
 <div class="why-card">
-<h3>Growth Tracking</h3>
-<p>Monitor skills, goals and career readiness.</p>
+
+<h3>
+
+Growth Tracking
+
+</h3>
+
+<p>
+
+Track skills,
+goals
+and readiness.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- SERVICES SECTION -->
+
+<section
+id="services"
+class="services-section">
+
+<div class="container">
+
+<h2>
+
+Our Services
+
+</h2>
+
+<p class="section-subtitle">
+
+Choose the service that best fits your journey.
+
+</p>
+
+<div class="services-grid">
+
+<!-- CAREER BLUEPRINT -->
+
+<div class="service-card">
+
+<img
+src="images/ikigai.png"
+alt="Career Blueprint">
+
+<h3>
+
+Career Blueprint Assessment
+
+</h3>
+
+<p>
+
+IKIGAI + Aptitude +
+Multiple Intelligence +
+Personality + Values
+
+</p>
+
+<button
+class="service-btn"
+onclick="openLead()">
+
+Start Assessment
+
+</button>
+
+</div>
+
+<!-- DMIT -->
+
+<div class="service-card">
+
+<img
+src="images/personality.png"
+alt="DMIT">
+
+<h3>
+
+DMIT Validation Package
+
+</h3>
+
+<p>
+
+DMIT acts as an additional
+validation layer and not the
+sole decision-making tool.
+
+</p>
+
+<a
+href="YOUR_RAZORPAY_LINK"
+class="service-btn">
+
+Buy Now
+
+</a>
+
+</div>
+
+<!-- ROADMAP -->
+
+<div class="service-card">
+
+<img
+src="images/aptitude.png"
+alt="Roadmap">
+
+<h3>
+
+Career Roadmap Planning
+
+</h3>
+
+<p>
+
+Get a 5-Year roadmap
+for your future career.
+
+</p>
+
+<a
+href="YOUR_RAZORPAY_LINK"
+class="service-btn">
+
+Get Roadmap
+
+</a>
+
+</div>
+
+<!-- DASHBOARD -->
+
+<div class="service-card">
+
+<img
+src="images/multiple-intelligence.png"
+alt="Dashboard">
+
+<h3>
+
+Student Growth Dashboard
+
+</h3>
+
+<p>
+
+Track goals,
+skills,
+progress and readiness.
+
+</p>
+
+<a
+href="YOUR_RAZORPAY_LINK"
+class="service-btn">
+
+Subscribe
+
+</a>
+
+</div>
+
+<!-- ENTREPRENEUR -->
+
+<div class="service-card">
+
+<img
+src="images/values.png"
+alt="Entrepreneur">
+
+<h3>
+
+Entrepreneurial Potential Assessment
+
+</h3>
+
+<p>
+
+Leadership,
+Creativity,
+Independence,
+Risk Taking
+
+</p>
+
+<button
+class="service-btn"
+onclick="openLead()">
+
+Start Assessment
+
+</button>
+
+</div>
+
 </div>
 
 </div>
 
 </section>
 
-<div class="lead-popup" id="leadPopup">
+<!-- LEAD POPUP -->
+
+<div
+class="lead-popup"
+id="leadPopup">
 
 <div class="popup-box">
 
-<h2>Start Your Journey</h2>
+<h2>
 
-<input type="text" placeholder="Full Name">
+Start Your Journey
 
-<input type="email" placeholder="Email">
+</h2>
 
-<input type="text" placeholder="Mobile Number">
+<p>
 
-<input type="text" placeholder="School / College">
+Complete your details before
+accessing assessments.
 
-<input type="text" placeholder="Class / Grade">
+</p>
 
-<input type="text" placeholder="City">
+<input
+type="text"
+id="studentName"
+placeholder="Full Name">
 
-<button onclick="closeLead()">
-Continue to Assessment
+<input
+type="email"
+id="studentEmail"
+placeholder="Email">
+
+<input
+type="text"
+id="studentMobile"
+placeholder="Mobile Number">
+
+<input
+type="text"
+id="studentSchool"
+placeholder="School / College">
+
+<input
+type="text"
+id="studentClass"
+placeholder="Class / Grade">
+
+<input
+type="text"
+id="studentCity"
+placeholder="City">
+
+<button
+class="popup-btn"
+onclick="startAssessment()">
+
+Continue
+
+</button>
+
+<button
+class="close-btn"
+onclick="closeLead()">
+
+Close
+
 </button>
 
 </div>
 
 </div>
+<!-- ASSESSMENT CONTAINER -->
 
-<script>
+<section
+id="assessmentContainer"
+class="assessment-section"
+style="display:none;">
 
-function openLead(){
-document.getElementById("leadPopup").style.display="flex";
-}
+<div class="container">
 
-function closeLead(){
+<h1>
 
-document.getElementById("leadPopup").style.display="none";
-
-alert(
-"Assessment Engine will start here in Part 2"
-);
-
-}
-
-</script>
-<!-- ASSESSMENT SCREEN -->
-
-<section id="assessmentSection" style="display:none;padding:120px 8%;min-height:100vh;background:#0b0b0b;">
-
-<div style="max-width:900px;margin:auto;">
-
-<h2 style="color:#f4c542;text-align:center;margin-bottom:25px;">
 Career Blueprint Assessment
-</h2>
 
-<div style="background:#1a1a1a;height:14px;border-radius:30px;overflow:hidden;margin-bottom:40px;">
+</h1>
 
-<div id="progressBar"
-style="
-height:100%;
-width:0%;
-background:#f4c542;
-transition:.4s;">
+<p class="section-subtitle">
+
+Discover your strengths,
+personality,
+aptitude,
+values and purpose.
+
+</p>
+
+<!-- PROGRESS BAR -->
+
+<div class="progress-wrapper">
+
+<div
+id="progressBar"
+class="progress-bar">
+
 </div>
 
 </div>
 
+<!-- QUESTION COUNTER -->
+
+<div class="question-counter">
+
+Question
+
+<span id="currentQuestion">
+
+1
+
+</span>
+
+of
+
+<span id="totalQuestions">
+
+50
+
+</span>
+
+</div>
+
+<!-- CATEGORY -->
+
 <div
-style="
-background:#141414;
-padding:40px;
-border-radius:20px;
-border:1px solid rgba(244,197,66,.2);
-">
+id="questionCategory"
+class="question-category">
 
-<h3 id="questionCategory"
-style="
-color:#f4c542;
-margin-bottom:15px;">
-</h3>
+IKIGAI
 
-<h2 id="questionText"
-style="
-margin-bottom:30px;
-line-height:1.6;">
+</div>
+
+<!-- QUESTION CARD -->
+
+<div class="question-card">
+
+<h2
+id="questionText">
+
+Question will appear here
+
 </h2>
 
-<div id="optionsContainer"></div>
-
 <div
-style="
-display:flex;
-justify-content:space-between;
-margin-top:35px;">
+id="optionsContainer">
+
+</div>
+
+</div>
+
+<!-- BUTTONS -->
+
+<div class="assessment-buttons">
 
 <button
-onclick="previousQuestion()"
-style="
-padding:12px 25px;
-background:#333;
-color:white;
-border:none;
-border-radius:10px;">
+id="previousBtn"
+onclick="previousQuestion()">
+
 Previous
+
 </button>
 
 <button
-onclick="nextQuestion()"
-style="
-padding:12px 25px;
-background:#f4c542;
-color:black;
-border:none;
-font-weight:700;
-border-radius:10px;">
-Next
-</button>
+id="nextBtn"
+onclick="nextQuestion()">
 
-</div>
+Next
+
+</button>
 
 </div>
 
 </div>
 
 </section>
-<script>
 
-const questions = [
+<!-- PROCESSING SCREEN -->
 
-{
-category:"IKIGAI",
-question:"What activity makes you lose track of time?",
-options:[
-"Teaching",
-"Designing",
-"Building",
-"Helping Others"
-]
-},
+<section
+id="processingScreen"
+class="processing-section"
+style="display:none;">
 
-{
-category:"IKIGAI",
-question:"What do people often appreciate you for?",
-options:[
-"Creativity",
-"Leadership",
-"Knowledge",
-"Communication"
-]
-},
+<div class="container">
 
-{
-category:"APTITUDE",
-question:"What is 20% of 200?",
-options:[
-"20",
-"30",
-"40",
-"50"
-]
-},
+<h1>
 
-{
-category:"APTITUDE",
-question:"Find the next number: 2,4,8,16",
-options:[
-"20",
-"24",
-"32",
-"64"
-]
-},
+Generating Your Career Blueprint...
 
-{
-category:"MI",
-question:"I enjoy solving puzzles.",
-options:[
-"Strongly Agree",
-"Agree",
-"Neutral",
-"Disagree"
-]
-},
+</h1>
 
-{
-category:"MI",
-question:"I learn best through visuals.",
-options:[
-"Strongly Agree",
-"Agree",
-"Neutral",
-"Disagree"
-]
-},
-
-{
-category:"PERSONALITY",
-question:"I enjoy meeting new people.",
-options:[
-"Strongly Agree",
-"Agree",
-"Neutral",
-"Disagree"
-]
-},
-
-{
-category:"PERSONALITY",
-question:"I plan my activities in advance.",
-options:[
-"Strongly Agree",
-"Agree",
-"Neutral",
-"Disagree"
-]
-},
-
-{
-category:"VALUES",
-question:"What matters most in a career?",
-options:[
-"Money",
-"Purpose",
-"Freedom",
-"Security"
-]
-},
-
-{
-category:"VALUES",
-question:"What motivates you the most?",
-options:[
-"Growth",
-"Recognition",
-"Impact",
-"Stability"
-]
-}
-
-]
-
-let currentQuestion = 0
-let score = 0
-
-</script>
-<script>
-
-function renderQuestion(){
-
-const q =
-questions[currentQuestion]
-
-document.getElementById(
-"questionCategory"
-).innerHTML =
-q.category
-
-document.getElementById(
-"questionText"
-).innerHTML =
-q.question
-
-let html = ""
-
-q.options.forEach(
-
-(option,index)=>{
-
-html += `
-
-<div
-onclick="selectOption(${index})"
-class="option-card"
-style="
-padding:15px;
-margin-bottom:12px;
-border:1px solid #333;
-border-radius:12px;
-cursor:pointer;
-">
-
-${option}
+<div class="spinner">
 
 </div>
 
-`
+<p>
 
-})
+Analyzing responses across:
 
-document.getElementById(
-"optionsContainer"
-).innerHTML = html
+<br><br>
 
-updateProgress()
+✓ IKIGAI
 
-}
+<br>
 
-</script>
-<script>
+✓ Aptitude
 
-let selectedAnswer = null
+<br>
 
-function selectOption(index){
+✓ Multiple Intelligence
 
-selectedAnswer = index
+<br>
 
-document
-.querySelectorAll(".option-card")
-.forEach(card=>{
+✓ Personality
 
-card.style.border=
-"1px solid #333"
+<br>
 
-})
+✓ Values
 
-document
-.querySelectorAll(".option-card")
-[index]
-.style.border=
-"2px solid #f4c542"
+</p>
 
-}
+</div>
 
-</script>
-<script>
+</section>
+<!-- CATEGORY INTRO SCREEN -->
 
-function nextQuestion(){
-
-if(selectedAnswer===null){
-
-alert(
-"Please select an answer."
-)
-
-return
-
-}
-
-score += selectedAnswer + 1
-
-selectedAnswer = null
-
-currentQuestion++
-
-if(
-currentQuestion >=
-questions.length
-){
-
-showResults()
-
-return
-
-}
-
-renderQuestion()
-
-}
-
-function previousQuestion(){
-
-if(currentQuestion===0)
-return
-
-currentQuestion--
-
-renderQuestion()
-
-}
-
-</script>
-<script>
-
-function updateProgress(){
-
-const percentage =
-
-(
-(currentQuestion+1)
-
-/
-
-questions.length
-
-)
-
-*100
-
-document.getElementById(
-"progressBar"
-).style.width =
-percentage+"%"
-
-}
-
-</script>
 <section
-id="resultSection"
-style="
-display:none;
-padding:120px 8%;
-background:#0b0b0b;
-min-height:100vh;
-">
+id="categoryIntro"
+class="category-intro"
+style="display:none;">
 
-<div
-style="
-max-width:1200px;
-margin:auto;
-">
+<div class="container">
 
 <h1
-style="
-text-align:center;
-color:#f4c542;
-margin-bottom:20px;
-font-size:3rem;
-">
+id="introTitle">
 
-Your Career Blueprint Report
+IKIGAI Assessment
 
 </h1>
 
 <p
-style="
-text-align:center;
-color:#d1d5db;
-margin-bottom:50px;
-">
+id="introDescription">
 
-Based on your responses across IKIGAI, Aptitude,
-Multiple Intelligence, Personality and Values.
+Discover your purpose,
+passion and direction.
 
 </p>
 
-<div
-style="
-display:grid;
-grid-template-columns:
-repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-">
+<button
+class="primary-btn"
+onclick="beginCategory()">
 
-<div class="report-card">
+Begin Assessment
 
-<h3>Career Readiness</h3>
-
-<h1 id="careerReadiness">
-82%
-</h1>
+</button>
 
 </div>
 
-<div class="report-card">
+</section>
+<!-- RESULT CONTAINER -->
 
-<h3>Recommended Stream</h3>
+<section
+id="resultContainer"
+class="result-section"
+style="display:none;">
 
-<h2 id="recommendedStream">
+<div class="container">
+
+<!-- REPORT HEADER -->
+
+<div class="report-header">
+
+<h1>
+
+Career Blueprint Report
+
+</h1>
+
+<p>
+
+Unlocking the X in Every Human Being
+
+</p>
+
+</div>
+
+<!-- STUDENT INFO -->
+
+<div class="student-card">
+
+<h2>
+
+Welcome
+
+<span id="studentDisplayName">
+
+Student
+
+</span>
+
+</h2>
+
+<p>
+
+Your personalized career blueprint
+has been generated.
+
+</p>
+
+</div>
+
+<!-- SCORE SECTION -->
+
+<div class="score-wrapper">
+
+<div class="score-circle">
+
+<span
+id="careerReadiness">
+
+85%
+
+</span>
+
+</div>
+
+<h3>
+
+Career Readiness Score
+
+</h3>
+
+</div>
+
+<!-- SUMMARY CARDS -->
+
+<div class="summary-grid">
+
+<div class="summary-card">
+
+<h3>
+
+Recommended Stream
+
+</h3>
+
+<h2
+id="recommendedStream">
 
 Science
 
@@ -902,11 +837,16 @@ Science
 
 </div>
 
-<div class="report-card">
+<div class="summary-card">
 
-<h3>Learning Style</h3>
+<h3>
 
-<h2 id="learningStyle">
+Learning Style
+
+</h3>
+
+<h2
+id="learningStyle">
 
 Visual Learner
 
@@ -914,18 +854,30 @@ Visual Learner
 
 </div>
 
-</div>
+<div class="summary-card">
 
-<div
-style="
-margin-top:60px;
-">
+<h3>
+
+Top Career Match
+
+</h3>
 
 <h2
-style="
-color:#f4c542;
-margin-bottom:20px;
-">
+id="topCareer">
+
+Data Scientist
+
+</h2>
+
+</div>
+
+</div>
+
+<!-- CAREER MATCHES -->
+
+<div class="report-section">
+
+<h2>
 
 Top Career Matches
 
@@ -939,415 +891,151 @@ class="career-grid">
 
 </div>
 
-<div
-style="
-margin-top:60px;
-">
+<!-- STRENGTHS -->
 
-<h2
-style="
-color:#f4c542;
-margin-bottom:20px;
-">
+<div class="report-section">
 
-Strengths
+<h2>
+
+Your Strengths
 
 </h2>
 
-<ul id="strengthList">
+<ul
+id="strengthList">
 
 </ul>
 
 </div>
 
-<div
-style="
-margin-top:50px;
-">
+<!-- DEVELOPMENT AREAS -->
 
-<h2
-style="
-color:#f4c542;
-margin-bottom:20px;
-">
+<div class="report-section">
+
+<h2>
 
 Development Areas
 
 </h2>
 
-<ul id="developmentList">
+<ul
+id="developmentList">
 
 </ul>
 
 </div>
 
-<div
-style="
-text-align:center;
-margin-top:60px;
-">
+<!-- MULTIPLE INTELLIGENCE -->
 
-<a
-href="#"
-class="btn btn-primary">
+<div class="report-section">
 
-Download Report
+<h2>
 
-</a>
+Multiple Intelligence Profile
+
+</h2>
+
+<canvas
+id="miChart">
+
+</canvas>
 
 </div>
 
+<!-- PERSONALITY -->
+
+<div class="report-section">
+
+<h2>
+
+Personality Profile
+
+</h2>
+
+<canvas
+id="personalityChart">
+
+</canvas>
+
 </div>
 
-</section>
-<script>
+<!-- CTA -->
 
-function showResults(){
+<div class="report-cta">
 
-document
+<h2>
 
-.getElementById(
-"assessmentSection"
-)
+Need Personalized Guidance?
 
-.style.display="none"
-
-document
-
-.getElementById(
-"resultSection"
-)
-
-.style.display="block"
-
-generateCareerReport()
-
-}
-
-</script>
-<script>
-
-function generateCareerReport(){
-
-let readiness =
-
-Math.min(
-
-100,
-
-Math.round(
-(score/questions.length)*20
-)
-
-)
-
-document
-
-.getElementById(
-"careerReadiness"
-)
-
-.innerHTML =
-
-readiness + "%"
-
-let stream = "Science"
-
-if(readiness < 50){
-
-stream = "Commerce"
-
-}
-
-document
-
-.getElementById(
-"recommendedStream"
-)
-
-.innerHTML = stream
-
-let learning =
-
-"Visual Learner"
-
-if(readiness > 80){
-
-learning =
-"Experiential Learner"
-
-}
-
-document
-
-.getElementById(
-"learningStyle"
-)
-
-.innerHTML = learning
-
-generateCareers(
-readiness
-)
-
-generateStrengths(
-readiness
-)
-
-generateDevelopment(
-readiness
-)
-
-}
-
-</script>
-<script>
-
-function generateCareers(score){
-
-let careers = []
-
-if(score>80){
-
-careers = [
-
-"Data Scientist",
-
-"AI Engineer",
-
-"Psychologist",
-
-"Product Manager",
-
-"UX Designer"
-
-]
-
-}else{
-
-careers = [
-
-"Teacher",
-
-"Marketing Manager",
-
-"Business Analyst",
-
-"HR Specialist",
-
-"Digital Marketer"
-
-]
-
-}
-
-let html=""
-
-careers.forEach(
-
-career=>{
-
-html +=
-
-`
-
-<div class="career-card">
-
-<h3>${career}</h3>
+</h2>
 
 <p>
 
-Strong Match
+Book a professional counseling session.
 
 </p>
-
-</div>
-
-`
-
-})
-
-document
-
-.getElementById(
-"careerMatches"
-)
-
-.innerHTML = html
-
-}
-
-</script>
-<script>
-
-function generateStrengths(score){
-
-let strengths = []
-
-if(score>80){
-
-strengths = [
-
-"Strong analytical ability",
-
-"High learning adaptability",
-
-"Clear career direction",
-
-"Strong problem solving"
-
-]
-
-}else{
-
-strengths = [
-
-"Good communication",
-
-"Positive attitude",
-
-"Growth mindset",
-
-"Team collaboration"
-
-]
-
-}
-
-let html=""
-
-strengths.forEach(
-
-item=>{
-
-html +=
-
-`<li>${item}</li>`
-
-})
-
-document
-
-.getElementById(
-"strengthList"
-)
-
-.innerHTML = html
-
-}
-
-</script>
-<script>
-
-function generateDevelopment(score){
-
-let areas=[]
-
-if(score>80){
-
-areas=[
-
-"Develop leadership",
-
-"Gain project experience",
-
-"Build industry exposure"
-
-]
-
-}else{
-
-areas=[
-
-"Improve focus",
-
-"Develop analytical skills",
-
-"Explore more career options"
-
-]
-
-}
-
-let html=""
-
-areas.forEach(
-
-item=>{
-
-html +=
-
-`<li>${item}</li>`
-
-})
-
-document
-
-.getElementById(
-"developmentList"
-)
-
-.innerHTML = html
-
-}
-
-</script>
-<section class="gold-section">
-
-<h2 class="section-title">
-Student Growth Dashboard
-</h2>
-
-<p class="section-sub">
-Track your progress beyond assessments.
-</p>
-
-<div class="dashboard-cards">
-
-<div class="dash-card">
-<h2>Goals</h2>
-<p>Track academic and career goals.</p>
-</div>
-
-<div class="dash-card">
-<h2>Skills</h2>
-<p>Monitor skill development.</p>
-</div>
-
-<div class="dash-card">
-<h2>Progress</h2>
-<p>Monthly growth tracking.</p>
-</div>
-
-<div class="dash-card">
-<h2>Career Readiness</h2>
-<p>Measure preparedness.</p>
-</div>
-
-</div>
-
-<div style="text-align:center;margin-top:40px;">
 
 <a
 href="YOUR_RAZORPAY_LINK"
-class="btn btn-primary">
+class="primary-btn">
 
-Subscribe Now
+Book Counseling
 
 </a>
 
 </div>
 
-</section>
-<section class="gold-section">
+</div>
 
-<h2 class="section-title">
+</section>
+<!-- REPORT DOWNLOAD SECTION -->
+
+<section
+id="downloadSection"
+class="download-section"
+style="display:none;">
+
+<div class="container">
+
+<h2>
+
+Download Your Report
+
+</h2>
+
+<p>
+
+Save your Career Blueprint Report.
+
+</p>
+
+<button
+class="primary-btn">
+
+Download PDF
+
+</button>
+
+</div>
+
+</section>
+<!-- DMIT VALIDATION PACKAGE -->
+
+<section
+id="dmit"
+class="premium-section">
+
+<div class="container">
+
+<div class="premium-header">
+
+<h2>
 
 DMIT Validation Package
 
 </h2>
 
-<p class="section-sub">
+<p>
 
 DMIT is used as an additional
 validation layer and not as the
@@ -1355,32 +1043,81 @@ sole career decision-making tool.
 
 </p>
 
-<div
-style="
-max-width:900px;
-margin:auto;
-text-align:center;
-">
+</div>
 
-<ul
-style="
-list-style:none;
-line-height:2.3;
-">
+<div class="premium-grid">
 
-<li>✓ DMIT Analysis</li>
+<div class="premium-card">
 
-<li>✓ Career Blueprint Assessment</li>
+<h3>
 
-<li>✓ Comparison Report</li>
+DMIT Analysis
 
-<li>✓ Recommendation Summary</li>
+</h3>
 
-</ul>
+<p>
+
+Fingerprint-based intelligence insights.
+
+</p>
+
+</div>
+
+<div class="premium-card">
+
+<h3>
+
+Career Blueprint Assessment
+
+</h3>
+
+<p>
+
+Complete psychometric assessment.
+
+</p>
+
+</div>
+
+<div class="premium-card">
+
+<h3>
+
+Comparison Report
+
+</h3>
+
+<p>
+
+Compare DMIT findings with assessment results.
+
+</p>
+
+</div>
+
+<div class="premium-card">
+
+<h3>
+
+Recommendation Summary
+
+</h3>
+
+<p>
+
+Integrated career guidance report.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="premium-action">
 
 <a
 href="YOUR_RAZORPAY_LINK"
-class="btn btn-primary">
+class="primary-btn">
 
 Buy DMIT Package
 
@@ -1388,60 +1125,97 @@ Buy DMIT Package
 
 </div>
 
-</section>
-<section class="gold-section">
+</div>
 
-<h2 class="section-title">
+</section>
+
+<!-- CAREER ROADMAP -->
+
+<section
+id="roadmap"
+class="premium-section">
+
+<div class="container">
+
+<div class="premium-header">
+
+<h2>
 
 Career Roadmap Planning
 
 </h2>
 
-<div
-style="
-max-width:900px;
-margin:auto;
-">
+<p>
 
-<div class="timeline">
+Get a personalized 5-Year roadmap.
+
+</p>
+
+</div>
+
+<div class="roadmap-flow">
+
+<div class="roadmap-step">
 
 Class 10
 
+</div>
+
+<div class="roadmap-arrow">
+
 ↓
+
+</div>
+
+<div class="roadmap-step">
 
 Science
 
-↓
+</div>
 
-B.Tech Artificial Intelligence
-
-↓
-
-Python Certification
+<div class="roadmap-arrow">
 
 ↓
 
-Machine Learning
+</div>
+
+<div class="roadmap-step">
+
+B.Tech AI
+
+</div>
+
+<div class="roadmap-arrow">
 
 ↓
 
-Internship
+</div>
+
+<div class="roadmap-step">
+
+AI Certification
+
+</div>
+
+<div class="roadmap-arrow">
 
 ↓
+
+</div>
+
+<div class="roadmap-step">
 
 Data Scientist
 
 </div>
 
-<div
-style="
-text-align:center;
-margin-top:40px;
-">
+</div>
+
+<div class="premium-action">
 
 <a
 href="YOUR_RAZORPAY_LINK"
-class="btn btn-primary">
+class="primary-btn">
 
 Get Personalized Roadmap
 
@@ -1452,177 +1226,477 @@ Get Personalized Roadmap
 </div>
 
 </section>
-<section class="gold-section">
 
-<h2 class="section-title">
+<!-- STUDENT DASHBOARD -->
+
+<section
+id="dashboard"
+class="premium-section">
+
+<div class="container">
+
+<div class="premium-header">
+
+<h2>
+
+Student Growth Dashboard
+
+</h2>
+
+<p>
+
+Track growth continuously.
+
+</p>
+
+</div>
+
+<div class="dashboard-grid">
+
+<div class="dashboard-card">
+
+<h3>
+
+Goals
+
+</h3>
+
+<p>
+
+Set academic and career goals.
+
+</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>
+
+Skills
+
+</h3>
+
+<p>
+
+Track skill development.
+
+</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>
+
+Progress
+
+</h3>
+
+<p>
+
+Monthly performance tracking.
+
+</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>
+
+Career Readiness
+
+</h3>
+
+<p>
+
+Monitor readiness score.
+
+</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>
+
+Achievements
+
+</h3>
+
+<p>
+
+Celebrate milestones.
+
+</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>
+
+Counseling Sessions
+
+</h3>
+
+<p>
+
+Track consultations.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="premium-action">
+
+<a
+href="YOUR_RAZORPAY_LINK"
+class="primary-btn">
+
+Subscribe Now
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ENTREPRENEURIAL POTENTIAL -->
+
+<section
+id="entrepreneur"
+class="premium-section">
+
+<div class="container">
+
+<div class="premium-header">
+
+<h2>
 
 Entrepreneurial Potential Assessment
 
 </h2>
 
-<p class="section-sub">
+<p>
 
-Measure leadership,
-creativity,
-independence,
-risk tolerance
-and opportunity recognition.
+Discover your entrepreneurial strengths.
 
 </p>
 
-<div class="dashboard-cards">
-
-<div class="dash-card">
-<h2>Leadership</h2>
 </div>
 
-<div class="dash-card">
-<h2>Creativity</h2>
-</div>
+<div class="entrepreneur-grid">
 
-<div class="dash-card">
-<h2>Risk Taking</h2>
-</div>
+<div class="entrepreneur-card">
 
-<div class="dash-card">
-<h2>Opportunity Recognition</h2>
-</div>
+<h3>
+
+Risk Tolerance
+
+</h3>
 
 </div>
 
-<div
-style="
-text-align:center;
-margin-top:40px;
-">
+<div class="entrepreneur-card">
 
-<a
-onclick="openLead()"
-class="btn btn-primary">
+<h3>
+
+Creativity
+
+</h3>
+
+</div>
+
+<div class="entrepreneur-card">
+
+<h3>
+
+Leadership
+
+</h3>
+
+</div>
+
+<div class="entrepreneur-card">
+
+<h3>
+
+Independence
+
+</h3>
+
+</div>
+
+<div class="entrepreneur-card">
+
+<h3>
+
+Opportunity Recognition
+
+</h3>
+
+</div>
+
+</div>
+
+<div class="premium-action">
+
+<button
+class="primary-btn"
+onclick="openLead()">
 
 Start Assessment
 
-</a>
+</button>
+
+</div>
 
 </div>
 
 </section>
-<section class="gold-section">
+<!-- TESTIMONIALS -->
 
-<h2 class="section-title">
+<section
+id="testimonials"
+class="testimonials-section">
+
+<div class="container">
+
+<h2>
 
 Success Stories
 
 </h2>
 
-<div class="dashboard-cards">
+<p class="section-subtitle">
 
-<div class="testimonial">
+Students and parents who found clarity.
+
+</p>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-card">
 
 <h3>
+
 Student
+
 </h3>
 
 <p>
 
-The Career Blueprint Assessment
-helped me choose AI Engineering.
+The Career Blueprint Assessment helped me
+identify AI Engineering as my ideal path.
 
 </p>
 
 </div>
 
-<div class="testimonial">
+<div class="testimonial-card">
 
 <h3>
+
 Parent
+
 </h3>
 
 <p>
 
-The report provided clarity and
-direction for my child.
+The report gave us confidence while choosing
+our child's stream and future direction.
 
 </p>
 
 </div>
 
-<div class="testimonial">
+<div class="testimonial-card">
 
 <h3>
+
 College Student
+
 </h3>
 
 <p>
 
-The roadmap showed me exactly
-what to learn next.
+The roadmap clearly showed me what skills
+and certifications I should pursue.
 
 </p>
+
+</div>
 
 </div>
 
 </div>
 
 </section>
-<section class="gold-section">
 
-<h2 class="section-title">
+<!-- FAQ -->
+
+<section
+id="faq"
+class="faq-section">
+
+<div class="container">
+
+<h2>
 
 Frequently Asked Questions
 
 </h2>
 
-<div
-style="
-max-width:900px;
-margin:auto;
-">
+<div class="faq-item">
 
-<div
-class="faq-item"
-onclick="toggleFaq(this)">
+<h3>
 
 What is Career Blueprint Assessment?
 
-<div class="faq-answer">
+</h3>
 
-A scientific combination of
-IKIGAI,
+<p>
+
+A scientific combination of IKIGAI,
 Aptitude,
 Multiple Intelligence,
-Personality
+Personality,
 and Values assessments.
 
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+How long does it take?
+
+</h3>
+
+<p>
+
+Approximately 20–30 minutes.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+Will I receive a report?
+
+</h3>
+
+<p>
+
+Yes. An instant preliminary report is generated,
+followed by a reviewed report.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+Is DMIT mandatory?
+
+</h3>
+
+<p>
+
+No. DMIT is optional and serves only as an
+additional validation layer.
+
+</p>
+
 </div>
 
 </div>
 
-<div
-class="faq-item"
-onclick="toggleFaq(this)">
+</section>
 
-How long does assessment take?
+<!-- CONTACT -->
 
-<div class="faq-answer">
+<section
+id="contact"
+class="contact-section">
 
-Approximately
-20 to 30 minutes.
+<div class="container">
+
+<h2>
+
+Contact X Factor
+
+</h2>
+
+<p>
+
+Unlocking the X in Every Human Being
+
+</p>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h3>
+
+Website
+
+</h3>
+
+<p>
+
+xfactor.space
+
+</p>
 
 </div>
 
+<div class="contact-card">
+
+<h3>
+
+Email
+
+</h3>
+
+<p>
+
+info@xfactor.space
+
+</p>
+
 </div>
 
-<div
-class="faq-item"
-onclick="toggleFaq(this)">
+<div class="contact-card">
 
-When will I receive my report?
+<h3>
 
-<div class="faq-answer">
+Services
 
-Instant preliminary report
-followed by expert review.
+</h3>
+
+<p>
+
+Career Guidance,
+Assessments,
+Roadmaps,
+DMIT
+
+</p>
 
 </div>
 
@@ -1631,268 +1705,78 @@ followed by expert review.
 </div>
 
 </section>
-<script>
 
-function toggleFaq(element){
+<!-- FOOTER -->
 
-let answer =
+<footer>
 
-element.querySelector(
-".faq-answer"
-)
+<div class="container">
 
-if(
-answer.style.display==="block"
-){
+<div class="footer-logo">
 
-answer.style.display="none"
-
-}else{
-
-answer.style.display="block"
-
-}
-
-}
-
-</script>
-YOUR_RAZORPAY_LINK
-  <div
-style="
-display:flex;
-justify-content:center;
-margin-bottom:50px;
-">
-
-<div class="score-circle">
-
-<span id="scoreNumber">
-
-85%
-
-</span>
+<img
+src="images/xfactor-logo.png"
+alt="X Factor Logo">
 
 </div>
-
-</div>
-<canvas
-id="miChart"
-height="250">
-</canvas>
-<script src=
-"https://cdn.jsdelivr.net/npm/chart.js">
-</script>
-<script>
-
-function renderMIChart(){
-
-new Chart(
-
-document.getElementById(
-"miChart"
-),
-
-{
-
-type:"radar",
-
-data:{
-
-labels:[
-
-"Linguistic",
-
-"Logical",
-
-"Visual",
-
-"Musical",
-
-"Interpersonal"
-
-],
-
-datasets:[{
-
-label:
-
-"Multiple Intelligence",
-
-data:[
-
-85,
-75,
-90,
-65,
-80
-
-],
-
-borderColor:"#f4c542",
-
-backgroundColor:
-
-"rgba(244,197,66,.2)"
-
-}]
-
-}
-
-})
-
-}
-
-</script>
-<canvas
-id="personalityChart"
-height="250">
-</canvas>
-<script>
-
-function renderPersonalityChart(){
-
-new Chart(
-
-document.getElementById(
-"personalityChart"
-),
-
-{
-
-type:"bar",
-
-data:{
-
-labels:[
-
-"Openness",
-
-"Conscientiousness",
-
-"Extraversion",
-
-"Agreeableness",
-
-"Stability"
-
-],
-
-datasets:[{
-
-data:[
-
-80,
-75,
-70,
-85,
-78
-
-],
-
-backgroundColor:"#f4c542"
-
-}]
-
-}
-
-})
-
-}
-
-</script>
-showResults()
-  renderPersonalityChart()
-const questions=[
-...
-]
-  {
-category:"IKIGAI",
-question:"...",
-options:[
-"...",
-"...",
-"...",
-"..."
-]
-}
-  <div id="categoryIntro">
-
-<h1>
-
-IKIGAI Assessment
-
-</h1>
-
-<p>
-
-Discover your purpose.
-
-</p>
-
-<button>
-
-Begin
-
-</button>
-
-</div>
-<div id="processing">
-
-<h1>
-
-Generating Career Blueprint...
-
-</h1>
-
-<div class="spinner"></div>
-
-</div>
-localStorage
-  localStorage.setItem(
-
-"name",
-
-document.getElementById(
-"name"
-).value
-
-)
-  Welcome Dhaval
-  <div class="career-card">
 
 <h3>
 
-Data Scientist
+X Factor
 
 </h3>
 
-<div>
+<p>
 
-92% Match
+Unlocking the X in Every Human Being
 
-</div>
+</p>
 
-</div>
-<div
-style="
-text-align:center;
-margin-top:80px;
-">
+<div class="footer-links">
 
-<h2>
+<a href="#services">
 
-Ready For Personalized Guidance?
+Services
 
-</h2>
+</a>
 
-<br>
+<a href="#why">
 
-<a
-href="YOUR_RAZORPAY_LINK"
-class="btn btn-primary">
+Why X Factor
 
-Book Career Consultation
+</a>
+
+<a href="#faq">
+
+FAQ
+
+</a>
+
+<a href="#contact">
+
+Contact
 
 </a>
 
 </div>
+
+<p class="copyright">
+
+© 2026 X Factor. All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+<!-- CHART.JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- MAIN SCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
