@@ -1,409 +1,713 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>X Factor - Unlocking the X in Every Human Being</title>
+<header class="header">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <div class="logo-container">
+        <img src="images/xfactor-logo.png" alt="X Factor Logo">
+    </div>
 
-<style>
+    <nav class="navbar">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+        <a href="#home">Home</a>
 
-body{
-background:#000;
-color:#fff;
-}
+        <a href="#assessments">Assessments</a>
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:#000;
-border-bottom:1px solid #222;
-position:sticky;
-top:0;
-z-index:1000;
-}
+        <a href="#success">Success Stories</a>
 
-.logo{
-font-size:32px;
-font-weight:800;
-color:#f5c542;
-}
+        <a href="#pricing">Pricing</a>
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:30px;
-font-weight:500;
-}
+        <a href="#contact">Contact</a>
 
-.hero{
-padding:100px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-}
-
-.hero-left{
-max-width:600px;
-}
-
-.hero h1{
-font-size:64px;
-line-height:1.1;
-margin-bottom:20px;
-}
-
-.hero span{
-color:#f5c542;
-}
-
-.hero p{
-font-size:20px;
-color:#ccc;
-margin-bottom:30px;
-}
-
-.btn{
-display:inline-block;
-padding:15px 35px;
-background:#f5c542;
-color:black;
-text-decoration:none;
-font-weight:700;
-border-radius:50px;
-margin-right:15px;
-}
-
-.btn-outline{
-background:transparent;
-border:2px solid #f5c542;
-color:#f5c542;
-}
-
-.section{
-padding:80px 8%;
-}
-
-.section-title{
-text-align:center;
-font-size:48px;
-margin-bottom:50px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:#111;
-padding:30px;
-border-radius:20px;
-text-align:center;
-border:1px solid #222;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-border-color:#f5c542;
-}
-
-.card img{
-width:120px;
-height:120px;
-object-fit:contain;
-margin-bottom:20px;
-}
-
-.card h3{
-color:#f5c542;
-margin-bottom:10px;
-}
-
-.steps{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:20px;
-text-align:center;
-}
-
-.step{
-background:#111;
-padding:25px;
-border-radius:15px;
-}
-
-.pricing{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
-.price-box{
-background:#111;
-padding:35px;
-border-radius:20px;
-text-align:center;
-border:1px solid #222;
-}
-
-.price{
-font-size:42px;
-color:#f5c542;
-margin:20px 0;
-}
-
-form{
-max-width:700px;
-margin:auto;
-}
-
-input,select{
-width:100%;
-padding:15px;
-margin-bottom:15px;
-background:#111;
-border:1px solid #333;
-color:white;
-border-radius:10px;
-}
-
-button{
-width:100%;
-padding:15px;
-background:#f5c542;
-border:none;
-font-weight:700;
-border-radius:10px;
-cursor:pointer;
-}
-
-footer{
-padding:40px;
-text-align:center;
-border-top:1px solid #222;
-margin-top:50px;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:42px;
-}
-
-.steps{
-grid-template-columns:1fr;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<header>
-
-<div class="logo">X FACTOR</div>
-
-<nav>
-<a href="#tests">Assessments</a>
-<a href="#why">Why X Factor</a>
-<a href="#pricing">Pricing</a>
-<a href="#contact">Contact</a>
-</nav>
+    </nav>
 
 </header>
 
-<section class="hero">
+<section id="home" class="hero">
 
-<div class="hero-left">
+    <div class="hero-left">
 
-<h1>Unlocking the <span>X</span> in Every Human Being</h1>
+        <h1>
+            Discover Your
+            <span>True Potential</span>
+        </h1>
 
-<p>
-Discover your strengths, personality, aptitude,
-purpose and ideal career path through scientific assessments.
-</p>
+        <p>
 
-<a href="#contact" class="btn">Take The Test</a>
+            Scientific assessments to identify your purpose,
+            aptitude, intelligence, personality and values
+            for informed career decisions.
 
-<a href="#pricing" class="btn btn-outline">View Packages</a>
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="gold-btn"
+                    onclick="openRegistration()">
+
+                Take The Test
+
+            </button>
+
+            <button class="outline-btn">
+
+                Book Counseling
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+
+        <img src="images/xfactor-logo.png">
+
+    </div>
+
+</section>
+<section id="assessments" class="section">
+
+    <h2 class="section-title">
+
+        Career Blueprint Assessment
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        A comprehensive career assessment package
+        combining multiple scientific assessments.
+
+    </p>
+
+    <div class="assessment-grid">
+
+        <div class="assessment-card">
+
+            <img src="images/ikigai.png">
+
+            <h3>IKIGAI Test</h3>
+
+            <p>
+
+                Discover the intersection between
+                passion, mission, vocation and profession.
+
+            </p>
+
+        </div>
+
+        <div class="assessment-card">
+
+            <img src="images/aptitude.png">
+
+            <h3>Aptitude Test</h3>
+
+            <p>
+
+                Identify natural abilities,
+                logical thinking and reasoning.
+
+            </p>
+
+        </div>
+
+        <div class="assessment-card">
+
+            <img src="images/mit.png">
+
+            <h3>Multiple Intelligence</h3>
+
+            <p>
+
+                Discover dominant intelligence areas
+                and learning strengths.
+
+            </p>
+
+        </div>
+
+        <div class="assessment-card">
+
+            <img src="images/personality.png">
+
+            <h3>Personality Test</h3>
+
+            <p>
+
+                Understand behavior,
+                communication and work preferences.
+
+            </p>
+
+        </div>
+
+        <div class="assessment-card">
+
+            <img src="images/values.png">
+
+            <h3>Values Assessment</h3>
+
+            <p>
+
+                Discover personal priorities,
+                motivations and beliefs.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="section why-section">
+
+    <h2 class="section-title">
+
+        Why X Factor?
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        More than a test. A complete career discovery system.
+
+    </p>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+
+            <h3>Scientific Assessments</h3>
+
+            <p>
+
+                Evidence-based tools designed to
+                identify strengths, interests,
+                personality and intelligence.
+
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <h3>Career Clarity</h3>
+
+            <p>
+
+                Get suitable career recommendations
+                aligned with your profile.
+
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <h3>Roadmap Planning</h3>
+
+            <p>
+
+                Receive guidance from school
+                to professional success.
+
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <h3>Expert Counseling</h3>
+
+            <p>
+
+                Personalized counseling support
+                for students and parents.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<div id="registrationModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close-btn"
+              onclick="closeRegistration()">
+
+              &times;
+
+        </span>
+
+        <h2>Career Blueprint Assessment</h2>
+
+        <input
+        type="text"
+        id="name"
+        placeholder="Full Name">
+
+        <input
+        type="email"
+        id="email"
+        placeholder="Email Address">
+
+        <input
+        type="tel"
+        id="mobile"
+        placeholder="Mobile Number">
+
+        <button
+        class="gold-btn"
+        onclick="showPromoCode()">
+
+        Continue
+
+        </button>
+
+    </div>
 
 </div>
+
+<div id="promoModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close-btn"
+              onclick="closePromo()">
+
+              &times;
+
+        </span>
+
+        <h2>Apply Promo Code</h2>
+
+        <input
+        type="text"
+        id="promoCode"
+        placeholder="Enter Promo Code">
+
+        <button
+        class="gold-btn"
+        onclick="validatePromo()">
+
+            Apply Code
+
+        </button>
+
+        <div id="promoMessage"></div>
+
+    </div>
+
+</div>
+<section id="success" class="section success-section">
+
+    <h2 class="section-title">
+
+        Success Stories
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        Students and parents who found clarity
+        through X Factor Career Blueprint Assessment.
+
+    </p>
+
+    <div class="success-grid">
+
+        <div class="success-card">
+
+            <div class="stars">
+
+                ⭐⭐⭐⭐⭐
+
+            </div>
+
+            <h3>
+
+                Riya Shah
+
+            </h3>
+
+            <p class="role">
+
+                Class 10 Student
+
+            </p>
+
+            <p>
+
+                The assessment helped me discover
+                that my strengths lie in analytical
+                thinking and technology. I am now
+                confidently preparing for AI and
+                Data Science related careers.
+
+            </p>
+
+        </div>
+
+        <div class="success-card">
+
+            <div class="stars">
+
+                ⭐⭐⭐⭐⭐
+
+            </div>
+
+            <h3>
+
+                Parent Feedback
+
+            </h3>
+
+            <p class="role">
+
+                Parent of Class 9 Student
+
+            </p>
+
+            <p>
+
+                We were confused about our child's
+                future direction. The report gave
+                us a clear understanding of strengths,
+                interests and suitable academic paths.
+
+            </p>
+
+        </div>
+
+        <div class="success-card">
+
+            <div class="stars">
+
+                ⭐⭐⭐⭐⭐
+
+            </div>
+
+            <h3>
+
+                Rahul Mehta
+
+            </h3>
+
+            <p class="role">
+
+                First Year College Student
+
+            </p>
+
+            <p>
+
+                The Career Blueprint Assessment
+                helped me understand my personality,
+                learning style and career options.
+                It gave me clarity and confidence.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="pricing" class="section pricing-section">
+
+    <h2 class="section-title">
+
+        Pricing Plans
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        Choose the package that best supports
+        your career discovery journey.
+
+    </p>
+
+    <div class="pricing-grid">
+
+        <!-- PLAN 1 -->
+
+        <div class="pricing-card">
+
+            <h3>
+
+                Career Blueprint Assessment
+
+            </h3>
+
+            <div class="price">
+
+                ₹499
+
+            </div>
+
+            <ul>
+
+                <li>✓ IKIGAI Test</li>
+
+                <li>✓ Aptitude Test</li>
+
+                <li>✓ Multiple Intelligence Test</li>
+
+                <li>✓ Personality Test</li>
+
+                <li>✓ Values Assessment</li>
+
+                <li>✓ Preliminary Career Report</li>
+
+            </ul>
+
+            <a href="YOUR_RAZORPAY_LINK"
+               class="gold-btn">
+
+                Buy Now
+
+            </a>
+
+        </div>
+
+        <!-- PLAN 2 -->
+
+        <div class="pricing-card featured">
+
+            <div class="badge">
+
+                MOST POPULAR
+
+            </div>
+
+            <h3>
+
+                Assessment + Counseling
+
+            </h3>
+
+            <div class="price">
+
+                ₹999
+
+            </div>
+
+            <ul>
+
+                <li>✓ Complete Assessment</li>
+
+                <li>✓ Career Blueprint Report</li>
+
+                <li>✓ Stream Recommendation</li>
+
+                <li>✓ Top Career Matches</li>
+
+                <li>✓ 1-on-1 Counseling Session</li>
+
+                <li>✓ Career Roadmap Guidance</li>
+
+            </ul>
+
+            <a href="YOUR_RAZORPAY_LINK"
+               class="gold-btn">
+
+                Buy Now
+
+            </a>
+
+        </div>
+
+        <!-- PLAN 3 -->
+
+        <div class="pricing-card">
+
+            <h3>
+
+                DMIT Validation Package
+
+            </h3>
+
+            <div class="price">
+
+                ₹1999
+
+            </div>
+
+            <ul>
+
+                <li>✓ DMIT Analysis</li>
+
+                <li>✓ Career Blueprint Assessment</li>
+
+                <li>✓ Comparison Report</li>
+
+                <li>✓ Validation Insights</li>
+
+                <li>✓ Expert Recommendations</li>
+
+                <li>✓ Premium Support</li>
+
+            </ul>
+
+            <a href="YOUR_RAZORPAY_LINK"
+               class="gold-btn">
+
+                Buy Now
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- CONTACT SECTION -->
+
+<section id="contact" class="section contact-section">
+
+    <h2 class="section-title">
+
+        Contact X Factor
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        Ready to discover your true potential?
+        Get in touch with us today.
+
+    </p>
+
+    <div class="contact-wrapper">
+
+        <div class="contact-form">
+
+            <input
+            type="text"
+            placeholder="Your Name">
+
+            <input
+            type="email"
+            placeholder="Email Address">
+
+            <input
+            type="tel"
+            placeholder="Mobile Number">
+
+            <textarea
+            placeholder="Your Message"
+            rows="5"></textarea>
+
+            <button class="gold-btn">
+
+                Send Message
+
+            </button>
+
+        </div>
+
+        <div class="contact-info">
+
+            <h3>
+
+                Reach Us
+
+            </h3>
+
+            <p>
+
+                📧 info@xfactor.space
+
+            </p>
+
+            <p>
+
+                📱 +91 XXXXX XXXXX
+
+            </p>
+
+            <p>
+
+                🌐 xfactor.space
+
+            </p>
+
+            <div class="social-buttons">
+
+                <a
+                href="https://wa.me/91XXXXXXXXXX"
+                target="_blank"
+                class="whatsapp-btn">
+
+                    WhatsApp Us
+
+                </a>
+
+                <a
+                href="https://instagram.com/YOUR_INSTAGRAM"
+                target="_blank"
+                class="instagram-btn">
+
+                    Instagram
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section class="section" id="tests">
+<!-- FOOTER -->
 
-<h2 class="section-title">Career Blueprint Assessment</h2>
+<footer class="footer">
 
-<div class="cards">
+    <img
+    src="images/xfactor-logo.png"
+    alt="X Factor Logo"
+    class="footer-logo">
 
-<div class="card">
-<img src="images/ikigai.png">
-<h3>IKIGAI Test</h3>
-<p>Discover your purpose and life direction.</p>
-</div>
+    <h3>
 
-<div class="card">
-<img src="images/aptitude.png">
-<h3>Aptitude Test</h3>
-<p>Identify your natural abilities.</p>
-</div>
+        X Factor.space
 
-<div class="card">
-<img src="images/mi.png">
-<h3>Multiple Intelligence</h3>
-<p>Discover how you learn best.</p>
-</div>
+    </h3>
 
-<div class="card">
-<img src="images/personality.png">
-<h3>Personality Test</h3>
-<p>Understand your personality style.</p>
-</div>
+    <p>
 
-<div class="card">
-<img src="images/values.png">
-<h3>Values Assessment</h3>
-<p>Identify your core values.</p>
-</div>
+        Unlocking the X in Every Human Being
 
-</div>
+    </p>
 
-</section>
+    <div class="footer-menu">
 
-<section class="section" id="why">
+        <a href="#home">Home</a>
 
-<h2 class="section-title">Why X Factor?</h2>
+        <a href="#assessments">Assessments</a>
 
-<div class="cards">
+        <a href="#success">Success Stories</a>
 
-<div class="card">
-<h3>Scientific Assessments</h3>
-<p>Evidence based evaluation of strengths and interests.</p>
-</div>
+        <a href="#pricing">Pricing</a>
 
-<div class="card">
-<h3>Career Clarity</h3>
-<p>Personalized career recommendations.</p>
-</div>
+        <a href="#contact">Contact</a>
 
-<div class="card">
-<h3>Roadmap Planning</h3>
-<p>Step-by-step guidance for future success.</p>
-</div>
+    </div>
 
-<div class="card">
-<h3>Expert Counseling</h3>
-<p>One-on-one consultation support.</p>
-</div>
+    <p class="copyright">
 
-</div>
+        © 2026 X Factor.space
+        All Rights Reserved.
 
-</section>
-
-<section class="section">
-
-<h2 class="section-title">How It Works</h2>
-
-<div class="steps">
-
-<div class="step">Register</div>
-
-<div class="step">Pay</div>
-
-<div class="step">Take Test</div>
-
-<div class="step">Get Report</div>
-
-<div class="step">Counseling</div>
-
-</div>
-
-</section>
-
-<section class="section" id="pricing">
-
-<h2 class="section-title">Packages</h2>
-
-<div class="pricing">
-
-<div class="price-box">
-<h3>Career Blueprint</h3>
-<div class="price">₹499</div>
-<p>Complete Assessment Package</p>
-</div>
-
-<div class="price-box">
-<h3>Assessment + Counseling</h3>
-<div class="price">₹999</div>
-<p>Assessment + Expert Guidance</p>
-</div>
-
-<div class="price-box">
-<h3>DMIT Validation</h3>
-<div class="price">₹1999</div>
-<p>Advanced Validation Package</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section" id="contact">
-
-<h2 class="section-title">Start Your Journey</h2>
-
-<form>
-
-<input type="text" placeholder="Full Name">
-
-<input type="email" placeholder="Email">
-
-<input type="tel" placeholder="Mobile Number">
-
-<select>
-<option>Select Class</option>
-<option>8</option>
-<option>9</option>
-<option>10</option>
-<option>11</option>
-<option>12</option>
-<option>College</option>
-</select>
-
-<button type="submit">
-Take The Test
-</button>
-
-</form>
-
-</section>
-
-<footer>
-
-<h3>X Factor</h3>
-
-<p>Unlocking the X in Every Human Being</p>
-
-<p>Email: info@xfactor.space</p>
+    </p>
 
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
