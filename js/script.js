@@ -562,7 +562,7 @@ if(applyPromoBtn){
 
             const code =
             document.getElementById(
-                "promoCode"
+                "paymentPromoCode"
             ).value;
 
             if(code.trim() !== ""){
