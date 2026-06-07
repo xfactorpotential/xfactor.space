@@ -80,28 +80,31 @@ function openRegisterModal(){
 
 /* Close Popup */
 
-closeRegisterModal
-.addEventListener("click",()=>{
+if(closeRegisterModal){
 
-    registerModal.classList.remove(
-    "active"
-    );
+    closeRegisterModal.addEventListener("click",()=>{
 
-});
+        registerModal.classList.remove("active");
+
+    });
+
+}
 
 /* Outside Click */
 
-registerModal
-.addEventListener("click",(e)=>{
+if(registerModal){
 
-    if(e.target===registerModal){
+    registerModal.addEventListener("click",(e)=>{
 
-        registerModal.classList.remove(
-        "active"
-        );
-    }
+        if(e.target===registerModal){
 
-});
+            registerModal.classList.remove("active");
+
+        }
+
+    });
+
+}
 
 /* Form Submit */
 
@@ -142,28 +145,31 @@ function openUnlockModal(){
 
 /* CLOSE */
 
-closeUnlockModal
-.addEventListener("click",()=>{
+if(closeUnlockModal){
 
-    unlockModal.classList.remove(
-    "active"
-    );
+    closeUnlockModal.addEventListener("click",()=>{
 
-});
+        unlockModal.classList.remove("active");
+
+    });
+
+}
 
 /* OUTSIDE CLICK */
 
-unlockModal
-.addEventListener("click",(e)=>{
+if(unlockModal){
 
-    if(e.target===unlockModal){
+    unlockModal.addEventListener("click",(e)=>{
 
-        unlockModal.classList.remove(
-        "active"
-        );
-    }
+        if(e.target===unlockModal){
 
-});
+            unlockModal.classList.remove("active");
+
+        }
+
+    });
+
+}
 
 /* VERIFY PROMO */
 
