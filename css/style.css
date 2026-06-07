@@ -469,14 +469,20 @@ body{
 
     color:white;
 
-    margin-bottom:5px;
+    margin-bottom:8px;
+
+    font-size:24px;
+
+    font-weight:700;
 }
 
 .feature-card p{
 
-    color:#bdbdbd;
+    color:#cfcfcf;
 
-    font-size:14px;
+    font-size:16px;
+
+    line-height:1.5;
 }
 
 /* RESPONSIVE */
