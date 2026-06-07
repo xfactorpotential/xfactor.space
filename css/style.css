@@ -49,7 +49,7 @@ body{
 
 .container{
 
-    max-width:1400px;
+    max-width:1200px;
 
     width:100%;
 
@@ -2842,4 +2842,26 @@ body{
 
         justify-content:center;
     }
+}
+
+/* TEMPORARILY HIDE SECTIONS */
+
+.student-dashboard{
+    display:none;
+}
+
+.admin-dashboard{
+    display:none;
+}
+
+.assessment-screen{
+    display:none;
+}
+
+.career-report{
+    display:none;
+}
+
+.entrepreneur-report{
+    display:none;
 }
