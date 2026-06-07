@@ -3,673 +3,1824 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X Factor Space</title>
 
-<title>X Factor</title>
+    <!-- Google Fonts -->
 
-<link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
 
 </head>
 
 <body>
-<header class="header">
 
-    <div class="logo-container">
-        <img src="images/logo.png" alt="X Factor Logo">
+    <!-- HEADER -->
+
+    <header class="header" id="header">
+
+        <div class="container">
+
+            <!-- Logo -->
+
+            <a href="#" class="logo">
+
+                <img src="images/logo.png"
+                     alt="X Factor Space">
+
+            </a>
+
+            <!-- Navigation -->
+
+            <nav class="nav" id="nav">
+
+                <ul class="nav-menu">
+
+                    <li><a href="#home">Home</a></li>
+
+                    <li><a href="#about">About</a></li>
+
+                    <li><a href="#assessments">Assessments</a></li>
+
+                    <li><a href="#plans">Plans</a></li>
+
+                    <li><a href="#dashboard">Dashboard</a></li>
+
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+
+            </nav>
+
+            <!-- CTA + Mobile Menu -->
+
+            <div class="header-actions">
+
+                <a href="#assessment"
+                   class="btn-primary">
+
+                    Take Test
+
+                </a>
+
+                <button id="menuToggle"
+                        class="menu-toggle"
+                        aria-label="Open Menu">
+
+                    <img src="images/menu.svg"
+                         alt="Menu">
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-container">
+
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                AI Powered Career Blueprint Assessment
+            </span>
+
+            <h1>
+
+                Unlock The
+
+                <span>X</span>
+
+                In Every Human Being
+
+            </h1>
+
+            <p class="hero-description">
+
+                Discover your strengths, talents, personality,
+                intelligence patterns and career opportunities
+                through advanced psychometric assessment.
+
+            </p>
+
+            <ul class="hero-features">
+
+                <li>AI Powered Assessment Engine</li>
+
+                <li>Career Blueprint Report</li>
+
+                <li>Entrepreneurial Potential Analysis</li>
+
+                <li>Multiple Intelligence Assessment</li>
+
+                <li>Personalized Career Roadmap</li>
+
+            </ul>
+
+            <div class="hero-buttons">
+
+                <a href="#assessments"
+                   class="btn-primary">
+
+                    Start Assessment
+
+                </a>
+
+                <a href="#about"
+                   class="btn-secondary">
+
+                    Learn More
+
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <nav class="navbar">
+    <!-- HERO FEATURE STRIP -->
 
-        <a href="#home">Home</a>
+    <div class="hero-strip">
 
-        <a href="#assessments">Assessments</a>
+        <div class="feature-card">
 
-        <a href="#success">Success Stories</a>
+            <span>🧠</span>
 
-        <a href="#pricing">Pricing</a>
+            <div>
 
-        <a href="#contact">Contact</a>
+                <h4>AI Powered</h4>
 
-    </nav>
+                <p>Career Mapping System</p>
 
-</header>
+            </div>
 
-<section id="home" class="hero">
+        </div>
 
-    <div class="hero-left">
+        <div class="feature-card">
 
-        <h1>
-            Discover Your
-            <span>True Potential</span>
-        </h1>
+            <span>📊</span>
 
-        <p>
+            <div>
 
-            Scientific assessments to identify your purpose,
-            aptitude, intelligence, personality and values
-            for informed career decisions.
+                <h4>Detailed Analysis</h4>
+
+                <p>Advanced Reports</p>
+
+            </div>
+
+        </div>
+
+        <div class="feature-card">
+
+            <span>🎯</span>
+
+            <div>
+
+                <h4>Career Guidance</h4>
+
+                <p>Personalized Recommendations</p>
+
+            </div>
+
+        </div>
+
+        <div class="feature-card">
+
+            <span>🚀</span>
+
+            <div>
+
+                <h4>Growth Plan</h4>
+
+                <p>Future Success Roadmap</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ASSESSMENTS SECTION -->
+
+<section class="assessments" id="assessments">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>Our Assessments</h2>
+
+            <p>
+                Comprehensive Career Assessment System
+            </p>
+
+        </div>
+
+        <div class="assessment-grid">
+
+            <!-- CARD 1 -->
+
+            <div class="assessment-card">
+
+                <div class="assessment-icon">🧠</div>
+
+                <h3>Career Blueprint</h3>
+
+                <span>200 Questions</span>
+
+                <button class="assessment-btn">
+                    Start Test
+                </button>
+
+            </div>
+
+            <!-- CARD 2 -->
+
+            <div class="assessment-card">
+
+                <div class="assessment-icon">🎯</div>
+
+                <h3>IKIGAI Assessment</h3>
+
+                <span>40 Questions</span>
+
+                <button class="assessment-btn">
+                    Start Test
+                </button>
+
+            </div>
+
+            <!-- CARD 3 -->
+
+            <div class="assessment-card">
+
+                <div class="assessment-icon">📊</div>
+
+                <h3>Aptitude Test</h3>
+
+                <span>40 Questions</span>
+
+                <button class="assessment-btn">
+                    Start Test
+                </button>
+
+            </div>
+
+            <!-- CARD 4 -->
+
+            <div class="assessment-card">
+
+                <div class="assessment-icon">👥</div>
+
+                <h3>Multiple Intelligence</h3>
+
+                <span>40 Questions</span>
+
+                <button class="assessment-btn">
+                    Start Test
+                </button>
+
+            </div>
+
+            <!-- CARD 5 -->
+
+            <div class="assessment-card">
+
+                <div class="assessment-icon">😊</div>
+
+                <h3>Personality Test</h3>
+
+                <span>90 Questions</span>
+
+                <button class="assessment-btn">
+                    Start Test
+                </button>
+
+            </div>
+
+            <!-- CARD 6 -->
+
+            <div class="assessment-card">
+
+                <div class="assessment-icon">💎</div>
+
+                <h3>Values Assessment</h3>
+
+                <span>60 Questions</span>
+
+                <button class="assessment-btn">
+                    Start Test
+                </button>
+
+            </div>
+
+            <!-- CARD 7 -->
+
+            <div class="assessment-card">
+
+                <div class="assessment-icon">🚀</div>
+
+                <h3>Entrepreneurial</h3>
+
+                <span>Assessment</span>
+
+                <button class="assessment-btn">
+                    Start Test
+                </button>
+
+            </div>
+
+            <!-- CARD 8 -->
+
+            <div class="assessment-card">
+
+                <div class="assessment-icon">📈</div>
+
+                <h3>Student Growth</h3>
+
+                <span>Dashboard</span>
+
+                <button class="assessment-btn dashboard-btn">
+                    View Dashboard
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ACCOUNT REGISTRATION POPUP -->
+
+<div class="modal-overlay"
+     id="registerModal">
+
+    <div class="modal-box">
+
+        <button
+            class="close-modal"
+            id="closeRegisterModal">
+
+            ×
+
+        </button>
+
+        <h2>Create Your Account</h2>
+
+        <form id="registerForm">
+
+            <div class="form-group">
+
+                <label>Full Name</label>
+
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Enter your full name"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Email Address</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Mobile Number</label>
+
+                <input
+                    type="tel"
+                    id="mobile"
+                    placeholder="Enter your mobile number"
+                    required>
+
+            </div>
+
+            <button
+                type="submit"
+                class="generate-btn">
+
+                Generate Promo Code
+
+            </button>
+
+        </form>
+
+        <p class="privacy-text">
+
+            We respect your privacy.
+            Your data is safe with us.
 
         </p>
 
-        <div class="hero-buttons">
-
-            <button class="gold-btn"
-                    onclick="openRegistration()">
-
-                Take The Test
-
-            </button>
-
-            <button class="outline-btn">
-
-                Book Counseling
-
-            </button>
-
-        </div>
-
     </div>
 
-    <div class="hero-right">
+</div>
 
-        <img src="images/logo.png">
+<!-- ASSESSMENT UNLOCK POPUP -->
 
-    </div>
+<div class="modal-overlay"
+     id="unlockModal">
 
-</section>
-<section id="assessments" class="section">
-
-    <h2 class="section-title">
-
-        Career Blueprint Assessment
-
-    </h2>
-
-    <p class="section-subtitle">
-
-        A comprehensive career assessment package
-        combining multiple scientific assessments.
-
-    </p>
-
-    <div class="assessment-grid">
-
-        <div class="assessment-card">
-
-            <img src="images/ikigai.png">
-
-            <h3>IKIGAI Test</h3>
-
-            <p>
-
-                Discover the intersection between
-                passion, mission, vocation and profession.
-
-            </p>
-
-        </div>
-
-        <div class="assessment-card">
-
-            <img src="images/aptitude.png">
-
-            <h3>Aptitude Test</h3>
-
-            <p>
-
-                Identify natural abilities,
-                logical thinking and reasoning.
-
-            </p>
-
-        </div>
-
-        <div class="assessment-card">
-
-            <img src="images/mi.png">
-
-            <h3>Multiple Intelligence</h3>
-
-            <p>
-
-                Discover dominant intelligence areas
-                and learning strengths.
-
-            </p>
-
-        </div>
-
-        <div class="assessment-card">
-
-            <img src="images/personality.png">
-
-            <h3>Personality Test</h3>
-
-            <p>
-
-                Understand behavior,
-                communication and work preferences.
-
-            </p>
-
-        </div>
-
-        <div class="assessment-card">
-
-            <img src="images/values.png">
-
-            <h3>Values Assessment</h3>
-
-            <p>
-
-                Discover personal priorities,
-                motivations and beliefs.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-<section class="section why-section">
-
-    <h2 class="section-title">
-
-        Why X Factor?
-
-    </h2>
-
-    <p class="section-subtitle">
-
-        More than a test. A complete career discovery system.
-
-    </p>
-
-    <div class="why-grid">
-
-        <div class="why-card">
-
-            <h3>Scientific Assessments</h3>
-
-            <p>
-
-                Evidence-based tools designed to
-                identify strengths, interests,
-                personality and intelligence.
-
-            </p>
-
-        </div>
-
-        <div class="why-card">
-
-            <h3>Career Clarity</h3>
-
-            <p>
-
-                Get suitable career recommendations
-                aligned with your profile.
-
-            </p>
-
-        </div>
-
-        <div class="why-card">
-
-            <h3>Roadmap Planning</h3>
-
-            <p>
-
-                Receive guidance from school
-                to professional success.
-
-            </p>
-
-        </div>
-
-        <div class="why-card">
-
-            <h3>Expert Counseling</h3>
-
-            <p>
-
-                Personalized counseling support
-                for students and parents.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-<div id="registrationModal" class="modal">
-
-    <div class="modal-content">
-
-        <span class="close-btn"
-              onclick="closeRegistration()">
-
-              &times;
-
-        </span>
-
-        <h2>Career Blueprint Assessment</h2>
-
-        <input
-        type="text"
-        id="name"
-        placeholder="Full Name">
-
-        <input
-        type="email"
-        id="email"
-        placeholder="Email Address">
-
-        <input
-        type="tel"
-        id="mobile"
-        placeholder="Mobile Number">
+    <div class="modal-box unlock-box">
 
         <button
-        class="gold-btn"
-        onclick="showPromoCode()">
+            class="close-modal"
+            id="closeUnlockModal">
 
-        Continue
+            ×
 
         </button>
+
+        <h2>Unlock Assessment</h2>
+
+        <p class="unlock-text">
+
+            Enter your Promo Code to unlock
+            the complete assessment.
+
+        </p>
+
+        <form id="unlockForm">
+
+            <div class="form-group">
+
+                <label>Promo Code</label>
+
+                <input
+                    type="text"
+                    id="promoCode"
+                    placeholder="Enter Promo Code"
+                    required>
+
+            </div>
+
+            <button
+                type="submit"
+                class="generate-btn">
+
+                Verify Promo Code
+
+            </button>
+
+            <button
+                type="button"
+                class="payment-btn">
+
+                Proceed To Payment
+
+            </button>
+
+        </form>
 
     </div>
 
 </div>
 
-<div id="promoModal" class="modal">
+<!-- ASSESSMENT QUESTIONS SCREEN -->
 
-    <div class="modal-content">
+<section class="assessment-screen"
+         id="assessment-screen">
 
-        <span class="close-btn"
-              onclick="closePromo()">
+    <div class="container">
 
-              &times;
+        <div class="question-card">
 
-        </span>
+            <!-- HEADER -->
 
-        <h2>Apply Promo Code</h2>
+            <div class="question-header">
 
-        <input
-        type="text"
-        id="promoCode"
-        placeholder="Enter Promo Code">
+                <h2>
+                    Career Blueprint Assessment
+                </h2>
 
-        <button
-        class="gold-btn"
-        onclick="validatePromo()">
-
-            Apply Code
-
-        </button>
-
-        <div id="promoMessage"></div>
-
-    </div>
-
-</div>
-<section id="success" class="section success-section">
-
-    <h2 class="section-title">
-
-        Success Stories
-
-    </h2>
-
-    <p class="section-subtitle">
-
-        Students and parents who found clarity
-        through X Factor Career Blueprint Assessment.
-
-    </p>
-
-    <div class="success-grid">
-
-        <div class="success-card">
-
-            <div class="stars">
-
-                ⭐⭐⭐⭐⭐
+                <span>
+                    Question 1 of 200
+                </span>
 
             </div>
 
-            <h3>
+            <!-- PROGRESS -->
 
-                Riya Shah
+            <div class="progress-wrapper">
 
-            </h3>
+                <div class="progress-bar">
 
-            <p class="role">
+                    <div class="progress-fill"></div>
 
-                Class 10 Student
+                </div>
 
-            </p>
-
-            <p>
-
-                The assessment helped me discover
-                that my strengths lie in analytical
-                thinking and technology. I am now
-                confidently preparing for AI and
-                Data Science related careers.
-
-            </p>
-
-        </div>
-
-        <div class="success-card">
-
-            <div class="stars">
-
-                ⭐⭐⭐⭐⭐
+                <span class="progress-percent">
+                    1%
+                </span>
 
             </div>
 
-            <h3>
+            <!-- QUESTION -->
 
-                Parent Feedback
+            <div class="question-content">
 
-            </h3>
+                <h3 class="question-title">
 
-            <p class="role">
+                    I enjoy solving complex problems
+                    that require analytical thinking.
 
-                Parent of Class 9 Student
+                </h3>
 
-            </p>
+                <div class="options-group">
 
-            <p>
+                    <label class="option-card">
 
-                We were confused about our child's
-                future direction. The report gave
-                us a clear understanding of strengths,
-                interests and suitable academic paths.
+                        <input type="radio"
+                               name="question1">
 
-            </p>
+                        <span>
+                            Strongly Disagree
+                        </span>
 
-        </div>
+                    </label>
 
-        <div class="success-card">
+                    <label class="option-card">
 
-            <div class="stars">
+                        <input type="radio"
+                               name="question1">
 
-                ⭐⭐⭐⭐⭐
+                        <span>
+                            Disagree
+                        </span>
+
+                    </label>
+
+                    <label class="option-card">
+
+                        <input type="radio"
+                               name="question1">
+
+                        <span>
+                            Neutral
+                        </span>
+
+                    </label>
+
+                    <label class="option-card">
+
+                        <input type="radio"
+                               name="question1">
+
+                        <span>
+                            Agree
+                        </span>
+
+                    </label>
+
+                    <label class="option-card">
+
+                        <input type="radio"
+                               name="question1">
+
+                        <span>
+                            Strongly Agree
+                        </span>
+
+                    </label>
+
+                </div>
 
             </div>
 
-            <h3>
+            <!-- BUTTONS -->
 
-                Rahul Mehta
+            <div class="question-actions">
 
-            </h3>
+                <button
+                    class="previous-btn">
 
-            <p class="role">
+                    Previous
 
-                First Year College Student
+                </button>
 
-            </p>
+                <button
+                    class="next-btn">
 
-            <p>
+                    Next Question
 
-                The Career Blueprint Assessment
-                helped me understand my personality,
-                learning style and career options.
-                It gave me clarity and confidence.
+                </button>
 
-            </p>
+            </div>
 
         </div>
 
     </div>
 
 </section>
-<section id="pricing" class="section pricing-section">
 
-    <h2 class="section-title">
+<!-- CAREER BLUEPRINT REPORT -->
 
-        Pricing Plans
+<section class="career-report"
+         id="career-report">
 
-    </h2>
+    <div class="container">
 
-    <p class="section-subtitle">
+        <div class="section-header">
 
-        Choose the package that best supports
-        your career discovery journey.
+            <h2>Your Career Blueprint Report</h2>
 
-    </p>
-
-    <div class="pricing-grid">
-
-        <!-- PLAN 1 -->
-
-        <div class="pricing-card">
-
-            <h3>
-
-                Career Blueprint Assessment
-
-            </h3>
-
-            <div class="price">
-
-                ₹499
-
-            </div>
-
-            <ul>
-
-                <li>✓ IKIGAI Test</li>
-
-                <li>✓ Aptitude Test</li>
-
-                <li>✓ Multiple Intelligence Test</li>
-
-                <li>✓ Personality Test</li>
-
-                <li>✓ Values Assessment</li>
-
-                <li>✓ Preliminary Career Report</li>
-
-            </ul>
-
-            <a href="YOUR_RAZORPAY_LINK"
-               class="gold-btn">
-
-                Buy Now
-
-            </a>
+            <p>
+                Personalized career insights based on your assessment.
+            </p>
 
         </div>
 
-        <!-- PLAN 2 -->
+        <!-- SCORE CARDS -->
 
-        <div class="pricing-card featured">
+        <div class="score-grid">
 
-            <div class="badge">
+            <div class="score-card">
 
-                MOST POPULAR
+                <div class="score-circle">
+                    92%
+                </div>
 
-            </div>
-
-            <h3>
-
-                Assessment + Counseling
-
-            </h3>
-
-            <div class="price">
-
-                ₹999
+                <h3>Personality Match</h3>
 
             </div>
 
-            <ul>
+            <div class="score-card">
 
-                <li>✓ Complete Assessment</li>
+                <div class="score-circle">
+                    88%
+                </div>
 
-                <li>✓ Career Blueprint Report</li>
+                <h3>Aptitude Score</h3>
 
-                <li>✓ Stream Recommendation</li>
+            </div>
 
-                <li>✓ Top Career Matches</li>
+            <div class="score-card">
 
-                <li>✓ 1-on-1 Counseling Session</li>
+                <div class="score-circle">
+                    95%
+                </div>
 
-                <li>✓ Career Roadmap Guidance</li>
+                <h3>Multiple Intelligence</h3>
 
-            </ul>
+            </div>
 
-            <a href="YOUR_RAZORPAY_LINK"
-               class="gold-btn">
+            <div class="score-card">
 
-                Buy Now
+                <div class="score-circle">
+                    85%
+                </div>
 
-            </a>
+                <h3>Career Readiness</h3>
+
+            </div>
 
         </div>
 
-        <!-- PLAN 3 -->
+        <!-- CAREER MATCHES -->
 
-        <div class="pricing-card">
+        <div class="report-box">
 
-            <h3>
+            <h3>Top Career Matches</h3>
 
-                DMIT Validation Package
+            <ul class="career-list">
 
-            </h3>
+                <li>Software Engineer</li>
 
-            <div class="price">
+                <li>Data Scientist</li>
 
-                ₹1999
+                <li>AI Researcher</li>
 
-            </div>
+                <li>Product Manager</li>
 
-            <ul>
-
-                <li>✓ DMIT Analysis</li>
-
-                <li>✓ Career Blueprint Assessment</li>
-
-                <li>✓ Comparison Report</li>
-
-                <li>✓ Validation Insights</li>
-
-                <li>✓ Expert Recommendations</li>
-
-                <li>✓ Premium Support</li>
+                <li>Technology Consultant</li>
 
             </ul>
 
-            <a href="YOUR_RAZORPAY_LINK"
-               class="gold-btn">
+        </div>
 
-                Buy Now
+        <!-- STRENGTHS -->
 
-            </a>
+        <div class="report-box">
+
+            <h3>Your Strengths</h3>
+
+            <ul class="career-list">
+
+                <li>Strong Analytical Thinking</li>
+
+                <li>Problem Solving Ability</li>
+
+                <li>High Learning Agility</li>
+
+                <li>Leadership Potential</li>
+
+                <li>Decision Making Skills</li>
+
+            </ul>
+
+        </div>
+
+        <!-- DEVELOPMENT AREAS -->
+
+        <div class="report-box">
+
+            <h3>Development Areas</h3>
+
+            <ul class="career-list">
+
+                <li>Communication Skills</li>
+
+                <li>Public Speaking</li>
+
+                <li>Team Collaboration</li>
+
+                <li>Strategic Planning</li>
+
+                <li>Time Management</li>
+
+            </ul>
 
         </div>
 
     </div>
 
 </section>
+
+<!-- ENTREPRENEURIAL REPORT -->
+
+<section class="entrepreneur-report"
+         id="entrepreneur-report">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>Entrepreneurial Potential Report</h2>
+
+            <p>
+                Discover your business mindset and entrepreneurial strengths.
+            </p>
+
+        </div>
+
+        <!-- MAIN SCORE -->
+
+        <div class="entre-main-card">
+
+            <div class="entre-score-circle">
+
+                89%
+
+            </div>
+
+            <div class="entre-info">
+
+                <h3>Entrepreneurial Potential</h3>
+
+                <p>
+                    You demonstrate strong entrepreneurial traits,
+                    leadership qualities and innovation potential.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ENTREPRENEUR TYPE -->
+
+        <div class="entre-box">
+
+            <h3>Your Entrepreneur Type</h3>
+
+            <p>
+
+                Visionary Builder
+
+            </p>
+
+        </div>
+
+        <!-- BUSINESS SUGGESTIONS -->
+
+        <div class="entre-box">
+
+            <h3>Recommended Business Areas</h3>
+
+            <ul>
+
+                <li>Technology Startups</li>
+
+                <li>EdTech Solutions</li>
+
+                <li>Consulting Services</li>
+
+                <li>Digital Marketing Agency</li>
+
+                <li>AI & Automation Services</li>
+
+            </ul>
+
+        </div>
+
+        <!-- STRENGTHS -->
+
+        <div class="entre-box">
+
+            <h3>Entrepreneurial Strengths</h3>
+
+            <ul>
+
+                <li>Leadership Ability</li>
+
+                <li>Risk Taking Capability</li>
+
+                <li>Creative Problem Solving</li>
+
+                <li>Strategic Thinking</li>
+
+                <li>Decision Making Skills</li>
+
+            </ul>
+
+        </div>
+
+        <!-- IMPROVEMENT AREAS -->
+
+        <div class="entre-box">
+
+            <h3>Areas To Improve</h3>
+
+            <ul>
+
+                <li>Financial Planning</li>
+
+                <li>Delegation Skills</li>
+
+                <li>Long-Term Forecasting</li>
+
+                <li>Operational Management</li>
+
+                <li>Market Research</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- STUDENT DASHBOARD -->
+
+<section class="student-dashboard"
+         id="dashboard">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>Student Dashboard</h2>
+
+            <p>
+                Track your progress and career development journey.
+            </p>
+
+        </div>
+
+        <div class="dashboard-layout">
+
+            <!-- SIDEBAR -->
+
+            <aside class="dashboard-sidebar">
+
+                <h3>Dashboard</h3>
+
+                <ul>
+
+                    <li class="active">
+                        Overview
+                    </li>
+
+                    <li>
+                        Assessments
+                    </li>
+
+                    <li>
+                        Reports
+                    </li>
+
+                    <li>
+                        Goals
+                    </li>
+
+                    <li>
+                        Progress
+                    </li>
+
+                    <li>
+                        Settings
+                    </li>
+
+                </ul>
+
+            </aside>
+
+            <!-- CONTENT -->
+
+            <div class="dashboard-content">
+
+                <!-- STATS -->
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <h4>Assessments</h4>
+
+                        <span>8</span>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <h4>Completed</h4>
+
+                        <span>6</span>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <h4>Career Score</h4>
+
+                        <span>92%</span>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <h4>Goals Achieved</h4>
+
+                        <span>75%</span>
+
+                    </div>
+
+                </div>
+
+                <!-- PROGRESS -->
+
+                <div class="dashboard-box">
+
+                    <h3>Assessment Progress</h3>
+
+                    <div class="progress-item">
+
+                        <span>Career Blueprint</span>
+
+                        <div class="dashboard-progress">
+
+                            <div class="dashboard-fill fill-90"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="progress-item">
+
+                        <span>Personality Test</span>
+
+                        <div class="dashboard-progress">
+
+                            <div class="dashboard-fill fill-80"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="progress-item">
+
+                        <span>Entrepreneurial Test</span>
+
+                        <div class="dashboard-progress">
+
+                            <div class="dashboard-fill fill-70"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- MONTHLY GOALS -->
+
+                <div class="dashboard-box">
+
+                    <h3>Monthly Goals</h3>
+
+                    <ul class="goal-list">
+
+                        <li>Complete all assessments</li>
+
+                        <li>Download career blueprint report</li>
+
+                        <li>Attend counseling session</li>
+
+                        <li>Create career roadmap</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ADMIN DASHBOARD -->
+
+<section class="admin-dashboard"
+         id="admin-dashboard">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>Admin Dashboard</h2>
+
+            <p>
+                Manage users, assessments, leads and promo codes.
+            </p>
+
+        </div>
+
+        <div class="admin-layout">
+
+            <!-- SIDEBAR -->
+
+            <aside class="admin-sidebar">
+
+                <h3>Admin Panel</h3>
+
+                <ul>
+
+                    <li class="active">
+                        Dashboard
+                    </li>
+
+                    <li>
+                        Leads
+                    </li>
+
+                    <li>
+                        Assessments
+                    </li>
+
+                    <li>
+                        Promo Codes
+                    </li>
+
+                    <li>
+                        Reports
+                    </li>
+
+                    <li>
+                        Settings
+                    </li>
+
+                </ul>
+
+            </aside>
+
+            <!-- MAIN CONTENT -->
+
+            <div class="admin-content">
+
+                <!-- STATS -->
+
+                <div class="admin-stats-grid">
+
+                    <div class="admin-stat-card">
+
+                        <h4>Total Users</h4>
+
+                        <span>1,245</span>
+
+                    </div>
+
+                    <div class="admin-stat-card">
+
+                        <h4>Assessments</h4>
+
+                        <span>842</span>
+
+                    </div>
+
+                    <div class="admin-stat-card">
+
+                        <h4>Revenue</h4>
+
+                        <span>₹2.8L</span>
+
+                    </div>
+
+                    <div class="admin-stat-card">
+
+                        <h4>Promo Codes</h4>
+
+                        <span>158</span>
+
+                    </div>
+
+                </div>
+
+                <!-- LEADS TABLE -->
+
+                <div class="admin-box">
+
+                    <h3>Recent Leads</h3>
+
+                    <div class="table-wrapper">
+
+                        <table class="leads-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Name</th>
+
+                                    <th>Email</th>
+
+                                    <th>Mobile</th>
+
+                                    <th>Status</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>Rahul Patel</td>
+
+                                    <td>rahul@mail.com</td>
+
+                                    <td>9876543210</td>
+
+                                    <td>
+                                        <span class="status-active">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>Priya Shah</td>
+
+                                    <td>priya@mail.com</td>
+
+                                    <td>9876501234</td>
+
+                                    <td>
+                                        <span class="status-pending">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>Amit Joshi</td>
+
+                                    <td>amit@mail.com</td>
+
+                                    <td>9876511111</td>
+
+                                    <td>
+                                        <span class="status-active">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+                <!-- PROMO CODES -->
+
+                <div class="admin-box">
+
+                    <h3>Promo Codes</h3>
+
+                    <div class="promo-grid">
+
+                        <div class="promo-card">
+
+                            <h4>XFACTOR50</h4>
+
+                            <p>50% Discount</p>
+
+                        </div>
+
+                        <div class="promo-card">
+
+                            <h4>CAREER25</h4>
+
+                            <p>25% Discount</p>
+
+                        </div>
+
+                        <div class="promo-card">
+
+                            <h4>WELCOME10</h4>
+
+                            <p>10% Discount</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- QUICK ACTIONS -->
+
+                <div class="admin-box">
+
+                    <h3>Quick Actions</h3>
+
+                    <div class="action-buttons">
+
+                        <button class="admin-btn">
+                            Add User
+                        </button>
+
+                        <button class="admin-btn">
+                            Create Promo Code
+                        </button>
+
+                        <button class="admin-btn">
+                            Export Report
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PRICING SECTION -->
+
+<section class="pricing-section"
+         id="plans">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>Choose Your Plan</h2>
+
+            <p>
+                Select the package that best suits your career journey.
+            </p>
+
+        </div>
+
+        <div class="pricing-grid">
+
+            <!-- BASIC -->
+
+            <div class="pricing-card">
+
+                <h3>Basic</h3>
+
+                <div class="price">
+
+                    ₹999
+
+                </div>
+
+                <ul>
+
+                    <li>Career Assessment</li>
+
+                    <li>Basic Report</li>
+
+                    <li>Email Support</li>
+
+                    <li>1 Career Recommendation</li>
+
+                </ul>
+
+                <a href="#payment"
+                   class="pricing-btn">
+
+                    Get Started
+
+                </a>
+
+            </div>
+
+            <!-- PREMIUM -->
+
+            <div class="pricing-card featured-plan">
+
+                <div class="plan-badge">
+
+                    Most Popular
+
+                </div>
+
+                <h3>Premium</h3>
+
+                <div class="price">
+
+                    ₹2,499
+
+                </div>
+
+                <ul>
+
+                    <li>Career Blueprint Assessment</li>
+
+                    <li>Detailed Report</li>
+
+                    <li>Entrepreneurial Analysis</li>
+
+                    <li>Career Roadmap</li>
+
+                    <li>Priority Support</li>
+
+                </ul>
+
+                <a href="#payment"
+                   class="pricing-btn">
+
+                    Choose Premium
+
+                </a>
+
+            </div>
+
+            <!-- PRO -->
+
+            <div class="pricing-card">
+
+                <h3>Pro</h3>
+
+                <div class="price">
+
+                    ₹4,999
+
+                </div>
+
+                <ul>
+
+                    <li>All Premium Features</li>
+
+                    <li>1-on-1 Counseling Session</li>
+
+                    <li>Advanced Career Strategy</li>
+
+                    <li>Growth Blueprint</li>
+
+                    <li>VIP Support</li>
+
+                </ul>
+
+                <a href="#payment"
+                   class="pricing-btn">
+
+                    Go Pro
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SUCCESS STORIES -->
+
+<section class="success-stories"
+         id="success-stories">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>Success Stories</h2>
+
+            <p>
+                Real transformation stories from students and professionals.
+            </p>
+
+        </div>
+
+        <div class="testimonial-grid">
+
+            <!-- TESTIMONIAL 1 -->
+
+            <div class="testimonial-card">
+
+                <div class="testimonial-top">
+
+                    <div class="avatar-circle">
+
+                        RP
+
+                    </div>
+
+                    <div>
+
+                        <h4>Rahul Patel</h4>
+
+                        <span>Engineering Student</span>
+
+                    </div>
+
+                </div>
+
+                <div class="rating">
+
+                    ★★★★★
+
+                </div>
+
+                <p>
+
+                    The Career Blueprint Report helped me
+                    identify my strengths and choose the
+                    right career path.
+
+                </p>
+
+            </div>
+
+            <!-- TESTIMONIAL 2 -->
+
+            <div class="testimonial-card">
+
+                <div class="testimonial-top">
+
+                    <div class="avatar-circle">
+
+                        PS
+
+                    </div>
+
+                    <div>
+
+                        <h4>Priya Shah</h4>
+
+                        <span>Commerce Student</span>
+
+                    </div>
+
+                </div>
+
+                <div class="rating">
+
+                    ★★★★★
+
+                </div>
+
+                <p>
+
+                    The assessment gave me clarity about
+                    my future goals and confidence in
+                    decision making.
+
+                </p>
+
+            </div>
+
+            <!-- TESTIMONIAL 3 -->
+
+            <div class="testimonial-card">
+
+                <div class="testimonial-top">
+
+                    <div class="avatar-circle">
+
+                        AJ
+
+                    </div>
+
+                    <div>
+
+                        <h4>Amit Joshi</h4>
+
+                        <span>Young Entrepreneur</span>
+
+                    </div>
+
+                </div>
+
+                <div class="rating">
+
+                    ★★★★★
+
+                </div>
+
+                <p>
+
+                    Entrepreneurial Assessment helped me
+                    validate my business potential and
+                    growth strategy.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 <!-- CONTACT SECTION -->
 
-<section id="contact" class="section contact-section">
+<section class="contact-section"
+         id="contact">
 
-    <h2 class="section-title">
+    <div class="container">
 
-        Contact X Factor
+        <div class="section-header">
 
-    </h2>
+            <h2>Get In Touch</h2>
 
-    <p class="section-subtitle">
-
-        Ready to discover your true potential?
-        Get in touch with us today.
-
-    </p>
-
-    <div class="contact-wrapper">
-
-        <div class="contact-form">
-
-            <input
-            type="text"
-            placeholder="Your Name">
-
-            <input
-            type="email"
-            placeholder="Email Address">
-
-            <input
-            type="tel"
-            placeholder="Mobile Number">
-
-            <textarea
-            placeholder="Your Message"
-            rows="5"></textarea>
-
-            <button class="gold-btn">
-
-                Send Message
-
-            </button>
+            <p>
+                Have questions? Contact our career experts today.
+            </p>
 
         </div>
 
-        <div class="contact-info">
+        <div class="contact-wrapper">
 
-            <h3>
+            <!-- CONTACT INFO -->
 
-                Reach Us
+            <div class="contact-info">
 
-            </h3>
+                <div class="contact-card">
+
+                    <h3>Call Us</h3>
+
+                    <p>+91 90990 44336</p>
+
+                </div>
+
+                <div class="contact-card">
+
+                    <h3>Email</h3>
+
+                    <p>info@xfactorspace.com</p>
+
+                </div>
+
+                <div class="contact-card">
+
+                    <h3>Office</h3>
+
+                    <p>
+                        Office No. 302, Dwarika Empire,
+                        Opp. Rashtriya Shala,
+                        Manhar Plot,
+                        Rajkot - 360002
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form-box">
+
+                <form id="contactForm">
+
+                    <div class="form-group">
+
+                        <input
+                            type="text"
+                            id="contactName"
+                            placeholder="Your Name"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <input
+                            type="email"
+                            id="contactEmail"
+                            placeholder="Your Email"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <input
+                            type="tel"
+                            id="contactMobile"
+                            placeholder="Mobile Number"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <textarea
+                            id="contactMessage"
+                            rows="5"
+                            placeholder="Your Message"
+                            required></textarea>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="contact-btn">
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PAYMENT SECTION -->
+
+<section class="payment-section"
+         id="payment">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>Secure Payment</h2>
 
             <p>
-
-                📧 info@xfactor.space
-
+                Complete your purchase and unlock your assessment.
             </p>
 
-            <p>
+        </div>
 
-                📱 +91 XXXXX XXXXX
+        <div class="payment-wrapper">
 
-            </p>
+            <!-- ORDER SUMMARY -->
 
-            <p>
+            <div class="payment-card">
 
-                🌐 xfactor.space
+                <h3>Order Summary</h3>
 
-            </p>
+                <div class="summary-row">
 
-            <div class="social-buttons">
+                    <span>Plan</span>
 
-                <a
-                href="https://wa.me/91XXXXXXXXXX"
-                target="_blank"
-                class="whatsapp-btn">
+                    <span>Premium Plan</span>
 
-                    WhatsApp Us
+                </div>
 
-                </a>
+                <div class="summary-row">
 
-                <a
-                href="https://instagram.com/YOUR_INSTAGRAM"
-                target="_blank"
-                class="instagram-btn">
+                    <span>Assessment Access</span>
 
-                    Instagram
+                    <span>Included</span>
 
-                </a>
+                </div>
+
+                <div class="summary-row">
+
+                    <span>Career Blueprint</span>
+
+                    <span>Included</span>
+
+                </div>
+
+                <div class="summary-row">
+
+                    <span>Discount</span>
+
+                    <span>₹500</span>
+
+                </div>
+
+                <div class="summary-row total-row">
+
+                    <span>Total</span>
+
+                    <span>₹1,999</span>
+
+                </div>
+
+            </div>
+
+            <!-- PAYMENT AREA -->
+
+            <div class="payment-card">
+
+                <h3>Payment Details</h3>
+
+                <p class="payment-note">
+
+                    Secure payment powered by Razorpay.
+
+                </p>
+
+                <div class="promo-box">
+
+                    <input
+                        type="text"
+                        id="promoCode"
+                        placeholder="Enter Promo Code">
+
+                    <button
+                        id="applyPromo">
+
+                        Apply
+
+                    </button>
+
+                </div>
+
+                <button
+                    id="payNowBtn"
+                    class="pay-btn">
+
+                    Pay Now
+
+                </button>
+
+                <div class="razorpay-placeholder">
+
+                    Razorpay Integration Placeholder
+
+                </div>
 
             </div>
 
@@ -683,47 +1834,159 @@
 
 <footer class="footer">
 
-    <img
-    src="images/logo.png"
-    alt="X Factor Logo"
-    class="footer-logo">
+    <div class="container">
 
-    <h3>
+        <div class="footer-grid">
 
-        X Factor.space
+            <!-- COMPANY -->
 
-    </h3>
+            <div class="footer-column">
 
-    <p>
+                <h3>X Factor Space</h3>
 
-        Unlocking the X in Every Human Being
+                <p>
 
-    </p>
+                    Unlocking the "X" in every human being through
+                    advanced assessments, career guidance and
+                    personalized growth strategies.
 
-    <div class="footer-menu">
+                </p>
 
-        <a href="#home">Home</a>
+            </div>
 
-        <a href="#assessments">Assessments</a>
+            <!-- QUICK LINKS -->
 
-        <a href="#success">Success Stories</a>
+            <div class="footer-column">
 
-        <a href="#pricing">Pricing</a>
+                <h4>Quick Links</h4>
 
-        <a href="#contact">Contact</a>
+                <ul>
+
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#assessments">Assessments</a>
+                    </li>
+
+                    <li>
+                        <a href="#plans">Pricing</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- SERVICES -->
+
+            <div class="footer-column">
+
+                <h4>Services</h4>
+
+                <ul>
+
+                    <li>
+                        <a href="#">Career Blueprint</a>
+                    </li>
+
+                    <li>
+                        <a href="#">IKIGAI Assessment</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Personality Assessment</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Entrepreneurial Report</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Career Counseling</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h4>Contact</h4>
+
+                <ul>
+
+                    <li>
+                        +91 90990 44336
+                    </li>
+
+                    <li>
+                        info@xfactorspace.com
+                    </li>
+
+                    <li>
+
+                        Office No.302,
+                        Dwarika Empire,
+                        Opp. Rashtriya Shala,
+                        Manhar Plot,
+                        Rajkot - 360002
+
+                    </li>
+
+                </ul>
+
+                <!-- SOCIAL -->
+
+                <div class="social-links">
+
+                    <a href="#">
+                        Facebook
+                    </a>
+
+                    <a href="#">
+                        Instagram
+                    </a>
+
+                    <a href="#">
+                        LinkedIn
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 X Factor Space.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
 
     </div>
 
-    <p class="copyright">
-
-        © 2026 X Factor.space
-        All Rights Reserved.
-
-    </p>
-
 </footer>
 
-<script src="script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>
