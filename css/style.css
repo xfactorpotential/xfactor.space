@@ -530,10 +530,11 @@ body{
 
     display:grid;
 
-    grid-template-columns:
-    repeat(3,1fr);
+    grid-template-columns:repeat(3,1fr);
 
     gap:25px;
+
+    margin-top:50px;
 }
 
 .about-card{
@@ -545,13 +546,24 @@ body{
     border-radius:18px;
 
     padding:30px;
+
+    transition:.3s ease;
+}
+
+.about-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#D4A017;
 }
 
 .about-card h3{
 
-    color:var(--gold);
+    color:#D4A017;
 
     margin-bottom:15px;
+
+    font-size:22px;
 }
 
 .about-card p{
@@ -559,6 +571,8 @@ body{
     color:#d0d0d0;
 
     line-height:1.8;
+
+    font-size:15px;
 }
 
 @media(max-width:992px){
@@ -567,6 +581,7 @@ body{
 
         grid-template-columns:1fr;
     }
+
 }
 
 /* =====================================
