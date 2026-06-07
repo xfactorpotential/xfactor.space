@@ -2889,3 +2889,32 @@ body{
 .entrepreneur-report{
     display:none;
 }
+
+.about-section .section-header{
+
+    margin-bottom:40px;
+}
+
+.about-section .section-header h2{
+
+    font-size:60px;
+
+    font-weight:800;
+
+    color:white;
+
+    margin-bottom:15px;
+}
+
+.about-section .section-header p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    color:#bdbdbd;
+
+    line-height:1.8;
+
+    font-size:18px;
+}
