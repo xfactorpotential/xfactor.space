@@ -3144,3 +3144,18 @@ body{
         grid-template-columns:1fr;
     }
 }
+
+/* Report Cards Auto Height */
+
+.report-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    align-items:start;
+}
+
+.report-card{
+    height:auto;
+    min-height:auto;
+    padding:30px;
+}
