@@ -675,6 +675,8 @@ body{
     align-items:center;
 
     text-align:center;
+
+   overflow:visible;
    
 }
 
@@ -3054,6 +3056,10 @@ body{
 
     border:2px solid #D4A017 !important;
 
+   position:relative;
+
+    overflow:visible !important;
+
     box-shadow:0 0 30px rgba(212,160,23,.25);
 }
 
@@ -3061,7 +3067,7 @@ body{
 
     position:absolute;
 
-    top:-20px;
+    top:-22px;
 
     left:50%;
 
@@ -3069,19 +3075,19 @@ body{
 
     background:#D4A017;
 
-    color:#000 !important;
-
-    font-size:12px;
-
-    font-weight:800;
-
-    text-transform:uppercase;
+    color:#000;
 
     padding:10px 20px;
 
-    border-radius:30px;
+    border-radius:50px;
 
-    z-index:1000;
+    font-size:14px;
+
+    font-weight:800;
+
+    z-index:9999;
+
+    white-space:nowrap;
 }
 .combo-card .assessment-icon{
 
