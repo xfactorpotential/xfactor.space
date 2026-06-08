@@ -2908,13 +2908,17 @@ body{
 
 .about-section .section-header p{
 
+    width:80%;
+
     max-width:850px;
 
-    margin:auto;
+    margin:0 auto;
 
-    color:#bdbdbd;
+    text-align:center;
 
-    line-height:1.8;
+    line-height:1.9;
 
-    font-size:18px;
+    font-size:20px;
+
+    color:#cfcfcf;
 }
