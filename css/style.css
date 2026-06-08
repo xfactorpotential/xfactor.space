@@ -2786,6 +2786,11 @@ body{
     gap:40px;
 }
 
+html {
+    scroll-padding-top: 120px;
+    scroll-behavior: smooth;
+}
+
 /* COLUMN */
 
 .footer-column h3,
