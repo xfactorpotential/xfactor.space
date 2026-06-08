@@ -578,11 +578,14 @@ body{
 
     color:#d0d0d0;
 
-    line-height:1.8;
+    line-height:1.9;
 
-    font-size:15px;
+    font-size:16px;
+
+    text-align:justify;
+
+    text-justify:inter-word;
 }
-
 @media(max-width:992px){
 
     .about-content{
