@@ -3155,6 +3155,8 @@ body{
     border:2px solid var(--gold);
 
     position:relative;
+
+    overflow: visible;
 }
 
 .popular-badge{
