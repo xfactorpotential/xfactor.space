@@ -3172,3 +3172,21 @@ body{
         grid-template-columns:1fr;
     }
 }
+
+/* PAYMENT SECTION CENTER FIX */
+
+.payment-section .container{
+    max-width:900px !important;
+}
+
+.payment-wrapper{
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+}
+
+.payment-card{
+    width:100%;
+    max-width:750px;
+    margin:0 auto !important;
+}
