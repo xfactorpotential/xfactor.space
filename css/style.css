@@ -3056,19 +3056,24 @@ body{
 
     background:#D4A017;
 
-    color:#000;
+    color:#000000 !important;
 
     font-size:12px;
 
-    font-weight:700;
+    font-weight:800;
 
-    padding:6px 12px;
+    text-transform:uppercase;
+
+    padding:8px 14px;
 
     border-radius:30px;
 
-    letter-spacing:.5px;
-}
+    z-index:1000;
 
+    display:inline-block;
+
+    white-space:nowrap;
+}
 .combo-card .assessment-icon{
 
     font-size:48px;
@@ -3143,29 +3148,4 @@ body{
 
         grid-template-columns:1fr;
     }
-}
-
-.popular-badge{
-
-    position:absolute;
-
-    top:-12px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    background:#D4A017;
-
-    color:#000;
-
-    padding:8px 18px;
-
-    border-radius:50px;
-
-    font-weight:700;
-
-    font-size:12px;
-
-    z-index:999;
 }
