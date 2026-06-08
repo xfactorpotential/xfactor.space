@@ -3144,3 +3144,28 @@ body{
         grid-template-columns:1fr;
     }
 }
+
+.popular-badge{
+
+    position:absolute;
+
+    top:-12px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#D4A017;
+
+    color:#000;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    font-size:12px;
+
+    z-index:999;
+}
