@@ -2592,7 +2592,7 @@ body{
 
 .payment-section{
 
-    padding:100px 0;
+    padding-top:180px !important;
 
     background:#080808;
 }
