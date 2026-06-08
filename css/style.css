@@ -3071,31 +3071,24 @@ body{
     box-shadow:0 0 30px rgba(212,160,23,.25);
 }
 
-.popular-badge{
+.popular-badge {
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%);
 
-    position:absolute;
+    background: #d4a017;
+    color: #000;
 
-    top:-22px;
+    padding: 12px 30px;
+    border-radius: 30px;
 
-    left:50%;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
 
-    transform:translateX(-50%);
-
-    background:#D4A017;
-
-    color:#000;
-
-    padding:10px 20px;
-
-    border-radius:50px;
-
-    font-size:14px;
-
-    font-weight:800;
-
-    z-index:9999;
-
-    white-space:nowrap;
+    z-index: 9999;
+    white-space: nowrap;
 }
 .combo-card .assessment-icon{
 
