@@ -3022,3 +3022,56 @@ body{
 
     left:0;
 }
+
+/* ===========================
+   COMBO PACKAGES
+=========================== */
+
+.combo-card{
+
+    position:relative;
+
+    transition:all .3s ease;
+}
+
+.combo-card:hover{
+
+    transform:translateY(-8px);
+}
+
+.featured-package{
+
+    border:2px solid #D4A017 !important;
+
+    box-shadow:0 0 30px rgba(212,160,23,.25);
+}
+
+.popular-badge{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    background:#D4A017;
+
+    color:#000;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    padding:6px 12px;
+
+    border-radius:30px;
+
+    letter-spacing:.5px;
+}
+
+.combo-card .assessment-icon{
+
+    font-size:48px;
+
+    margin-bottom:15px;
+}
