@@ -3087,7 +3087,7 @@ body{
     font-weight: 700;
     text-transform: uppercase;
 
-    z-index: 9999;
+    z-index: 10;
     white-space: nowrap;
 }
 .combo-card .assessment-icon{
