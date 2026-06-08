@@ -604,6 +604,8 @@ body{
     padding:100px 0;
 
     background:#050505;
+
+    text-align:center;
 }
 
 .section-header{
@@ -639,7 +641,9 @@ body{
 
     gap:30px;
 
-    margin-top:20px;
+    margin-top:50px;
+
+    width:100%;
 }
 
 /* CARD */
