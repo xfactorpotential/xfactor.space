@@ -665,6 +665,17 @@ body{
     text-align:center;
 
     transition:.3s ease;
+
+   display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+   
 }
 
 .assessment-card:hover{
@@ -3109,9 +3120,22 @@ body{
 
 .combo-card{
 
-    min-height:380px;
-}
+    min-height:280px;
 
+    height:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:25px 20px;
+}
 .featured-package{
 
     border:2px solid var(--gold);
