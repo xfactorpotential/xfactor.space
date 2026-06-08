@@ -3195,3 +3195,9 @@ html {
     max-width:750px;
     margin:0 auto !important;
 }
+
+/* About Navigation Fix */
+
+#about{
+    scroll-margin-top: 140px;
+}
