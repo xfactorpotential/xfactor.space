@@ -3152,17 +3152,6 @@ body{
     overflow: visible;
 }
 
-.popular-badge{
-
-    color:var(--gold);
-
-    font-size:14px;
-
-    font-weight:700;
-
-    margin-bottom:10px;
-}
-
 /* Tablet */
 
 @media(max-width:1200px){
