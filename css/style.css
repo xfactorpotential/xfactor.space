@@ -3086,3 +3086,61 @@ body{
 
     margin-top:40px;
 }
+
+/* ===========================
+   COMBO PACKAGES
+=========================== */
+
+.combo-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin-top:50px;
+}
+
+.combo-card{
+
+    min-height:380px;
+}
+
+.featured-package{
+
+    border:2px solid var(--gold);
+
+    position:relative;
+}
+
+.popular-badge{
+
+    color:var(--gold);
+
+    font-size:14px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+}
+
+/* Tablet */
+
+@media(max-width:1200px){
+
+    .combo-grid{
+
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .combo-grid{
+
+        grid-template-columns:1fr;
+    }
+}
