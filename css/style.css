@@ -3269,3 +3269,247 @@ img{
         padding-right:15px;
     }
 }
+
+/* ==================================
+X FACTOR DEMO ASSESSMENT
+================================== */
+
+.assessment-result{
+
+```
+padding:100px 0;
+
+background:#050505;
+```
+
+}
+
+.assessment-result .question-card{
+
+```
+max-width:1000px;
+
+margin:auto;
+```
+
+}
+
+/* QUESTION TITLE */
+
+#questionText{
+
+```
+color:white;
+
+font-size:28px;
+
+line-height:1.7;
+
+margin-bottom:25px;
+
+text-align:center;
+```
+
+}
+
+/* OPTIONS */
+
+.options-group{
+
+```
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+margin-top:20px;
+```
+
+}
+
+.option-btn{
+
+```
+background:#0d1117;
+
+border:1px solid rgba(212,160,23,.15);
+
+border-radius:14px;
+
+padding:18px 20px;
+
+color:white;
+
+cursor:pointer;
+
+transition:.3s ease;
+
+text-align:left;
+
+font-size:16px;
+```
+
+}
+
+.option-btn:hover{
+
+```
+border-color:#D4A017;
+
+transform:translateY(-2px);
+```
+
+}
+
+.option-btn.selected{
+
+```
+background:rgba(212,160,23,.12);
+
+border-color:#D4A017;
+
+color:white;
+```
+
+}
+
+/* RESULT SECTION */
+
+.result-card{
+
+```
+max-width:1000px;
+
+margin:auto;
+```
+
+}
+
+/* SCORE CARDS */
+
+.assessment-result .score-grid{
+
+```
+margin-top:40px;
+
+margin-bottom:40px;
+```
+
+}
+
+.assessment-result .score-card{
+
+```
+background:#0d1117;
+
+border:1px solid rgba(212,160,23,.15);
+
+border-radius:20px;
+
+padding:30px;
+
+text-align:center;
+```
+
+}
+
+.assessment-result .score-circle{
+
+```
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+border:8px solid #D4A017;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+margin:auto;
+
+font-size:26px;
+
+font-weight:700;
+
+color:white;
+
+margin-bottom:20px;
+```
+
+}
+
+/* UNLOCK BUTTON */
+
+.unlock-report-btn{
+
+```
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:#D4A017;
+
+color:black;
+
+text-decoration:none;
+
+padding:15px 30px;
+
+border-radius:12px;
+
+font-weight:700;
+
+transition:.3s ease;
+```
+
+}
+
+.unlock-report-btn:hover{
+
+```
+background:#e3b541;
+
+transform:translateY(-2px);
+```
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+```
+#questionText{
+
+    font-size:22px;
+}
+
+.assessment-result .score-grid{
+
+    grid-template-columns:1fr;
+}
+
+.assessment-result .score-circle{
+
+    width:100px;
+
+    height:100px;
+
+    font-size:22px;
+}
+
+.option-btn{
+
+    font-size:15px;
+}
+```
+
+}
