@@ -3201,3 +3201,43 @@ html {
 #about{
     scroll-margin-top: 140px;
 }
+
+/* MOBILE HORIZONTAL SCROLL FIX */
+
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+*{
+    max-width:100%;
+}
+
+@media (max-width:768px){
+
+    .container{
+        width:100%;
+        padding:0 15px;
+    }
+
+    .assessment-grid,
+    .report-grid,
+    .combo-grid,
+    .testimonial-grid,
+    .pricing-grid,
+    .contact-wrapper{
+        grid-template-columns:1fr !important;
+    }
+
+    .assessment-card,
+    .report-card,
+    .combo-card{
+        width:100% !important;
+        min-width:0 !important;
+    }
+
+    .nav-menu{
+        width:100%;
+    }
+}
