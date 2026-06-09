@@ -65,117 +65,104 @@ const questions = [
 {
 question:"What type of work excites you the most?",
 options:[
-{
-text:"Solving complex problems",
-type:"career"
-},
-{
-text:"Helping people",
-type:"career"
-},
-{
-text:"Creating new ideas",
-type:"dmit"
-},
-{
-text:"Building a business",
-type:"entrepreneur"
-}
+{text:"Solving complex problems",career:5,dmit:2,entrepreneur:1},
+{text:"Helping people grow",career:4,dmit:3,entrepreneur:1},
+{text:"Creating innovative ideas",career:2,dmit:5,entrepreneur:2},
+{text:"Building a business",career:1,dmit:2,entrepreneur:5}
 ]
 },
 
 {
 question:"How do you usually make decisions?",
 options:[
-"Logic and analysis",
-"Feelings and values",
-"Creativity and intuition",
-"Opportunities and risks"
+{text:"Data & Logic",career:5,dmit:2,entrepreneur:2},
+{text:"Personal Values",career:3,dmit:4,entrepreneur:1},
+{text:"Intuition",career:2,dmit:5,entrepreneur:2},
+{text:"Risk vs Reward",career:2,dmit:2,entrepreneur:5}
 ]
 },
 
 {
 question:"Which activity do you enjoy most?",
 options:[
-"Researching",
-"Teaching",
-"Designing",
-"Selling"
+{text:"Researching",career:5,dmit:3,entrepreneur:1},
+{text:"Teaching",career:4,dmit:3,entrepreneur:1},
+{text:"Designing",career:2,dmit:5,entrepreneur:2},
+{text:"Selling",career:1,dmit:2,entrepreneur:5}
 ]
 },
 
 {
 question:"What motivates you most?",
 options:[
-"Knowledge",
-"Impact",
-"Innovation",
-"Freedom"
+{text:"Knowledge",career:5,dmit:3,entrepreneur:1},
+{text:"Helping Others",career:4,dmit:3,entrepreneur:1},
+{text:"Creativity",career:2,dmit:5,entrepreneur:2},
+{text:"Freedom",career:1,dmit:2,entrepreneur:5}
 ]
 },
 
 {
 question:"How do friends describe you?",
 options:[
-"Analytical",
-"Supportive",
-"Creative",
-"Ambitious"
+{text:"Analytical",career:5,dmit:2,entrepreneur:1},
+{text:"Supportive",career:4,dmit:3,entrepreneur:1},
+{text:"Creative",career:2,dmit:5,entrepreneur:2},
+{text:"Ambitious",career:1,dmit:2,entrepreneur:5}
 ]
 },
 
 {
 question:"Which environment suits you best?",
 options:[
-"Structured",
-"Collaborative",
-"Flexible",
-"Fast-paced"
+{text:"Structured",career:5,dmit:2,entrepreneur:1},
+{text:"Collaborative",career:4,dmit:3,entrepreneur:2},
+{text:"Flexible",career:2,dmit:5,entrepreneur:2},
+{text:"Fast-Paced",career:1,dmit:2,entrepreneur:5}
 ]
 },
 
 {
 question:"What would you rather do?",
 options:[
-"Analyze data",
-"Guide people",
-"Create products",
-"Start ventures"
+{text:"Analyze Data",career:5,dmit:2,entrepreneur:1},
+{text:"Guide People",career:4,dmit:3,entrepreneur:1},
+{text:"Create Products",career:2,dmit:5,entrepreneur:2},
+{text:"Start Ventures",career:1,dmit:2,entrepreneur:5}
 ]
 },
 
 {
 question:"Which skill do you value most?",
 options:[
-"Problem solving",
-"Empathy",
-"Creativity",
-"Leadership"
+{text:"Problem Solving",career:5,dmit:2,entrepreneur:2},
+{text:"Empathy",career:4,dmit:3,entrepreneur:1},
+{text:"Creativity",career:2,dmit:5,entrepreneur:2},
+{text:"Leadership",career:2,dmit:2,entrepreneur:5}
 ]
 },
 
 {
 question:"What excites you about the future?",
 options:[
-"Technology",
-"Social impact",
-"Innovation",
-"Wealth creation"
+{text:"Technology",career:5,dmit:2,entrepreneur:2},
+{text:"Social Impact",career:4,dmit:3,entrepreneur:1},
+{text:"Innovation",career:2,dmit:5,entrepreneur:2},
+{text:"Wealth Creation",career:1,dmit:2,entrepreneur:5}
 ]
 },
 
 {
 question:"Which role attracts you most?",
 options:[
-"Specialist",
-"Mentor",
-"Creator",
-"Entrepreneur"
+{text:"Specialist",career:5,dmit:2,entrepreneur:1},
+{text:"Mentor",career:4,dmit:3,entrepreneur:1},
+{text:"Creator",career:2,dmit:5,entrepreneur:2},
+{text:"Entrepreneur",career:1,dmit:2,entrepreneur:5}
 ]
 }
 
 ];
-
 let currentQuestion = 0;
 
 const questionText =
@@ -226,7 +213,11 @@ document
 
 btn.classList.add("selected");
 
-answers[currentQuestion] = option.type;
+answers[currentQuestion] = {
+career: option.career,
+dmit: option.dmit,
+entrepreneur: option.entrepreneur
+};
 
 };
 
@@ -268,75 +259,54 @@ loadQuestion();
 
 }else{
 
-calculateResults();
-
-}
-
-});
-
-}
-
-if(previousBtn){
-
-previousBtn.addEventListener("click",()=>{
-
-if(currentQuestion > 0){
-
-currentQuestion--;
-
-loadQuestion();
-
-}
-
-});
-
-}
-
-loadQuestion();
-
 function calculateResults(){
 
 careerScore = 0;
 dmitScore = 0;
 entrepreneurScore = 0;
 
-answers.forEach(answer=>{
+answers.forEach(answer => {
 
-if(answer==="career"){
-careerScore += 10;
-}
-
-if(answer==="dmit"){
-dmitScore += 10;
-}
-
-if(answer==="entrepreneur"){
-entrepreneurScore += 10;
-}
+careerScore += answer.career;
+dmitScore += answer.dmit;
+entrepreneurScore += answer.entrepreneur;
 
 });
 
-document.getElementById(
-"assessment-screen"
-).style.display="none";
+careerScore = Math.round((careerScore/50)*100);
+dmitScore = Math.round((dmitScore/50)*100);
+entrepreneurScore = Math.round((entrepreneurScore/50)*100);
 
-document.getElementById(
-"assessmentResult"
-).style.display="block";
+document.getElementById("assessment-screen").style.display="none";
 
-document.getElementById(
-"careerScore"
-).textContent =
+document.getElementById("assessmentResult").style.display="block";
+
+document.getElementById("careerScore").textContent =
 careerScore + "%";
 
-document.getElementById(
-"dmitScore"
-).textContent =
+document.getElementById("dmitScore").textContent =
 dmitScore + "%";
 
-document.getElementById(
-"entrepreneurScore"
-).textContent =
+document.getElementById("entrepreneurScore").textContent =
 entrepreneurScore + "%";
+
+let strengths = [];
+
+if(careerScore >= 70)
+strengths.push("Strong Career Clarity");
+
+if(dmitScore >= 70)
+strengths.push("High Creative & Natural Potential");
+
+if(entrepreneurScore >= 70)
+strengths.push("Strong Entrepreneurial Mindset");
+
+if(strengths.length === 0)
+strengths.push("Balanced Personality Profile");
+
+document.querySelector(".career-list").innerHTML =
+strengths.map(item =>
+`<li>${item}</li>`
+).join("");
 
 }
