@@ -1,3 +1,8 @@
+let careerScore = 0;
+let dmitScore = 0;
+let entrepreneurScore = 0;
+
+let answers = [];
 const header = document.getElementById("header");
 
 window.addEventListener("scroll", () => {
@@ -60,10 +65,22 @@ const questions = [
 {
 question:"What type of work excites you the most?",
 options:[
-"Solving complex problems",
-"Helping people",
-"Creating new ideas",
-"Building a business"
+{
+text:"Solving complex problems",
+type:"career"
+},
+{
+text:"Helping people",
+type:"career"
+},
+{
+text:"Creating new ideas",
+type:"dmit"
+},
+{
+text:"Building a business",
+type:"entrepreneur"
+}
 ]
 },
 
@@ -199,7 +216,7 @@ document.createElement("button");
 
 btn.className = "option-btn";
 
-btn.textContent = option;
+btn.textContent = option.text;
 
 btn.onclick = () => {
 
@@ -208,6 +225,8 @@ document
 .forEach(b => b.classList.remove("selected"));
 
 btn.classList.add("selected");
+
+answers[currentQuestion] = option.type;
 
 };
 
@@ -233,11 +252,23 @@ if(nextBtn){
 
 nextBtn.addEventListener("click",()=>{
 
+if(!answers[currentQuestion]){
+
+alert("Please select an option");
+
+return;
+
+}
+
 if(currentQuestion < questions.length - 1){
 
 currentQuestion++;
 
 loadQuestion();
+
+}else{
+
+calculateResults();
 
 }
 
@@ -262,3 +293,50 @@ loadQuestion();
 }
 
 loadQuestion();
+
+function calculateResults(){
+
+careerScore = 0;
+dmitScore = 0;
+entrepreneurScore = 0;
+
+answers.forEach(answer=>{
+
+if(answer==="career"){
+careerScore += 10;
+}
+
+if(answer==="dmit"){
+dmitScore += 10;
+}
+
+if(answer==="entrepreneur"){
+entrepreneurScore += 10;
+}
+
+});
+
+document.getElementById(
+"assessment-screen"
+).style.display="none";
+
+document.getElementById(
+"assessmentResult"
+).style.display="block";
+
+document.getElementById(
+"careerScore"
+).textContent =
+careerScore + "%";
+
+document.getElementById(
+"dmitScore"
+).textContent =
+dmitScore + "%";
+
+document.getElementById(
+"entrepreneurScore"
+).textContent =
+entrepreneurScore + "%";
+
+}
