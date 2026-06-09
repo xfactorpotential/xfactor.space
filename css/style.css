@@ -3603,3 +3603,11 @@ font-weight:600;
 
     justify-content:center;
 }
+
+html{
+    scroll-behavior:smooth;
+}
+
+#assessment-screen{
+    scroll-margin-top:120px;
+}
