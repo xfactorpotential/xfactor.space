@@ -3513,3 +3513,32 @@ transform:translateY(-2px);
 ```
 
 }
+
+.options-group{
+display:grid;
+gap:15px;
+margin-top:30px;
+}
+
+.option-btn{
+background:#111827;
+border:2px solid #1f2937;
+color:#fff;
+padding:16px;
+border-radius:12px;
+cursor:pointer;
+font-size:16px;
+text-align:left;
+transition:.3s;
+}
+
+.option-btn:hover{
+border-color:#fbbf24;
+}
+
+.option-btn.selected{
+background:#fbbf24;
+color:#000;
+border-color:#fbbf24;
+font-weight:600;
+}
