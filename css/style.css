@@ -2916,7 +2916,7 @@ html {
 }
 
 .assessment-screen{
-    display:none;
+    display:block;
 }
 
 .career-report{
