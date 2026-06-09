@@ -323,64 +323,6 @@ strengths.map(item =>
 }
 
 }
-}else{
-
-calculateResults();
-
-}
-
-});
-
-}
-careerScore = 0;
-dmitScore = 0;
-entrepreneurScore = 0;
-
-answers.forEach(answer => {
-
-careerScore += answer.career;
-dmitScore += answer.dmit;
-entrepreneurScore += answer.entrepreneur;
-
-});
-
-careerScore = Math.round((careerScore/50)*100);
-dmitScore = Math.round((dmitScore/50)*100);
-entrepreneurScore = Math.round((entrepreneurScore/50)*100);
-
-document.getElementById("assessment-screen").style.display="none";
-
-document.getElementById("assessmentResult").style.display="block";
-
-document.getElementById("careerScore").textContent =
-careerScore + "%";
-
-document.getElementById("dmitScore").textContent =
-dmitScore + "%";
-
-document.getElementById("entrepreneurScore").textContent =
-entrepreneurScore + "%";
-
-let strengths = [];
-
-if(careerScore >= 70)
-strengths.push("Strong Career Clarity");
-
-if(dmitScore >= 70)
-strengths.push("High Creative & Natural Potential");
-
-if(entrepreneurScore >= 70)
-strengths.push("Strong Entrepreneurial Mindset");
-
-if(strengths.length === 0)
-strengths.push("Balanced Personality Profile");
-
-document.querySelector(".career-list").innerHTML =
-strengths.map(item =>
-`<li>${item}</li>`
-).join("");
-
-}
 
 if(previousBtn){
 
