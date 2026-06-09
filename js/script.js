@@ -322,8 +322,15 @@ strengths.map(item =>
 
 }
 
-}
+/* Auto Scroll To Result */
 
+document
+.getElementById("assessmentResult")
+.scrollIntoView({
+    behavior:"smooth"
+});
+
+}
 if(previousBtn){
 
 previousBtn.addEventListener("click",()=>{
