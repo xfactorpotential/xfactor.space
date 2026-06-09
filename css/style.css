@@ -3238,14 +3238,6 @@ body{
     }
 }
 
-/* MOBILE RESPONSIVE FIX */
-
-html,
-body{
-    width:100%;
-    overflow-x:hidden;
-}
-
 img{
     max-width:100%;
     height:auto;
