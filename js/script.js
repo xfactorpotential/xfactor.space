@@ -246,7 +246,6 @@ nextBtn.addEventListener("click",()=>{
 if(!answers[currentQuestion]){
 
 alert("Please select an option");
-
 return;
 
 }
@@ -254,10 +253,19 @@ return;
 if(currentQuestion < questions.length - 1){
 
 currentQuestion++;
-
 loadQuestion();
 
-    function calculateResults(){
+}else{
+
+calculateResults();
+
+}
+
+});
+
+}
+
+function calculateResults(){
 
 careerScore = 0;
 dmitScore = 0;
@@ -271,13 +279,13 @@ entrepreneurScore += answer.entrepreneur;
 
 });
 
-careerScore = Math.round((careerScore/50)*100);
-dmitScore = Math.round((dmitScore/50)*100);
-entrepreneurScore = Math.round((entrepreneurScore/50)*100);
+careerScore = Math.round((careerScore / 50) * 100);
+dmitScore = Math.round((dmitScore / 50) * 100);
+entrepreneurScore = Math.round((entrepreneurScore / 50) * 100);
 
-document.getElementById("assessment-screen").style.display="none";
+document.getElementById("assessment-screen").style.display = "none";
 
-document.getElementById("assessmentResult").style.display="block";
+document.getElementById("assessmentResult").style.display = "block";
 
 document.getElementById("careerScore").textContent =
 careerScore + "%";
@@ -302,13 +310,19 @@ strengths.push("Strong Entrepreneurial Mindset");
 if(strengths.length === 0)
 strengths.push("Balanced Personality Profile");
 
-document.querySelector(".career-list").innerHTML =
+const careerList =
+document.querySelector(".career-list");
+
+if(careerList){
+
+careerList.innerHTML =
 strengths.map(item =>
 `<li>${item}</li>`
 ).join("");
 
 }
 
+}
 }else{
 
 calculateResults();
@@ -367,3 +381,20 @@ strengths.map(item =>
 ).join("");
 
 }
+
+if(previousBtn){
+
+previousBtn.addEventListener("click",()=>{
+
+if(currentQuestion > 0){
+
+currentQuestion--;
+loadQuestion();
+
+}
+
+});
+
+}
+
+loadQuestion();
