@@ -3624,3 +3624,82 @@ html{
         height:45px;
     }
 }
+
+/* Assessment Details Section */
+
+.assessment-details{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin:50px 0;
+}
+
+.detail-card{
+
+    background:#07101f;
+
+    border:1px solid rgba(212,160,23,.2);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    transition:0.3s;
+}
+
+.detail-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#d4a017;
+}
+
+.detail-card h3{
+
+    color:#d4a017;
+
+    margin-bottom:20px;
+
+    font-size:28px;
+
+    text-align:center;
+}
+
+.detail-card ul{
+
+    padding-left:20px;
+}
+
+.detail-card li{
+
+    color:#d8d8d8;
+
+    line-height:1.8;
+
+    margin-bottom:10px;
+}
+
+/* Mobile */
+
+@media(max-width:992px){
+
+    .assessment-details{
+
+        grid-template-columns:1fr;
+    }
+
+    .detail-card{
+
+        padding:25px;
+    }
+
+    .detail-card h3{
+
+        font-size:24px;
+    }
+
+}
