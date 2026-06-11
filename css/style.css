@@ -3755,3 +3755,36 @@ html{
         grid-template-columns:1fr;
     }
 }
+
+/* Assessment Summary Override */
+
+.detail-card h3{
+    color:#D4A017;
+    text-align:center;
+    margin-bottom:25px;
+    font-size:2rem;
+    line-height:1.3;
+}
+
+.detail-card ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.detail-card ul li{
+    color:#d0d0d0;
+    margin-bottom:14px;
+    padding-left:28px;
+    position:relative;
+    line-height:1.7;
+    text-align:left;
+}
+
+.detail-card ul li::before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    color:#D4A017;
+    font-weight:bold;
+}
