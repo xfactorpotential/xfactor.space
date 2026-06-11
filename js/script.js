@@ -29,6 +29,9 @@ if(menuToggle && nav){
 
 }
 const contactForm = document.getElementById("contactForm");
+const leadForm = document.getElementById("leadForm");
+
+/* CONTACT US FORM */
 
 if(contactForm){
 
@@ -45,33 +48,89 @@ if(contactForm){
 
         try {
 
-    await fetch(
-      "https://script.google.com/macros/s/AKfycbw3o4Pw1edoYpokRamIzEPChNl5RS45iJoVCt49VmpEpTvKehrQajDwi0YqPJMhClF4cg/exec",
-      {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type":
-          "application/x-www-form-urlencoded"
-        },
-        body: new URLSearchParams(data)
-      }
-    );
+            await fetch(
+              "https://script.google.com/macros/s/AKfycbw3o4Pw1edoYpokRamIzEPChNl5RS45iJoVCt49VmpEpTvKehrQajDwi0YqPJMhClF4cg/exec",
+              {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                  "Content-Type":
+                  "application/x-www-form-urlencoded"
+                },
+                body: new URLSearchParams(data)
+              }
+            );
 
-    alert("Thank you! We will contact you soon.");
+            alert("Thank you! We will contact you soon.");
 
-    contactForm.reset();
+            contactForm.reset();
 
-} catch(error){
+        } catch(error){
 
-    console.error(error);
+            console.error(error);
 
-    alert("Form submission failed.");
+            alert("Form submission failed.");
 
-}
+        }
+
     });
 
-}const payNowBtn =
+}
+
+/* DEMO TEST LEAD FORM */
+
+if(leadForm){
+
+    leadForm.addEventListener("submit", async (e) => {
+
+        e.preventDefault();
+
+        const data = {
+            name: document.getElementById("contactName").value,
+            email: document.getElementById("contactEmail").value,
+            mobile: document.getElementById("contactMobile").value,
+            message: document.getElementById("contactMessage").value
+        };
+
+        try {
+
+            await fetch(
+              "https://script.google.com/macros/s/AKfycbw3o4Pw1edoYpokRamIzEPChNl5RS45iJoVCt49VmpEpTvKehrQajDwi0YqPJMhClF4cg/exec",
+              {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                  "Content-Type":
+                  "application/x-www-form-urlencoded"
+                },
+                body: new URLSearchParams(data)
+              }
+            );
+
+            leadForm.reset();
+
+            document.getElementById("leadFormSection").style.display = "none";
+
+            document.getElementById("assessmentResult").style.display = "block";
+
+            document
+            .getElementById("assessmentResult")
+            .scrollIntoView({
+                behavior:"smooth"
+            });
+
+        } catch(error){
+
+            console.error(error);
+
+            alert("Form submission failed.");
+
+        }
+
+    });
+
+}    
+const payNowBtn =
 document.getElementById("payNowBtn");
 
 if(payNowBtn){
@@ -353,11 +412,11 @@ strengths.map(item =>
 /* Auto Scroll To Result */
 
 document
-.getElementById("assessmentResult")
+.getElementById("leadFormSection")
 .scrollIntoView({
     behavior:"smooth"
 });
-
+    
 }
 if(previousBtn){
 
