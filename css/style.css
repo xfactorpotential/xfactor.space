@@ -280,12 +280,9 @@ body{
         font-size:14px;
     }
 
-}
     .nav{
-
         position:fixed;
-
-        top:100%;
+        top:80px;
         left:-100%;
 
         width:100%;
@@ -298,20 +295,21 @@ body{
     }
 
     .nav.active{
-
         left:0;
     }
 
     .nav-menu{
-
         flex-direction:column;
-
         gap:20px;
-
         padding:25px;
     }
-}
 
+    .header-actions{
+        display:flex;
+        align-items:center;
+        gap:10px;
+    }
+}
 
 /* ==================================
    HERO SECTION
