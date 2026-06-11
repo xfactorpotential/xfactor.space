@@ -45,28 +45,30 @@ if(contactForm){
 
         try {
 
-            const response = await fetch(
-                "https://script.google.com/macros/s/AKfycbw3o4Pw1edoYpokRamIzEPChNl5RS45iJoVCt49VmpEpTvKehrQajDwi0YqPJMhClF4cg/exec",
-                {
-                    method: "POST",
-                    body: new URLSearchParams(data)
-                }
-            );
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbw3o4Pw1edoYpokRamIzEPChNl5RS45iJoVCt49VmpEpTvKehrQajDwi0YqPJMhClF4cg/exec",
+      {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type":
+          "application/x-www-form-urlencoded"
+        },
+        body: new URLSearchParams(data)
+      }
+    );
 
-            console.log("Form Submitted");
+    alert("Thank you! We will contact you soon.");
 
-            alert("Thank you! We will contact you soon.");
+    contactForm.reset();
 
-            contactForm.reset();
+} catch(error){
 
-        } catch(error){
+    console.error(error);
 
-            console.error(error);
+    alert("Form submission failed.");
 
-            alert("Form submission failed.");
-
-        }
-
+}
     });
 
 }const payNowBtn =
