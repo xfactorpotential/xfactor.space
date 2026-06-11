@@ -3703,3 +3703,55 @@ html{
     }
 
 }
+
+/* Assessment Summary Cards */
+
+.assessment-details{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+.detail-card{
+    background:#0d1117;
+    border:1px solid rgba(212,160,23,.15);
+    border-radius:18px;
+    padding:30px;
+    text-align:left;
+}
+
+.detail-card h3{
+    color:#ffffff;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.detail-card ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.detail-card ul li{
+    color:#d0d0d0;
+    margin-bottom:12px;
+    padding-left:24px;
+    position:relative;
+    line-height:1.6;
+}
+
+.detail-card ul li::before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    color:#D4A017;
+    font-weight:bold;
+}
+
+@media(max-width:992px){
+    .assessment-details{
+        grid-template-columns:1fr;
+    }
+}
