@@ -34,45 +34,42 @@ if(contactForm){
 
     contactForm.addEventListener("submit", async (e) => {
 
-    e.preventDefault();
+        e.preventDefault();
 
-    const data = {
-        name: document.getElementById("contactName").value,
-        email: document.getElementById("contactEmail").value,
-        mobile: document.getElementById("contactMobile").value,
-        message: document.getElementById("contactMessage").value
-    };
+        const data = {
+            name: document.getElementById("contactName").value,
+            email: document.getElementById("contactEmail").value,
+            mobile: document.getElementById("contactMobile").value,
+            message: document.getElementById("contactMessage").value
+        };
 
-    try {
+        try {
 
-    const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbw3o4Pw1edoYpokRamIzEPChNl5RS45iJoVCt49VmpEpTvKehrQajDwi0YqPJMhClF4cg/exec",
-      {
-        method: "POST",
-        body: new URLSearchParams(data)
-      }
-    );
+            const response = await fetch(
+                "https://script.google.com/macros/s/AKfycbw3o4Pw1edoYpokRamIzEPChNl5RS45iJoVCt49VmpEpTvKehrQajDwi0YqPJMhClF4cg/exec",
+                {
+                    method: "POST",
+                    body: new URLSearchParams(data)
+                }
+            );
 
-    console.log("Form Submitted");
+            console.log("Form Submitted");
 
-    alert("Thank you! We will contact you soon.");
+            alert("Thank you! We will contact you soon.");
 
-    contactForm.reset();
+            contactForm.reset();
 
-} catch(error){
+        } catch(error){
 
-    console.error(error);
+            console.error(error);
 
-    alert("Form submission failed.");
+            alert("Form submission failed.");
 
-}
-    alert("Thank you! We will contact you soon.");
+        }
 
-    contactForm.reset();
+    });
 
-});
-}
-const payNowBtn =
+}const payNowBtn =
 document.getElementById("payNowBtn");
 
 if(payNowBtn){
