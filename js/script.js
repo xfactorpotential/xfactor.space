@@ -43,20 +43,29 @@ if(contactForm){
         message: document.getElementById("contactMessage").value
     };
 
-    await fetch(
+    try {
+
+    const response = await fetch(
       "https://script.google.com/macros/s/AKfycbw3o4Pw1edoYpokRamIzEPChNl5RS45iJoVCt49VmpEpTvKehrQajDwi0YqPJMhClF4cg/exec",
       {
         method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type":
-          "application/x-www-form-urlencoded"
-        },
-        body:
-          new URLSearchParams(data)
+        body: new URLSearchParams(data)
       }
     );
 
+    console.log("Form Submitted");
+
+    alert("Thank you! We will contact you soon.");
+
+    contactForm.reset();
+
+} catch(error){
+
+    console.error(error);
+
+    alert("Form submission failed.");
+
+}
     alert("Thank you! We will contact you soon.");
 
     contactForm.reset();
