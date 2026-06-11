@@ -32,16 +32,36 @@ const contactForm = document.getElementById("contactForm");
 
 if(contactForm){
 
-    contactForm.addEventListener("submit",(e)=>{
+    contactForm.addEventListener("submit", async (e) => {
 
-        e.preventDefault();
+    e.preventDefault();
 
-        alert("Thank you! Your message has been submitted.");
+    const data = {
+        name: document.getElementById("contactName").value,
+        email: document.getElementById("contactEmail").value,
+        mobile: document.getElementById("contactMobile").value,
+        message: document.getElementById("contactMessage").value
+    };
 
-        contactForm.reset();
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbw3o4Pw1edoYpokRamIzEPChNl5RS45iJoVCt49VmpEpTvKehrQajDwi0YqPJMhClF4cg/exec",
+      {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type":
+          "application/x-www-form-urlencoded"
+        },
+        body:
+          new URLSearchParams(data)
+      }
+    );
 
-    });
+    alert("Thank you! We will contact you soon.");
 
+    contactForm.reset();
+
+});
 }
 const payNowBtn =
 document.getElementById("payNowBtn");
