@@ -3610,3 +3610,17 @@ html{
 #assessment-screen{
     scroll-margin-top:120px;
 }
+
+@media(max-width:768px){
+
+    .header-actions .btn-primary{
+        display:inline-flex !important;
+        font-size:12px;
+        padding:8px 12px;
+        white-space:nowrap;
+    }
+
+    .logo img{
+        height:45px;
+    }
+}
