@@ -30,10 +30,6 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
 
     font-family:'Inter',sans-serif;
@@ -1141,15 +1137,6 @@ body{
     margin-bottom:25px;
 
     line-height:1.7;
-}
-
-.options-group{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:15px;
 }
 
 .option-card{
@@ -3061,17 +3048,6 @@ html {
     transform:translateY(-8px);
 }
 
-.featured-package{
-
-    border:2px solid #D4A017 !important;
-
-   position:relative;
-
-    overflow:visible !important;
-
-    box-shadow:0 0 30px rgba(212,160,23,.25);
-}
-
 .popular-badge {
     position: absolute;
     top: -28px;
@@ -3269,23 +3245,13 @@ img{
 X FACTOR DEMO ASSESSMENT
 ================================== */
 
-.assessment-result{
-
-```
-padding:100px 0;
-
-background:#050505;
-```
-
-}
-
 .assessment-result .question-card{
 
-```
+
 max-width:1000px;
 
 margin:auto;
-```
+
 
 }
 
@@ -3293,7 +3259,7 @@ margin:auto;
 
 #questionText{
 
-```
+
 color:white;
 
 font-size:28px;
@@ -3303,69 +3269,30 @@ line-height:1.7;
 margin-bottom:25px;
 
 text-align:center;
-```
+
 
 }
 
-/* OPTIONS */
-
-.options-group{
-
-```
-display:flex;
-
-flex-direction:column;
-
-gap:15px;
-
-margin-top:20px;
-```
-
-}
-
-.option-btn{
-
-```
-background:#0d1117;
-
-border:1px solid rgba(212,160,23,.15);
-
-border-radius:14px;
-
-padding:18px 20px;
-
-color:white;
-
-cursor:pointer;
-
-transition:.3s ease;
-
-text-align:left;
-
-font-size:16px;
-```
-
-}
 
 .option-btn:hover{
 
-```
+
 border-color:#D4A017;
 
 transform:translateY(-2px);
-```
+
 
 }
 
 .option-btn.selected{
 
-```
+
 background:rgba(212,160,23,.12);
 
 border-color:#D4A017;
 
 color:white;
-```
+
 
 }
 
@@ -3373,11 +3300,11 @@ color:white;
 
 .result-card{
 
-```
+
 max-width:1000px;
 
 margin:auto;
-```
+
 
 }
 
@@ -3385,17 +3312,17 @@ margin:auto;
 
 .assessment-result .score-grid{
 
-```
+
 margin-top:40px;
 
 margin-bottom:40px;
-```
+
 
 }
 
 .assessment-result .score-card{
 
-```
+
 background:#0d1117;
 
 border:1px solid rgba(212,160,23,.15);
@@ -3405,13 +3332,13 @@ border-radius:20px;
 padding:30px;
 
 text-align:center;
-```
+
 
 }
 
 .assessment-result .score-circle{
 
-```
+
 width:120px;
 
 height:120px;
@@ -3435,7 +3362,7 @@ font-weight:700;
 color:white;
 
 margin-bottom:20px;
-```
+
 
 }
 
@@ -3443,7 +3370,7 @@ margin-bottom:20px;
 
 .unlock-report-btn{
 
-```
+
 display:inline-flex;
 
 align-items:center;
@@ -3463,17 +3390,17 @@ border-radius:12px;
 font-weight:700;
 
 transition:.3s ease;
-```
+
 
 }
 
 .unlock-report-btn:hover{
 
-```
+
 background:#e3b541;
 
 transform:translateY(-2px);
-```
+
 
 }
 
@@ -3481,7 +3408,7 @@ transform:translateY(-2px);
 
 @media(max-width:768px){
 
-```
+
 #questionText{
 
     font-size:22px;
@@ -3505,7 +3432,7 @@ transform:translateY(-2px);
 
     font-size:15px;
 }
-```
+
 
 }
 
@@ -3513,29 +3440,6 @@ transform:translateY(-2px);
 display:grid;
 gap:15px;
 margin-top:30px;
-}
-
-.option-btn{
-background:#111827;
-border:2px solid #1f2937;
-color:#fff;
-padding:16px;
-border-radius:12px;
-cursor:pointer;
-font-size:16px;
-text-align:left;
-transition:.3s;
-}
-
-.option-btn:hover{
-border-color:#fbbf24;
-}
-
-.option-btn.selected{
-background:#fbbf24;
-color:#000;
-border-color:#fbbf24;
-font-weight:600;
 }
 
 /* RESULT PAGE FIX */
@@ -3625,48 +3529,11 @@ html{
     }
 }
 
-/* Assessment Details Section */
-
-.assessment-details{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
-    margin:50px 0;
-}
-
-.detail-card{
-
-    background:#07101f;
-
-    border:1px solid rgba(212,160,23,.2);
-
-    border-radius:20px;
-
-    padding:30px;
-
-    transition:0.3s;
-}
-
 .detail-card:hover{
 
     transform:translateY(-5px);
 
     border-color:#d4a017;
-}
-
-.detail-card h3{
-
-    color:#d4a017;
-
-    margin-bottom:20px;
-
-    font-size:28px;
-
-    text-align:center;
 }
 
 .detail-card ul{
@@ -3720,34 +3587,6 @@ html{
     border-radius:18px;
     padding:30px;
     text-align:left;
-}
-
-.detail-card h3{
-    color:#ffffff;
-    margin-bottom:20px;
-    text-align:center;
-}
-
-.detail-card ul{
-    list-style:none;
-    padding:0;
-    margin:0;
-}
-
-.detail-card ul li{
-    color:#d0d0d0;
-    margin-bottom:12px;
-    padding-left:24px;
-    position:relative;
-    line-height:1.6;
-}
-
-.detail-card ul li::before{
-    content:"✓";
-    position:absolute;
-    left:0;
-    color:#D4A017;
-    font-weight:bold;
 }
 
 @media(max-width:992px){
