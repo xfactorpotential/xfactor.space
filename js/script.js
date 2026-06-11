@@ -313,7 +313,7 @@ entrepreneurScore = Math.round((entrepreneurScore / 50) * 100);
 
 document.getElementById("assessment-screen").style.display = "none";
 
-document.getElementById("assessmentResult").style.display = "block";
+document.getElementById("leadFormSection").style.display = "block";
 
 document.getElementById("careerScore").textContent =
 careerScore + "%";
