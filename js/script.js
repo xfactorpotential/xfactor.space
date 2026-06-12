@@ -40,11 +40,11 @@ if(contactForm){
         e.preventDefault();
 
         const data = {
-            name: document.getElementById("contactName").value,
-            email: document.getElementById("contactEmail").value,
-            mobile: document.getElementById("contactMobile").value,
-            message: document.getElementById("contactMessage").value
-        };
+    name: document.getElementById("leadName").value,
+    email: document.getElementById("leadEmail").value,
+    mobile: document.getElementById("leadMobile").value,
+    message: document.getElementById("leadMessage").value
+};
 
         try {
 
