@@ -3674,3 +3674,52 @@ html{
 
     margin-top:10px;
 }
+
+.report-info-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:25px;
+
+}
+
+.report-info-card{
+
+    background:#081120;
+    border:1px solid rgba(255,184,0,0.25);
+    border-radius:16px;
+    padding:25px;
+    text-align:left;
+
+}
+
+.report-info-card h4{
+
+    color:#ffb800;
+    margin-bottom:15px;
+    font-size:22px;
+
+}
+
+.report-info-card ul{
+
+    padding-left:20px;
+    margin-bottom:15px;
+
+}
+
+.report-info-card li{
+
+    margin-bottom:10px;
+    color:#e5e5e5;
+
+}
+
+.report-info-card p{
+
+    color:#cccccc;
+    font-size:15px;
+    line-height:1.6;
+
+}
