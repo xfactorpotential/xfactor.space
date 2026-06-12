@@ -3723,3 +3723,20 @@ html{
     line-height:1.6;
 
 }
+
+.footer-bottom{
+    width:100%;
+    margin-top:50px;
+    padding:25px 0;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.footer-bottom p{
+    margin:0;
+    color:#9f9f9f;
+}
