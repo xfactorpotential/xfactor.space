@@ -130,18 +130,6 @@ if(leadForm){
     });
 
 }    
-const payNowBtn =
-document.getElementById("payNowBtn");
-
-if(payNowBtn){
-
-    payNowBtn.addEventListener("click",()=>{
-
-        alert("Payment Gateway Coming Soon");
-
-    });
-
-}
 
 /* ==========================
    DEMO ASSESSMENT
