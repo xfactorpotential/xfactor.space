@@ -3816,17 +3816,18 @@ html{
 
     padding:35px;
 
-    background:rgba(212,160,23,.08);
+    background:#0d0a03;
 
-    border:1px solid rgba(212,160,23,.25);
+    border:2px solid #D4A017;
 
-    border-left:6px solid #D4A017;
-
-    border-radius:16px;
+    border-radius:20px;
 
     text-align:center;
-}
 
+    box-shadow:
+        0 0 10px rgba(212,160,23,.25),
+        0 0 25px rgba(212,160,23,.15);
+}
 .challenge-message h3{
 
     color:#D4A017;
