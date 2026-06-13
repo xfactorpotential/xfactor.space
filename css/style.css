@@ -502,6 +502,10 @@ body{
         padding:120px 0 60px;
     }
 
+   .hero-description{
+    margin-bottom:0px;
+}
+   
     .hero h1{
 
         font-size:40px;
