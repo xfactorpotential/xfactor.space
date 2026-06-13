@@ -319,10 +319,11 @@ body{
 
     justify-content:center;
 
-    padding:140px 0 40px;
+    padding:120px 0 20px;
 
     background:#050505;
 }
+
 .hero-container{
 
     display:flex;
