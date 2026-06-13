@@ -3859,3 +3859,17 @@ html{
     margin-bottom:40px;
 
 }
+
+/* Reduce gap between Hero and Challenges */
+
+.hero{
+    padding-bottom:0 !important;
+}
+
+.pain-points{
+    padding-top:20px !important;
+}
+
+.section-header{
+    margin-top:0 !important;
+}
