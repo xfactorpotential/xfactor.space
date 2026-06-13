@@ -4200,3 +4200,30 @@ html{
 
     align-items:stretch;
 }
+
+/* FORCE 4 STEPS IN ONE ROW */
+
+.solution-steps{
+
+    display:grid !important;
+
+    grid-template-columns:repeat(4,1fr) !important;
+
+    gap:25px;
+
+    align-items:start;
+
+    justify-content:center;
+}
+
+.arrow{
+
+    display:none !important;
+}
+
+.step{
+
+    width:100% !important;
+
+    max-width:none !important;
+}
