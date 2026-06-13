@@ -3846,3 +3846,14 @@ html{
 
     margin-bottom:10px;
 }
+
+.delivery-note{
+
+    text-align:center;
+    color:#D4A017;
+    font-size:18px;
+    font-weight:600;
+    margin-top:15px;
+    margin-bottom:40px;
+
+}
