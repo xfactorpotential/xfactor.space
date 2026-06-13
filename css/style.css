@@ -3805,3 +3805,44 @@ html{
     }
 
 }
+
+.challenge-message{
+
+    max-width:900px;
+
+    margin:60px auto;
+
+    padding:35px;
+
+    background:rgba(212,160,23,.08);
+
+    border:1px solid rgba(212,160,23,.25);
+
+    border-left:6px solid #D4A017;
+
+    border-radius:16px;
+
+    text-align:center;
+}
+
+.challenge-message h3{
+
+    color:#D4A017;
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+    font-weight:800;
+}
+
+.challenge-message p{
+
+    color:#e0e0e0;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:10px;
+}
