@@ -4276,3 +4276,21 @@ html{
 
     line-height:1.5;
 }
+/* REMOVE EXTRA GAP BETWEEN SOLUTION & WHY X FACTOR */
+
+.solution-box{
+    margin-bottom:40px !important;
+}
+
+.path-section{
+    padding-bottom:40px !important;
+}
+
+.why-x-factor{
+    padding-top:40px !important;
+    margin-top:0 !important;
+}
+
+.why-x-factor .container{
+    margin-top:0 !important;
+}
