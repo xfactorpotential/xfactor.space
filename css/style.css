@@ -3740,3 +3740,68 @@ html{
     margin:0;
     color:#9f9f9f;
 }
+
+/* ===========================
+   PAIN POINTS SECTION
+=========================== */
+
+.pain-points{
+
+    padding:100px 0;
+
+    background:#080808;
+}
+
+.pain-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-top:50px;
+}
+
+.pain-card{
+
+    background:#0d1117;
+
+    border:1px solid rgba(212,160,23,.15);
+
+    border-radius:18px;
+
+    padding:30px;
+
+    transition:.3s ease;
+}
+
+.pain-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#D4A017;
+}
+
+.pain-card h3{
+
+    color:#D4A017;
+
+    margin-bottom:15px;
+}
+
+.pain-card p{
+
+    color:#d0d0d0;
+
+    line-height:1.8;
+}
+
+@media(max-width:768px){
+
+    .pain-grid{
+
+        grid-template-columns:1fr;
+    }
+
+}
