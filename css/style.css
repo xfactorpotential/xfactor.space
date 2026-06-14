@@ -3848,8 +3848,11 @@ html{
     line-height:1.9;
 
     margin-bottom:10px;
-}
 
+    text-align:justify;
+
+    text-justify:inter-word;
+}
 .delivery-note{
 
     text-align:center;
