@@ -4294,3 +4294,31 @@ html{
 .why-x-factor .container{
     margin-top:0 !important;
 }
+
+.trust-bar{
+    padding: 25px 0;
+    background: #080808;
+    border-top: 1px solid rgba(255,196,0,0.15);
+    border-bottom: 1px solid rgba(255,196,0,0.15);
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.trust-item{
+    text-align:center;
+    color:#ffffff;
+    font-size:16px;
+    font-weight:600;
+}
+
+@media(max-width:768px){
+
+    .trust-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
