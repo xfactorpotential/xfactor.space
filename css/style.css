@@ -4322,3 +4322,25 @@ html{
     }
 
 }
+
+.ideal-for{
+
+    margin-top:15px;
+
+    padding:10px 14px;
+
+    background:rgba(255,196,0,0.08);
+
+    border:1px solid rgba(255,196,0,0.25);
+
+    border-radius:8px;
+
+    color:#ffc400;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    line-height:1.5;
+
+}
