@@ -2935,7 +2935,9 @@ html {
 
     margin:0 auto;
 
-    text-align:center;
+    text-align:justify;
+
+    text-justify:inter-word;
 
     line-height:1.9;
 
@@ -2943,7 +2945,6 @@ html {
 
     color:#cfcfcf;
 }
-
 /* ===========================
    REPORT DETAILS SECTION
 =========================== */
