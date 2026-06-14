@@ -4454,3 +4454,75 @@ html{
     line-height:1.8;
 
 }
+
+.whatsapp-cta{
+
+    padding:80px 0;
+
+}
+
+.whatsapp-box{
+
+    text-align:center;
+
+    padding:50px;
+
+    border:2px solid rgba(255,196,0,0.25);
+
+    border-radius:20px;
+
+    background:rgba(255,196,0,0.05);
+
+}
+
+.whatsapp-box h2{
+
+    color:#ffc400;
+
+    font-size:38px;
+
+    margin-bottom:20px;
+
+}
+
+.whatsapp-box p{
+
+    max-width:700px;
+
+    margin:0 auto 30px;
+
+    color:#d8d8d8;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+.whatsapp-btn{
+
+    display:inline-block;
+
+    padding:16px 36px;
+
+    background:#25D366;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.whatsapp-btn:hover{
+
+    transform:translateY(-3px);
+
+}
