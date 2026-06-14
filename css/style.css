@@ -4344,3 +4344,67 @@ html{
     line-height:1.5;
 
 }
+
+.delivery-badge{
+    padding:40px 0;
+}
+
+.delivery-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    padding:30px;
+
+    border:1px solid rgba(255,196,0,0.25);
+
+    border-radius:16px;
+
+    background:rgba(255,196,0,0.05);
+
+    box-shadow:0 0 20px rgba(255,196,0,0.08);
+
+}
+
+.delivery-icon{
+
+    font-size:48px;
+
+    flex-shrink:0;
+
+}
+
+.delivery-content h3{
+
+    color:#ffc400;
+
+    margin-bottom:10px;
+
+    font-size:28px;
+
+}
+
+.delivery-content p{
+
+    color:#d8d8d8;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+@media(max-width:768px){
+
+    .delivery-box{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+}
