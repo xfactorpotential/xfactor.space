@@ -4526,13 +4526,3 @@ html{
     transform:translateY(-3px);
 
 }
-
-.challenge-text{
-
-    text-align: justify;
-    text-justify: inter-word;
-    line-height: 1.8;
-    max-width: 900px;
-    margin: 0 auto;
-
-}
