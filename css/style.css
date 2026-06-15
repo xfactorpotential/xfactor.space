@@ -4515,13 +4515,8 @@ html{
 }
 
 /* ==================================
-   GLOBAL SECTION SPACING FIX
+   FINAL UNIFORM SPACING
 ================================== */
-
-.hero{
-    padding-top:120px !important;
-    padding-bottom:40px !important;
-}
 
 .pain-points,
 .path-section,
@@ -4533,166 +4528,38 @@ html{
 .faq-section,
 .whatsapp-cta,
 .contact-section{
-    padding-top:60px !important;
-    padding-bottom:60px !important;
+
+    padding:80px 0 !important;
 }
 
-/* Section Headings */
-
 .section-header{
+
     margin-bottom:40px !important;
 }
 
-/* Cards below headings */
+.challenge-message,
+.solution-box,
+.whatsapp-box{
 
-.path-grid,
-.about-content,
-.assessment-grid,
-.combo-grid,
-.report-grid,
-.testimonial-grid,
-.contact-wrapper{
     margin-top:40px !important;
+    margin-bottom:40px !important;
 }
-
-/* Solution Box */
-
-.solution-box{
-    margin-top:50px !important;
-    margin-bottom:50px !important;
-}
-
-/* Demo Assessment */
-
-.assessment-screen{
-    padding-top:60px !important;
-    padding-bottom:60px !important;
-}
-
-/* Success Stories */
-
-.success-stories{
-    padding-top:60px !important;
-}
-
-/* FAQ */
-
-.faq-section{
-    padding-top:60px !important;
-    padding-bottom:60px !important;
-}
-
-/* Whatsapp CTA */
-
-.whatsapp-cta{
-    padding-top:60px !important;
-    padding-bottom:60px !important;
-}
-
-/* Contact */
-
-.contact-section{
-    padding-top:60px !important;
-    padding-bottom:60px !important;
-}
-
-/* ==================================
-   MASTER SPACING SYSTEM
-================================== */
-
-/* Main Sections */
-
-.hero,
-.pain-points,
-.path-section,
-.why-x-factor,
-.assessments,
-.report-details,
-.assessment-screen,
-.success-stories,
-.faq-section,
-.whatsapp-cta,
-.contact-section{
-
-    padding-top:70px !important;
-    padding-bottom:70px !important;
-}
-
-/* First Hero Section */
-
-.hero{
-
-    padding-top:120px !important;
-    padding-bottom:50px !important;
-}
-
-/* Section Headings */
-
-.section-header{
-
-    margin-bottom:50px !important;
-}
-
-/* Heading + Description */
-
-.section-header h2{
-
-    margin-bottom:15px !important;
-}
-
-/* Grids */
 
 .pain-grid,
 .path-grid,
 .assessment-grid,
 .combo-grid,
 .report-grid,
-.testimonial-grid{
-
-    margin-top:40px !important;
-}
-
-/* Boxes */
-
-.solution-box,
-.challenge-message,
-.whatsapp-box{
-
-    margin-top:50px !important;
-    margin-bottom:50px !important;
-}
-
-/* Contact Layout */
-
+.testimonial-grid,
 .contact-wrapper{
 
     margin-top:40px !important;
 }
 
-/* FAQ Items */
-
-.faq-item{
-
-    margin-bottom:15px !important;
+.assessment-screen{
+    padding-bottom:40px !important;
 }
 
-/* Testimonials */
-
-.testimonial-grid{
-
-    margin-bottom:0 !important;
-}
-
-/* Assessment Demo */
-
-.question-card{
-
-    margin-top:0 !important;
-}
-
-/* Remove Random Empty Space */
-
-section{
-
-    margin:0 !important;
+.success-stories{
+    padding-top:40px !important;
 }
