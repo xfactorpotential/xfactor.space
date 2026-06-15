@@ -4616,3 +4616,55 @@ html{
 .about-section .section-header h2{
     margin-top:0 !important;
 }
+
+/* DELIVERY BOX HORIZONTAL FIX */
+
+.delivery-box{
+    display:flex !important;
+    flex-direction:row !important;
+    align-items:center !important;
+
+    gap:30px;
+    width:100%;
+}
+
+.delivery-icon{
+    flex:0 0 80px;
+    font-size:60px;
+    text-align:center;
+}
+
+.delivery-content{
+    flex:1 !important;
+    width:auto !important;
+    max-width:none !important;
+}
+
+.delivery-content h3{
+    font-size:36px;
+    line-height:1.2;
+    margin-bottom:15px;
+
+    text-align:left;
+}
+
+.delivery-content p{
+    text-align:left;
+    line-height:1.8;
+    margin:0;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .delivery-box{
+        flex-direction:column !important;
+        text-align:center;
+    }
+
+    .delivery-content h3,
+    .delivery-content p{
+        text-align:center;
+    }
+}
