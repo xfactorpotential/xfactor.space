@@ -3879,12 +3879,7 @@ html{
    WHY PEOPLE CHOOSE WRONG PATH
 =========================== */
 
-.path-section{
 
-    padding:100px 0;
-
-    background:#050505;
-}
 
 .path-grid{
 
@@ -4575,10 +4570,6 @@ html{
 
 /* Fix huge gap before About section */
 
-.path-section{
-    padding-bottom:40px !important;
-}
-
 .solution-box{
     margin-bottom:0 !important;
 }
@@ -4594,10 +4585,6 @@ html{
 .about-section .section-header{
     margin-top:0 !important;
     padding-top:0 !important;
-}
-
-.path-section{
-    padding-bottom:20px !important;
 }
 
 /* GAP FIX */
