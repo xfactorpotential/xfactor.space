@@ -4530,3 +4530,92 @@ html{
     transform:translateY(-3px);
 
 }
+
+/* ==================================
+   GLOBAL SECTION SPACING FIX
+================================== */
+
+.hero{
+    padding-top:120px !important;
+    padding-bottom:40px !important;
+}
+
+.pain-points,
+.path-section,
+.why-x-factor,
+.assessments,
+.report-details,
+.assessment-screen,
+.success-stories,
+.faq-section,
+.whatsapp-cta,
+.contact-section{
+    padding-top:60px !important;
+    padding-bottom:60px !important;
+}
+
+/* Section Headings */
+
+.section-header{
+    margin-bottom:40px !important;
+}
+
+/* Cards below headings */
+
+.path-grid,
+.about-content,
+.assessment-grid,
+.combo-grid,
+.report-grid,
+.testimonial-grid,
+.contact-wrapper{
+    margin-top:40px !important;
+}
+
+/* Solution Box */
+
+.solution-box{
+    margin-top:50px !important;
+    margin-bottom:50px !important;
+}
+
+/* Why X Factor Section */
+
+.why-x-factor{
+   padding-bottom:60px !important;
+    margin-top:0 !important;
+}
+
+/* Demo Assessment */
+
+.assessment-screen{
+    padding-top:60px !important;
+    padding-bottom:60px !important;
+}
+
+/* Success Stories */
+
+.success-stories{
+    padding-top:60px !important;
+}
+
+/* FAQ */
+
+.faq-section{
+    padding-top:60px !important;
+    padding-bottom:60px !important;
+}
+
+/* Whatsapp CTA */
+
+.whatsapp-cta{
+    padding-top:60px !important;
+    padding-bottom:60px !important;
+}
+
+/* Contact */
+
+.contact-section{
+    padding-top:60px !important;
+    padding-bottom:60px !important;
+}
