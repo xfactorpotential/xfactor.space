@@ -4668,3 +4668,19 @@ html{
         text-align:center;
     }
 }
+
+/* UNIFORM SECTION HEADINGS */
+
+.section-header h2,
+.about-section .section-header h2{
+
+    font-size:60px !important;
+    font-weight:800 !important;
+    line-height:1.1 !important;
+
+    color:#ffffff !important;
+
+    text-align:center !important;
+
+    margin-bottom:15px !important;
+}
