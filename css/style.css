@@ -3871,10 +3871,6 @@ html{
     padding-bottom:0 !important;
 }
 
-.pain-points{
-    padding-top:20px !important;
-}
-
 .section-header{
     margin-top:0 !important;
 }
@@ -4282,19 +4278,6 @@ html{
 }
 /* REMOVE EXTRA GAP BETWEEN SOLUTION & WHY X FACTOR */
 
-.solution-box{
-    margin-bottom:40px !important;
-}
-
-.path-section{
-    padding-bottom:40px !important;
-}
-
-.why-x-factor{
-    padding-top:40px !important;
-    margin-top:0 !important;
-}
-
 .why-x-factor .container{
     margin-top:0 !important;
 }
@@ -4577,13 +4560,6 @@ html{
 .solution-box{
     margin-top:50px !important;
     margin-bottom:50px !important;
-}
-
-/* Why X Factor Section */
-
-.why-x-factor{
-   padding-bottom:60px !important;
-    margin-top:0 !important;
 }
 
 /* Demo Assessment */
