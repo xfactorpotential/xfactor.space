@@ -4551,71 +4551,6 @@ html{
     margin-top:40px !important;
 }
 
-.assessment-screen{
-    padding-bottom:40px !important;
-}
-
-.success-stories{
-    padding-top:40px !important;
-}
-
-.faq-section{
-    padding-bottom: 30px !important;
-}
-
-.whatsapp-cta{
-    padding-top: 30px !important;
-    margin-top: 0 !important;
-}
-
-/* Fix huge gap before About section */
-
-.solution-box{
-    margin-bottom:0 !important;
-}
-
-.about-section{
-    padding-top:40px !important;
-}
-
-.about-section{
-    padding-top:20px !important;
-}
-
-.about-section .section-header{
-    margin-top:0 !important;
-    padding-top:0 !important;
-}
-
-/* GAP FIX */
-
-.path-section{
-    padding-bottom:30px !important;
-    margin-bottom:0 !important;
-}
-
-.solution-box{
-    margin-bottom:0 !important;
-}
-
-.about-section{
-    margin-top:0 !important;
-    padding-top:30px !important;
-}
-
-.about-section .container{
-    margin-top:0 !important;
-    padding-top:0 !important;
-}
-
-.about-section .section-header{
-    margin-top:0 !important;
-    padding-top:0 !important;
-}
-
-.about-section .section-header h2{
-    margin-top:0 !important;
-}
 
 /* DELIVERY BOX HORIZONTAL FIX */
 
@@ -4685,30 +4620,39 @@ html{
     margin-bottom:15px !important;
 }
 
-/* FINAL GAP FIX */
+/* =================================
+UNIFORM SECTION SPACING SYSTEM
+================================= */
 
-.path-section{
+.pain-points,
+.path-section,
+.about-section,
+.assessments,
+.report-details,
+.assessment-screen,
+.success-stories,
+.faq-section,
+.whatsapp-cta,
+.contact-section{
+
     padding-top:80px !important;
-    padding-bottom:0 !important;
+    padding-bottom:80px !important;
 }
 
-.solution-box{
-    margin-bottom:0 !important;
+/* Section Heading */
+
+.section-header{
+    margin-bottom:40px !important;
 }
 
-.solution-message{
-    margin-bottom:0 !important;
+/* Special Blocks */
+
+.challenge-message,
+.solution-box,
+.whatsapp-box{
+
+    margin-top:40px !important;
+    margin-bottom:40px !important;
 }
 
-.about-section{
-    padding-top:0 !important;
-    margin-top:0 !important;
-}
 
-.about-section .container{
-    margin-top:0 !important;
-}
-
-.about-section .section-header{
-    margin-top:0 !important;
-}
