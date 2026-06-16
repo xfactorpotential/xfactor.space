@@ -4684,3 +4684,31 @@ html{
 
     margin-bottom:15px !important;
 }
+
+/* FINAL GAP FIX */
+
+.path-section{
+    padding-top:80px !important;
+    padding-bottom:0 !important;
+}
+
+.solution-box{
+    margin-bottom:0 !important;
+}
+
+.solution-message{
+    margin-bottom:0 !important;
+}
+
+.about-section{
+    padding-top:0 !important;
+    margin-top:0 !important;
+}
+
+.about-section .container{
+    margin-top:0 !important;
+}
+
+.about-section .section-header{
+    margin-top:0 !important;
+}
