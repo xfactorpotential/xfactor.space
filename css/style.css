@@ -1068,16 +1068,11 @@ body{
 /* HEADER */
 
 .question-header{
-
     display:flex;
-
-    justify-content:space-between;
-
+    justify-content:flex-end;
     align-items:center;
-
     margin-bottom:25px;
 }
-
 .question-header h2{
 
     color:white;
@@ -4655,4 +4650,12 @@ UNIFORM SECTION SPACING SYSTEM
     margin-bottom:40px !important;
 }
 
+.assessment-screen .section-header{
+    margin-bottom:40px;
+}
 
+.assessment-screen .section-header h2{
+    font-size:42px;
+    font-weight:800;
+    color:#fff;
+}
