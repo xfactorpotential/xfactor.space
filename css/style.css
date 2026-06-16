@@ -2301,33 +2301,155 @@ body{
     background:#080808;
 }
 
-.testimonial-grid{
+/* ==================================
+   SUCCESS STORIES SLIDER
+================================== */
 
-    display:grid;
+.testimonial-slider{
 
-    grid-template-columns:
-    repeat(3,1fr);
+    width:100%;
 
-    gap:30px;
+    overflow:hidden;
 
     margin-top:50px;
+
+    position:relative;
+}
+
+.testimonial-track{
+
+    display:flex;
+
+    gap:25px;
+
+    width:max-content;
+
+    animation:scrollTestimonials 40s linear infinite;
+}
+
+.testimonial-slider:hover .testimonial-track{
+
+    animation-play-state:paused;
 }
 
 /* CARD */
 
 .testimonial-card{
 
+    width:320px;
+
+    flex-shrink:0;
+
     background:#0d1117;
 
     border:1px solid rgba(212,160,23,.15);
 
-    border-radius:20px;
+    border-radius:18px;
 
-    padding:30px;
+    padding:22px;
 
-    transition:.3s;
+    transition:.3s ease;
 }
 
+.testimonial-card:hover{
+
+    border-color:#D4A017;
+
+    transform:translateY(-5px);
+}
+
+/* TOP */
+
+.testimonial-top{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:18px;
+}
+
+/* AVATAR */
+
+.avatar-circle{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #D4A017,
+        #f5c542
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:black;
+
+    font-size:16px;
+
+    font-weight:700;
+}
+
+.testimonial-top h4{
+
+    color:white;
+
+    margin-bottom:3px;
+
+    font-size:20px;
+}
+
+.testimonial-top span{
+
+    color:#9f9f9f;
+
+    font-size:14px;
+}
+
+/* RATING */
+
+.rating{
+
+    color:#D4A017;
+
+    font-size:18px;
+
+    margin-bottom:12px;
+}
+
+/* TEXT */
+
+.testimonial-card p{
+
+    color:#d0d0d0;
+
+    line-height:1.7;
+
+    font-size:15px;
+}
+
+/* ANIMATION */
+
+@keyframes scrollTestimonials{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+}
 .testimonial-card:hover{
 
     transform:translateY(-8px);
