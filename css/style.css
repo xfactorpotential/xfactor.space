@@ -4953,3 +4953,18 @@ UNIFORM SECTION SPACING SYSTEM
 
     top:-20px !important;
 }
+
+@media(max-width:768px){
+
+    .testimonial-card{
+
+        width:280px;
+    }
+
+    .testimonial-track{
+
+        gap:18px;
+
+        animation-duration:30s;
+    }
+}
