@@ -422,3 +422,19 @@ loadQuestion();
 }
 
 loadQuestion();
+
+/* ==========================
+   SUCCESS STORIES INFINITE LOOP
+========================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const track = document.querySelector(".testimonial-track");
+
+    if(track){
+
+        track.innerHTML += track.innerHTML;
+
+    }
+
+});
