@@ -4985,3 +4985,8 @@ UNIFORM SECTION SPACING SYSTEM
         animation-duration:30s;
     }
 }
+
+.footer-grid{
+    grid-template-columns:1.6fr 0.9fr 1.1fr 1.4fr;
+    gap:70px;
+}
